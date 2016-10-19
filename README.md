@@ -1,7 +1,7 @@
 ## Mines of MIDIA
 ### "Drums, Drums in the deep."
 
-![Mines of Moria](http://i.imgur.com/XWfTcOf.png)
+![Mines of Moria](includes/images/mines.png)
 
 Mines of Midia is a user interface for parsing the drum part out of a midi file and displaying it on a graphical drumset.
 
