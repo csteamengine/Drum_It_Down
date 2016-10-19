@@ -2,1256 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a98a40d8-85f9-4123-b52d-e8848d077d53" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/commands/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/config/app.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/config/auth.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/config/cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/config/compile.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/config/database.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/config/local/app.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/config/local/database.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/config/mail.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/config/packages/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/config/queue.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/config/remote.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/config/services.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/config/session.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/config/testing/cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/config/testing/session.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/config/view.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/config/workbench.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/BaseController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/HomeController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/seeds/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/filters.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/lang/en/pagination.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/lang/en/reminders.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/lang/en/validation.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/User.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/start/artisan.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/start/global.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/start/local.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/storage/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/storage/cache/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/storage/logs/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/storage/meta/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/storage/sessions/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/storage/views/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/tests/ExampleTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/tests/TestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/emails/auth/reminder.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/hello.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/autoload.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/compiled.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/paths.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/start.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/packages/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/robots.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/.editorconfig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/src/Carbon/Carbon.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/AddTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/ComparisonTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/ConstructTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/CopyTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/CreateFromDateTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/CreateFromFormatTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/CreateFromTimeTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/CreateFromTimestampTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/CreateTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/DayOfWeekModifiersTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/DiffTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/FluidSettersTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/GettersTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/InstanceTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/IsTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/IssetTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/NowAndOtherStaticHelpersTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/RelativeTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/SettersTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/StartEndOfTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/StringsTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/SubTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/TestFixture.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/TestingAidsTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/.gitattributes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/.scrutinizer.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/AUTHORS" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/build/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/build/code-sniffer-ruleset-tests.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/build/code-sniffer-ruleset.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/build/sami.conf.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/composer.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Crypt/AES.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Crypt/Base.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Crypt/Blowfish.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Crypt/DES.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Crypt/Hash.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Crypt/RC2.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Crypt/RC4.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Crypt/RSA.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Crypt/Random.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Crypt/Rijndael.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Crypt/TripleDES.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Crypt/Twofish.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/File/ANSI.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/File/ASN1.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/File/X509.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Math/BigInteger.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Net/SCP.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Net/SFTP.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Net/SFTP/Stream.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Net/SSH1.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Net/SSH2.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/System/SSH/Agent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/System/SSH_Agent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/openssl.cnf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Functional/Net/SCPSSH2UserStoryTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Functional/Net/SFTPLargeFileTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Functional/Net/SFTPUserStoryTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Functional/Net/SSH2AgentTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Functional/Net/SSH2Test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/PhpseclibFunctionalTestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/PhpseclibTestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Unit/Crypt/AES/InternalTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Unit/Crypt/AES/McryptTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Unit/Crypt/AES/TestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Unit/Crypt/Hash/MD5Test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Unit/Crypt/Hash/SHA256Test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Unit/Crypt/Hash/SHA256_96Test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Unit/Crypt/Hash/SHA512Test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Unit/Crypt/Hash/SHA512_96Test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Unit/Crypt/Hash/TestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Unit/Crypt/RSA/LoadKeyTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Unit/Crypt/RandomTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Unit/File/ASN1/FE.pdf.p7m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Unit/File/ASN1Test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Unit/File/X509/CSRTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Unit/File/X509/SPKACTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Unit/Math/BigInteger/BCMathTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Unit/Math/BigInteger/GMPTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Unit/Math/BigInteger/InternalOpenSSLTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Unit/Math/BigInteger/InternalTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Unit/Math/BigInteger/TestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Unit/Net/SFTPStreamTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Unit/Net/SSH1Test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Unit/Net/SSH2Test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/travis/code_coverage_id_rsa" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/travis/install-php-extensions.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/travis/run-phpunit.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/travis/setup-composer.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/travis/setup-secure-shell.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/travis/upload-code-coverage-html.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/travis/upload-code-coverage-scrutinizer.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/CHANGELOG.NAMING.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/FAQ.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/VERSION" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/autoload.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/examples/CustomDistributionStrategy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/examples/DispatcherLoop.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/examples/KeyPrefixes.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/examples/MasterSlaveReplication.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/examples/MasterSlaveReplicationComplex.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/examples/MonitorContext.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/examples/MultiBulkReplyIterators.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/examples/MultipleSetAndGet.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/examples/PipelineContext.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/examples/PubSubContext.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/examples/RedisCollectionsIterators.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/examples/ServerSideScripting.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/examples/SessionHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/examples/SharedConfigurations.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/examples/SimpleDebuggableConnection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/examples/SimpleSetAndGet.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/examples/TransactionWithCAS.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Autoloader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/BasicClientInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Client.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/ClientException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/ClientInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Cluster/CommandHashStrategyInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Cluster/Distribution/DistributionStrategyInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Cluster/Distribution/EmptyRingException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Cluster/Distribution/HashRing.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Cluster/Distribution/KetamaPureRing.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Cluster/Hash/CRC16HashGenerator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Cluster/Hash/HashGeneratorInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Cluster/PredisClusterHashStrategy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Cluster/RedisClusterHashStrategy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Collection/Iterator/CursorBasedIterator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Collection/Iterator/HashKey.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Collection/Iterator/Keyspace.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Collection/Iterator/ListKey.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Collection/Iterator/SetKey.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Collection/Iterator/SortedSetKey.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/AbstractCommand.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/CommandInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ConnectionAuth.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ConnectionEcho.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ConnectionPing.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ConnectionQuit.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ConnectionSelect.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/HashDelete.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/HashExists.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/HashGet.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/HashGetAll.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/HashGetMultiple.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/HashIncrementBy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/HashIncrementByFloat.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/HashKeys.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/HashLength.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/HashScan.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/HashSet.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/HashSetMultiple.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/HashSetPreserve.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/HashValues.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/HyperLogLogAdd.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/HyperLogLogCount.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/HyperLogLogMerge.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/KeyDelete.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/KeyDump.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/KeyExists.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/KeyExpire.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/KeyExpireAt.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/KeyKeys.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/KeyKeysV12x.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/KeyMove.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/KeyPersist.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/KeyPreciseExpire.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/KeyPreciseExpireAt.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/KeyPreciseTimeToLive.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/KeyRandom.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/KeyRename.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/KeyRenamePreserve.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/KeyRestore.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/KeyScan.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/KeySort.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/KeyTimeToLive.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/KeyType.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ListIndex.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ListInsert.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ListLength.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ListPopFirst.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ListPopFirstBlocking.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ListPopLast.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ListPopLastBlocking.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ListPopLastPushHead.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ListPopLastPushHeadBlocking.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ListPushHead.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ListPushHeadX.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ListPushTail.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ListPushTailX.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ListRange.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ListRemove.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ListSet.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ListTrim.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/PrefixHelpers.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/PrefixableCommand.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/PrefixableCommandInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/Processor/CommandProcessingInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/Processor/CommandProcessorChainInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/Processor/CommandProcessorInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/Processor/KeyPrefixProcessor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/Processor/ProcessorChain.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/PubSubPublish.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/PubSubSubscribe.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/PubSubSubscribeByPattern.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/PubSubUnsubscribe.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/PubSubUnsubscribeByPattern.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/RawCommand.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ScriptedCommand.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ServerBackgroundRewriteAOF.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ServerBackgroundSave.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ServerClient.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ServerCommand.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ServerConfig.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ServerDatabaseSize.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ServerEval.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ServerEvalSHA.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ServerFlushAll.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ServerFlushDatabase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ServerInfo.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ServerInfoV26x.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ServerLastSave.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ServerMonitor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ServerObject.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ServerSave.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ServerScript.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ServerShutdown.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ServerSlaveOf.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ServerSlowlog.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ServerTime.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/SetAdd.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/SetCardinality.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/SetDifference.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/SetDifferenceStore.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/SetIntersection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/SetIntersectionStore.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/SetIsMember.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/SetMembers.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/SetMove.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/SetPop.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/SetRandomMember.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/SetRemove.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/SetScan.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/SetUnion.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/SetUnionStore.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/StringAppend.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/StringBitCount.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/StringBitOp.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/StringDecrement.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/StringDecrementBy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/StringGet.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/StringGetBit.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/StringGetMultiple.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/StringGetRange.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/StringGetSet.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/StringIncrement.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/StringIncrementBy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/StringIncrementByFloat.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/StringPreciseSetExpire.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/StringSet.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/StringSetBit.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/StringSetExpire.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/StringSetMultiple.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/StringSetMultiplePreserve.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/StringSetPreserve.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/StringSetRange.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/StringStrlen.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/StringSubstr.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/TransactionDiscard.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/TransactionExec.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/TransactionMulti.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/TransactionUnwatch.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/TransactionWatch.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ZSetAdd.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ZSetCardinality.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ZSetCount.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ZSetIncrementBy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ZSetIntersectionStore.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ZSetLexCount.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ZSetRange.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ZSetRangeByLex.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ZSetRangeByScore.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ZSetRank.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ZSetRemove.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ZSetRemoveRangeByLex.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ZSetRemoveRangeByRank.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ZSetRemoveRangeByScore.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ZSetReverseRange.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ZSetReverseRangeByScore.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ZSetReverseRank.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ZSetScan.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ZSetScore.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Command/ZSetUnionStore.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/CommunicationException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Connection/AbstractConnection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Connection/AggregatedConnectionInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Connection/ClusterConnectionInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Connection/ComposableConnectionInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Connection/ComposableStreamConnection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Connection/ConnectionException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Connection/ConnectionFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Connection/ConnectionFactoryInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Connection/ConnectionInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Connection/ConnectionParameters.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Connection/ConnectionParametersInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Connection/MasterSlaveReplication.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Connection/PhpiredisConnection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Connection/PhpiredisStreamConnection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Connection/PredisCluster.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Connection/RedisCluster.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Connection/ReplicationConnectionInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Connection/SingleConnectionInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Connection/StreamConnection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Connection/WebdisConnection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/ExecutableContextInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Helpers.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Iterator/MultiBulkResponse.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Iterator/MultiBulkResponseSimple.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Iterator/MultiBulkResponseTuple.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Monitor/MonitorContext.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/NotSupportedException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Option/AbstractOption.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Option/ClientCluster.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Option/ClientConnectionFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Option/ClientExceptions.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Option/ClientOptions.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Option/ClientOptionsInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Option/ClientPrefix.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Option/ClientProfile.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Option/ClientReplication.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Option/CustomOption.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Option/OptionInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Pipeline/FireAndForgetExecutor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Pipeline/MultiExecExecutor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Pipeline/PipelineContext.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Pipeline/PipelineExecutorInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Pipeline/SafeClusterExecutor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Pipeline/SafeExecutor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Pipeline/StandardExecutor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/PredisException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Profile/ServerProfile.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Profile/ServerProfileInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Profile/ServerVersion12.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Profile/ServerVersion20.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Profile/ServerVersion22.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Profile/ServerVersion24.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Profile/ServerVersion26.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Profile/ServerVersion28.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Profile/ServerVersion30.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Profile/ServerVersionNext.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Protocol/CommandSerializerInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Protocol/ComposableProtocolInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Protocol/ProtocolException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Protocol/ProtocolInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Protocol/ResponseHandlerInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Protocol/ResponseReaderInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Protocol/Text/ComposableTextProtocol.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Protocol/Text/ResponseBulkHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Protocol/Text/ResponseErrorHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Protocol/Text/ResponseIntegerHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Protocol/Text/ResponseMultiBulkHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Protocol/Text/ResponseMultiBulkStreamHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Protocol/Text/ResponseStatusHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Protocol/Text/TextCommandSerializer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Protocol/Text/TextProtocol.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Protocol/Text/TextResponseReader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/PubSub/AbstractPubSubContext.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/PubSub/DispatcherLoop.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/PubSub/PubSubContext.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Replication/ReplicationStrategy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/ResponseError.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/ResponseErrorInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/ResponseObjectInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/ResponseQueued.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/ServerException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Session/SessionHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Transaction/AbortedMultiExecException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/lib/Predis/Transaction/MultiExecContext.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/package.ini" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/phpunit.xml.travisci" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/PHPUnit/ArrayHasSameValuesConstraint.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/PHPUnit/PredisCommandTestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/PHPUnit/PredisConnectionTestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/PHPUnit/PredisDistributorTestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/PHPUnit/PredisProfileTestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/PHPUnit/PredisTestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/PHPUnit/RedisCommandConstraint.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/ClientExceptionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/ClientTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Cluster/Distribution/EmptyRingExceptionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Cluster/Distribution/HashRingTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Cluster/Distribution/KetamaPureRingTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Cluster/PredisClusterHashStrategyTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Cluster/RedisClusterHashStrategyTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Collection/Iterator/HashKeyTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Collection/Iterator/KeyspaceTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Collection/Iterator/ListKeyTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Collection/Iterator/SetKeyTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Collection/Iterator/SortedSetKeyTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/CommandTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ConnectionAuthTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ConnectionEchoTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ConnectionPingTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ConnectionQuitTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ConnectionSelectTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/HashDeleteTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/HashExistsTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/HashGetAllTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/HashGetMultipleTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/HashGetTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/HashIncrementByFloatTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/HashIncrementByTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/HashKeysTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/HashLengthTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/HashScanTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/HashSetMultipleTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/HashSetPreserveTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/HashSetTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/HashValuesTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/HyperLogLogAddTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/HyperLogLogCountTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/HyperLogLogMergeTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/KeyDeleteTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/KeyDumpTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/KeyExistsTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/KeyExpireAtTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/KeyExpireTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/KeyKeysTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/KeyKeysV12xTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/KeyMoveTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/KeyPersistTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/KeyPreciseExpireAtTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/KeyPreciseExpireTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/KeyPreciseTimeToLiveTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/KeyRandomTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/KeyRenamePreserveTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/KeyRenameTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/KeyRestoreTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/KeyScanTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/KeySortTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/KeyTimeToLiveTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/KeyTypeTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ListIndexTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ListInsertTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ListLengthTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ListPopFirstBlockingTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ListPopFirstTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ListPopLastBlockingTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ListPopLastPushHeadBlockingTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ListPopLastPushHeadTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ListPopLastTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ListPushHeadTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ListPushHeadXTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ListPushTailTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ListPushTailXTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ListRangeTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ListRemoveTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ListSetTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ListTrimTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/PrefixHelpersTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/PrefixableCommandTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/Processor/KeyPrefixProcessorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/Processor/ProcessorChainTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/PubSubPublishTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/PubSubSubscribeByPatternTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/PubSubSubscribeTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/PubSubUnsubscribeByPatternTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/PubSubUnsubscribeTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/RawCommandTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ScriptedCommandTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ServerBackgroundRewriteAOFTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ServerBackgroundSaveTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ServerClientTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ServerCommandTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ServerConfigTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ServerDatabaseSizeTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ServerEvalSHATest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ServerEvalTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ServerFlushAllTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ServerFlushDatabaseTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ServerInfoTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ServerInfoV26xTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ServerLastSaveTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ServerMonitorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ServerObjectTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ServerSaveTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ServerScriptTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ServerShutdownTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ServerSlaveOfTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ServerSlowlogTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ServerTimeTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/SetAddTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/SetCardinalityTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/SetDifferenceStoreTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/SetDifferenceTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/SetIntersectionStoreTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/SetIntersectionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/SetIsMemberTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/SetMembersTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/SetMoveTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/SetPopTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/SetRandomMemberTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/SetRemoveTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/SetScanTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/SetUnionStoreTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/SetUnionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/StringAppendTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/StringBitCountTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/StringBitOpTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/StringDecrementByTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/StringDecrementTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/StringGetBitTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/StringGetMultipleTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/StringGetRangeTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/StringGetSetTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/StringGetTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/StringIncrementByFloatTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/StringIncrementByTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/StringIncrementTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/StringPreciseSetExpireTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/StringSetBitTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/StringSetExpireTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/StringSetMultiplePreserveTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/StringSetMultipleTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/StringSetPreserveTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/StringSetRangeTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/StringSetTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/StringStrlenTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/StringSubstrTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/TransactionDiscardTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/TransactionExecTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/TransactionMultiTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/TransactionUnwatchTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/TransactionWatchTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ZSetAddTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ZSetCardinalityTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ZSetCountTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ZSetIncrementByTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ZSetIntersectionStoreTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ZSetLexCountTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ZSetRangeByLexTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ZSetRangeByScoreTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ZSetRangeTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ZSetRankTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ZSetRemoveRangeByLexTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ZSetRemoveRangeByRankTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ZSetRemoveRangeByScoreTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ZSetRemoveTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ZSetReverseRangeByScoreTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ZSetReverseRangeTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ZSetReverseRankTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ZSetScanTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ZSetScoreTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Command/ZSetUnionStoreTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/CommunicationExceptionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Connection/ComposableStreamConnectionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Connection/ConnectionExceptionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Connection/ConnectionFactoryTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Connection/ConnectionParametersTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Connection/MasterSlaveReplicationTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Connection/PhpiredisConnectionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Connection/PhpiredisStreamConnectionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Connection/PredisClusterTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Connection/RedisClusterTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Connection/StreamConnectionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Connection/WebdisConnectionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/HelpersTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Iterator/MultiBulkResponseSimpleTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Iterator/MultiBulkResponseTupleTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Monitor/MonitorContextTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Option/AbstractOptionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Option/ClientClusterTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Option/ClientConnectionFactoryTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Option/ClientExceptionsTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Option/ClientOptionsTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Option/ClientPrefixTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Option/ClientProfileTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Option/ClientReplicationTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Option/CustomOptionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Pipeline/FireAndForgetExecutorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Pipeline/MultiExecExecutorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Pipeline/PipelineContextTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Pipeline/StandardExecutorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/PredisExceptionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Profile/ServerProfileTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Profile/ServerVersion12Test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Profile/ServerVersion20Test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Profile/ServerVersion22Test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Profile/ServerVersion24Test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Profile/ServerVersion26Test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Profile/ServerVersion28Test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Profile/ServerVersion30Test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Profile/ServerVersionNextTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Protocol/ProtocolExceptionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Protocol/Text/ComposableTextProtocolTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Protocol/Text/ResponseBulkHandlerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Protocol/Text/ResponseErrorHandlerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Protocol/Text/ResponseIntegerHandlerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Protocol/Text/ResponseMultiBulkHandlerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Protocol/Text/ResponseMultiBulkStreamHandlerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Protocol/Text/ResponseStatusHandlerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Protocol/Text/TextCommandSerializerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Protocol/Text/TextProtocolTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Protocol/Text/TextResponseReaderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/PubSub/DispatcherLoopTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/PubSub/PubSubContextTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Replication/ReplicationStrategyTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/ResponseErrorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/ResponseQueuedTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/ServerExceptionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Transaction/AbortedMultiExecExceptionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/Predis/Transaction/MultiExecContextTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/predis/predis/tests/bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Event/ConsoleCommandEvent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Event/ConsoleEvent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Event/ConsoleExceptionEvent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Event/ConsoleTerminateEvent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Formatter/OutputFormatter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Formatter/OutputFormatterInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Formatter/OutputFormatterStyle.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Formatter/OutputFormatterStyleInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Formatter/OutputFormatterStyleStack.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Helper/DescriptorHelper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Helper/DialogHelper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Helper/FormatterHelper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Helper/Helper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Helper/HelperInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Helper/HelperSet.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Helper/InputAwareHelper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Helper/ProgressBar.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Helper/ProgressHelper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Helper/QuestionHelper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Helper/Table.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Helper/TableHelper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Helper/TableSeparator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Helper/TableStyle.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Input/ArgvInput.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Input/ArrayInput.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Input/Input.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Input/InputArgument.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Input/InputAwareInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Input/InputDefinition.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Input/InputInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Input/InputOption.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Input/StringInput.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Logger/ConsoleLogger.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Output/BufferedOutput.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Output/ConsoleOutput.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Output/ConsoleOutputInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Output/NullOutput.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Output/Output.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Output/OutputInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Output/StreamOutput.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Shell.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tester/ApplicationTester.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tester/CommandTester.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/ApplicationTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Command/CommandTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Command/HelpCommandTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Command/ListCommandTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Descriptor/AbstractDescriptorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Descriptor/JsonDescriptorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Descriptor/MarkdownDescriptorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Descriptor/ObjectsProvider.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Descriptor/TextDescriptorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Descriptor/XmlDescriptorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/BarBucCommand.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/DescriptorApplication1.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/DescriptorApplication2.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/DescriptorCommand1.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/DescriptorCommand2.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/DummyOutput.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/Foo1Command.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/Foo2Command.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/Foo3Command.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/Foo4Command.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/Foo5Command.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/FooCommand.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/FooSubnamespaced1Command.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/FooSubnamespaced2Command.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/FoobarCommand.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/TestCommand.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_1.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_1.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_2.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_2.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_astext1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_astext2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_asxml1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_asxml2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_gethelp.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_renderexception1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_renderexception2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_renderexception3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_renderexception3decorated.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_renderexception4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_renderexception_doublewidth1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_renderexception_doublewidth1decorated.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_renderexception_doublewidth2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_run1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_run2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_run3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_run4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/command_1.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/command_1.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/command_1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/command_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/command_2.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/command_2.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/command_2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/command_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/command_astext.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/command_asxml.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/definition_astext.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/definition_asxml.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_argument_1.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_argument_1.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_argument_1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_argument_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_argument_2.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_argument_2.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_argument_2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_argument_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_argument_3.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_argument_3.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_argument_3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_argument_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_definition_1.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_definition_1.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_definition_1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_definition_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_definition_2.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_definition_2.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_definition_2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_definition_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_definition_3.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_definition_3.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_definition_3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_definition_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_definition_4.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_definition_4.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_definition_4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_definition_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_option_1.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_option_1.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_option_1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_option_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_option_2.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_option_2.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_option_2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_option_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_option_3.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_option_3.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_option_3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_option_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_option_4.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_option_4.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_option_4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/input_option_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Formatter/OutputFormatterStyleStackTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Formatter/OutputFormatterStyleTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Formatter/OutputFormatterTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Helper/FormatterHelperTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Helper/HelperSetTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Helper/LegacyDialogHelperTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Helper/LegacyProgressHelperTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Helper/LegacyTableHelperTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Helper/ProgressBarTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Helper/QuestionHelperTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Helper/TableTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Input/ArgvInputTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Input/ArrayInputTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Input/InputArgumentTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Input/InputDefinitionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Input/InputOptionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Input/InputTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Input/StringInputTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Logger/ConsoleLoggerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Output/ConsoleOutputTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Output/NullOutputTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Output/OutputTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Output/StreamOutputTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Tester/ApplicationTesterTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Tester/CommandTesterTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/Crawler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/Field/ChoiceFormField.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/Field/FileFormField.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/Field/FormField.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/Field/InputFormField.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/Field/TextareaFormField.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/Form.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/FormFieldRegistry.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/Link.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/Tests/CrawlerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/Tests/Field/ChoiceFormFieldTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/Tests/Field/FileFormFieldTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/Tests/Field/FormFieldTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/Tests/Field/FormFieldTestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/Tests/Field/InputFormFieldTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/Tests/Field/TextareaFormFieldTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/Tests/Fixtures/no-extension" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/Tests/Fixtures/windows-1250.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/Tests/FormTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/Tests/LinkTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Bundle/Bundle.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Bundle/BundleInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/CacheClearer/CacheClearerInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/CacheClearer/ChainCacheClearer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/CacheWarmer/CacheWarmer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/CacheWarmer/CacheWarmerAggregate.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/CacheWarmer/CacheWarmerInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/CacheWarmer/WarmableInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Client.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Config/EnvParametersResource.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Config/FileLocator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Controller/ControllerReference.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Controller/ControllerResolver.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Controller/ControllerResolverInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Controller/TraceableControllerResolver.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/DataCollector/ConfigDataCollector.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/DataCollector/DataCollector.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/DataCollector/DataCollectorInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/DataCollector/EventDataCollector.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/DataCollector/ExceptionDataCollector.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/DataCollector/LateDataCollectorInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/DataCollector/LoggerDataCollector.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/DataCollector/MemoryDataCollector.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/DataCollector/RequestDataCollector.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/DataCollector/RouterDataCollector.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/DataCollector/TimeDataCollector.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/DataCollector/Util/ValueExporter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Debug/ErrorHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Debug/ExceptionHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Debug/TraceableEventDispatcher.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/DependencyInjection/AddClassesToCachePass.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/DependencyInjection/ConfigurableExtension.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/DependencyInjection/ContainerAwareHttpKernel.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/DependencyInjection/Extension.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/DependencyInjection/MergeExtensionConfigurationPass.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/DependencyInjection/RegisterListenersPass.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Event/FilterControllerEvent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Event/FilterResponseEvent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Event/FinishRequestEvent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Event/GetResponseEvent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Event/GetResponseForControllerResultEvent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Event/GetResponseForExceptionEvent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Event/KernelEvent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Event/PostResponseEvent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/EventListener/AddRequestFormatsListener.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/EventListener/DebugHandlersListener.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/EventListener/ErrorsLoggerListener.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/EventListener/EsiListener.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/EventListener/ExceptionListener.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/EventListener/FragmentListener.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/EventListener/LocaleListener.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/EventListener/ProfilerListener.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/EventListener/ResponseListener.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/EventListener/RouterListener.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/EventListener/SaveSessionListener.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/EventListener/SessionListener.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/EventListener/StreamedResponseListener.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/EventListener/TestSessionListener.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Exception/AccessDeniedHttpException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Exception/BadRequestHttpException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Exception/ConflictHttpException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Exception/FatalErrorException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Exception/FlattenException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Exception/GoneHttpException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Exception/HttpException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Exception/HttpExceptionInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Exception/LengthRequiredHttpException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Exception/MethodNotAllowedHttpException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Exception/NotAcceptableHttpException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Exception/NotFoundHttpException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Exception/PreconditionFailedHttpException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Exception/PreconditionRequiredHttpException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Exception/ServiceUnavailableHttpException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Exception/TooManyRequestsHttpException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Exception/UnauthorizedHttpException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Exception/UnprocessableEntityHttpException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Exception/UnsupportedMediaTypeHttpException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Fragment/EsiFragmentRenderer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Fragment/FragmentHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Fragment/FragmentRendererInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Fragment/HIncludeFragmentRenderer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Fragment/InlineFragmentRenderer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Fragment/RoutableFragmentRenderer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/HttpCache/Esi.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/HttpCache/EsiResponseCacheStrategy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/HttpCache/EsiResponseCacheStrategyInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/HttpCache/HttpCache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/HttpCache/Store.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/HttpCache/StoreInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/HttpKernel.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/HttpKernelInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Kernel.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/KernelEvents.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/KernelInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Log/DebugLoggerInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Log/LoggerInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Log/NullLogger.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Profiler/BaseMemcacheProfilerStorage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Profiler/FileProfilerStorage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Profiler/MemcacheProfilerStorage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Profiler/MemcachedProfilerStorage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Profiler/MongoDbProfilerStorage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Profiler/MysqlProfilerStorage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Profiler/PdoProfilerStorage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Profiler/Profile.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Profiler/Profiler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Profiler/ProfilerStorageInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Profiler/RedisProfilerStorage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Profiler/SqliteProfilerStorage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/TerminableInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Bundle/BundleTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/CacheClearer/ChainCacheClearerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/CacheWarmer/CacheWarmerAggregateTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/CacheWarmer/CacheWarmerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/ClientTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Config/EnvParametersResourceTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Config/FileLocatorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Controller/ControllerResolverTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/DataCollector/ConfigDataCollectorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/DataCollector/ExceptionDataCollectorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/DataCollector/LoggerDataCollectorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/DataCollector/MemoryDataCollectorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/DataCollector/RequestDataCollectorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/DataCollector/TimeDataCollectorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Debug/TraceableEventDispatcherTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/DependencyInjection/ContainerAwareHttpKernelTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/DependencyInjection/MergeExtensionConfigurationPassTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/EventListener/AddRequestFormatsListenerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/EventListener/EsiListenerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/EventListener/ExceptionListenerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/EventListener/FragmentListenerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/EventListener/LocaleListenerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/EventListener/ProfilerListenerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/EventListener/ResponseListenerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/EventListener/RouterListenerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/EventListener/TestSessionListenerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/BaseBundle/Resources/foo.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/BaseBundle/Resources/hide.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/Bundle1Bundle/Resources/foo.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/Bundle1Bundle/bar.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/Bundle1Bundle/foo.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/Bundle2Bundle/foo.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/ChildBundle/Resources/foo.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/ChildBundle/Resources/hide.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/ExtensionAbsentBundle/ExtensionAbsentBundle.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/ExtensionLoadedBundle/DependencyInjection/ExtensionLoadedExtension.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/ExtensionLoadedBundle/ExtensionLoadedBundle.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/ExtensionPresentBundle/Command/BarCommand.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/ExtensionPresentBundle/Command/FooCommand.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/ExtensionPresentBundle/DependencyInjection/ExtensionPresentExtension.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/ExtensionPresentBundle/ExtensionPresentBundle.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/FooBarBundle.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/KernelForOverrideName.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/KernelForTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/Resources/BaseBundle/hide.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/Resources/Bundle1Bundle/foo.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/Resources/ChildBundle/foo.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/Resources/FooBundle/foo.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/TestClient.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/TestEventDispatcher.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fragment/EsiFragmentRendererTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fragment/FragmentHandlerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fragment/HIncludeFragmentRendererTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fragment/InlineFragmentRendererTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fragment/RoutableFragmentRendererTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/HttpCache/EsiTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/HttpCache/HttpCacheTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/HttpCache/HttpCacheTestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/HttpCache/StoreTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/HttpCache/TestHttpKernel.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/HttpCache/TestMultipleHttpKernel.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/HttpKernelTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/KernelTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Logger.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Profiler/AbstractProfilerStorageTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Profiler/FileProfilerStorageTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Profiler/MemcacheProfilerStorageTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Profiler/MemcachedProfilerStorageTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Profiler/Mock/MemcacheMock.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Profiler/Mock/MemcachedMock.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Profiler/Mock/RedisMock.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Profiler/MongoDbProfilerStorageTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Profiler/ProfilerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Profiler/RedisProfilerStorageTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Profiler/SqliteProfilerStorageTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/TestHttpKernel.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/UriSignerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/UriSigner.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Exception/ExceptionInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Exception/InvalidArgumentException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Exception/LogicException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Exception/ProcessFailedException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Exception/ProcessTimedOutException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Exception/RuntimeException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/ExecutableFinder.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/PhpExecutableFinder.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/PhpProcess.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Process.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/ProcessBuilder.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/ProcessPipes.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/ProcessUtils.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Tests/AbstractProcessTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Tests/ExecutableFinderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Tests/NonStopableProcess.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Tests/PhpExecutableFinderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Tests/PhpProcessTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Tests/PipeStdinInStdoutStdErrStreamSelect.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Tests/ProcessBuilderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Tests/ProcessFailedExceptionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Tests/ProcessInSigchildEnvironment.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Tests/ProcessUtilsTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Tests/SigchildDisabledProcessTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Tests/SigchildEnabledProcessTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Tests/SignalListener.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Tests/SimpleProcessTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Catalogue/AbstractOperation.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Catalogue/DiffOperation.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Catalogue/MergeOperation.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Catalogue/OperationInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Dumper/CsvFileDumper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Dumper/DumperInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Dumper/FileDumper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Dumper/IcuResFileDumper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Dumper/IniFileDumper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Dumper/JsonFileDumper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Dumper/MoFileDumper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Dumper/PhpFileDumper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Dumper/PoFileDumper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Dumper/QtFileDumper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Dumper/XliffFileDumper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Dumper/YamlFileDumper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Exception/ExceptionInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Exception/InvalidResourceException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Exception/NotFoundResourceException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Extractor/ChainExtractor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Extractor/ExtractorInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/IdentityTranslator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Interval.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Loader/ArrayLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Loader/CsvFileLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Loader/IcuDatFileLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Loader/IcuResFileLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Loader/IniFileLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Loader/JsonFileLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Loader/LoaderInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Loader/MoFileLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Loader/PhpFileLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Loader/PoFileLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Loader/QtFileLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Loader/XliffFileLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Loader/YamlFileLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Loader/schema/dic/xliff-core/xliff-core-1.2-strict.xsd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Loader/schema/dic/xliff-core/xml.xsd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/MessageCatalogue.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/MessageCatalogueInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/MessageSelector.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/MetadataAwareInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/PluralizationRules.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Catalogue/AbstractOperationTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Catalogue/DiffOperationTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Catalogue/MergeOperationTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Dumper/CsvFileDumperTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Dumper/FileDumperTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Dumper/IcuResFileDumperTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Dumper/IniFileDumperTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Dumper/JsonFileDumperTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Dumper/MoFileDumperTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Dumper/PhpFileDumperTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Dumper/PoFileDumperTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Dumper/QtFileDumperTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Dumper/XliffFileDumperTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Dumper/YamlFileDumperTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/IdentityTranslatorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/IntervalTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Loader/CsvFileLoaderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Loader/IcuDatFileLoaderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Loader/IcuResFileLoaderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Loader/IniFileLoaderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Loader/JsonFileLoaderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Loader/LocalizedTestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Loader/MoFileLoaderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Loader/PhpFileLoaderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Loader/PoFileLoaderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Loader/QtFileLoaderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Loader/XliffFileLoaderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Loader/YamlFileLoaderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/MessageCatalogueTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/MessageSelectorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/PluralizationRulesTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/TranslatorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/empty-translation.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/empty.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/empty.ini" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/empty.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/empty.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/empty.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/empty.xlf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/empty.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/encoding.xlf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/escaped-id-plurals.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/escaped-id.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/invalid-xml-resources.xlf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/malformed.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/non-valid.xlf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/non-valid.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/plurals.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/plurals.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/resname.xlf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/resourcebundle/corrupted/resources.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/resourcebundle/dat/en.res" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/resourcebundle/dat/en.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/resourcebundle/dat/fr.res" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/resourcebundle/dat/fr.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/resourcebundle/dat/packagelist.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/resourcebundle/dat/resources.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/resourcebundle/res/en.res" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/resources-clean.xlf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/resources.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/resources.ini" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/resources.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/resources.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/resources.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/resources.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/resources.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/resources.xlf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/resources.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/valid.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/withdoctype.xlf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Translator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/TranslatorInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Writer/TranslationWriter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/phpunit.xml.dist" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/CONTRIBUTING.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="se329_project_3.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -1266,8 +23,56 @@
   <component name="FavoritesManager">
     <favorites_list name="se329_project_3" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="544">
+                <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CONTRIBUTING.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="340">
+                <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/CONTRIBUTING.md" />
+        <option value="$PROJECT_DIR$/README.md" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -1289,7 +94,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -1317,6 +122,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="se329_project_3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="se329_project_3" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -1326,6 +141,48 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -1337,18 +194,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1476883013513</updated>
-      <workItem from="1476883018779" duration="107000" />
+      <workItem from="1476883018779" duration="3030000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107000" />
+    <option name="totallyTimeSpent" value="3030000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14285715" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14285715" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907662" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907662" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2185501" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1381,5 +238,37 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="340">
+            <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="544">
+            <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
