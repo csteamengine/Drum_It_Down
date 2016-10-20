@@ -21,7 +21,17 @@ Coming soon...
 
 ## Discussion
 
-Coming soon...
+This project will be broken up into two separate projects due to
+time constraints. The first part of the project, will be mainly
+user interface stuff, like login, profile stuff, songs, etc. The
+second half will contain more midi parsing stuff.
+
+There isn't any very good midi file libraries that we can use, so
+one restriction we might want to set is that users must upload
+their own midi files. To do this, we might want to implement a
+voting or rating system, so people can upvote midi files that are
+actually accurate. This would prevent people from uploading a midi
+file and claiming that it is actually a different song.
 
 ## Intellectual Property
 
