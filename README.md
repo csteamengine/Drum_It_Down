@@ -1,7 +1,5 @@
 # The Mines of MIDIa
 
-> "Drums, drums in the deep..."
-
 ![Drums in the Deep](drums_in_the_deep.gif)
 
 ## Goal
