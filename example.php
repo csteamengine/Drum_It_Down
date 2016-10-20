@@ -12,21 +12,31 @@
 
 include "includes/php/base.php";
 
+mysqli_select_db($conn, 'drumsinthedeep');
 $sql = "SELECT * FROM users";
 $query = mysqli_query($conn, $sql);
-while($result = mysqli_fetch_assoc($query)){
-    echo $result['username'];
-}
+
+
 
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-
+    <title>Example PHP</title>
 </head>
 <body>
-<h1>Hello World!</h1>
+<?php
+//We use a while loop to loop through each result.
+//This is usefule, because it will not start if the result brings back 0 results.
+while($result = mysqli_fetch_assoc($query)){
+    example($result['username']);
+    ?>
+    <h1><?= $result['username']?></h1>
+    <?php
+}
+?>
+
 </body>
 <script>
     //Some js code here!
@@ -37,6 +47,6 @@ while($result = mysqli_fetch_assoc($query)){
 #####################################################
 ################ PHP Functions ######################
 #####################################################
-function example(){
-    echo "This is an example function";
+function example($username){
+    echo $username;
 }

@@ -5,17 +5,18 @@
  * Date: 10/19/2016
  * Time: 4:50 PM
  */
+error_reporting(-1);
+ini_set('display_errors', 'On');
 
 session_start();
 
 $parent = basename(dirname($_SERVER['PHP_SELF']));
-if($parent == "" || $parent == "Stonestreet"){
+if($parent == "" || $parent == "Drumsinthedeep"){
     $file = "../kdc_config.txt";
 }else{
     $file = "../../kdc_config.txt";
 }
-//echo $parent;
-//exit;
+
 
 $json = "";
 if (file_exists($file))

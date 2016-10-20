@@ -113,3 +113,6 @@ flycheck_*.el
 
 # projectiles files
 .projectile
+
+# spotify key
+spotify.txt
