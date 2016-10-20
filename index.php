@@ -10,8 +10,6 @@ session_start();
 include "includes/php/base.php";
 include "includes/php/general.php";
 
-$api = get_spotify_key();
-$api = json_decode($api);
 
 
 
