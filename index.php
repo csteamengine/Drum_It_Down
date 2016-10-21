@@ -6,7 +6,7 @@
  * Time: 4:27 PM
  */
 
-include "includes/php/base.php";
+//include "includes/php/base.php";
 include "includes/php/general.php";
 
 
@@ -45,6 +45,8 @@ include "includes/php/general.php";
 include "includes/php/header.php";
 ?>
 <body>
+    <h1>Mines of Midia</h1>
+    <h2>Drums, Drums in the deep.</h2>
     <form id="file_upload" method="post" enctype="multipart/form-data">
         <input type="file" name="midi_file" id="midi_file">
         <input type="submit" value="Upload">
