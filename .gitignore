@@ -116,3 +116,5 @@ flycheck_*.el
 
 # spotify key
 spotify.txt
+
+.DS_Store
