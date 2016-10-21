@@ -1,40 +1,26 @@
 # Contribution Guidelines
+This project (At least my proposal) will be written with PHP, javascript, html, mysql and css. 
 
-In order to contribute to this project, you will need to install a few things.
+## File Structure
 
-You will need to install composer on you computer, but first there are a few things to confirm
+Each page will have it's own index.php file, inside it's own directory. This makes it really easy to redirect to a new page, 
+and it also makes the url appear really clean. It allows for maximum code reusability, and in my opinion is really easy to read.
 
- - You have PHP 5.4+ installed
- - You have OpenSSL installed
- - You have OpenSSL enabled in your php.ini file
- - You have Mcrypt installed
- - You have Mcrypt enabled in your php.ini file
- 
-Once you have verified the preceding, you can go ahead and install composer. 
+Any shared css, js, php, or images will be put inside the includes folder under the respective folder. 
 
- - [Windows](https://getcomposer.org/doc/00-intro.md)
- - [Mac](https://www.abeautifulsite.net/installing-composer-on-os-x)
- - [Linux](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-composer-on-ubuntu-14-04)
- - PS. All of the instructions can be found on the first link, but the supplementary Mac and Linux links are more in depth.
- 
-I have never used Laravel + Git, so IDK how it will work. It seems like it requires some extensive settings and config specific
-to your computer, which could be a problem.
+## Code
+There is an example php file that shows the basic outline of each php file. Basically, the top will have pre-processing code,
+the middle will be the html code, under that will be javascript, and the very bottom will be page specific php functions
 
-## Once everything is installed
-Once you have all the dependencies and extensions installed, it is time to start up the Laravel server. To do this, run 
-the following in the terminal or cmd prompt on windows.
+## IDE
+I choose to use PHPStorm, by JetBrains. It is one of the best PHP editors out there, as it allows you to create a local php
+server with just a few clicks. 
 
-```
-php artisan serve
-```
+## PHP version
+TBD, but most php is legacy friendly. We will say anything newer than 5.5
 
-This is also a good way to see which extensions and dependencies you have yet to install. For example, if you try to run the 
-above, without Mcrypt installed, it will fail and say that you must install mcrypt first.
-
-Once it succeeds, you can visit your live site in `localhost:8000` (By default, you can also specify a different port to host)
-
-
-## Some problems I have run into and potentially some solutions
-
-### Mcrypt Extension required
-As I stated above, the PHP Mcrypt extension is required for this to work. 
+## MySQL
+The mysql config file will need to be kept out of the git repo, for securities sake. We don't want our passwords and connection 
+information online for people to see. To solve this, we will have a base.php file that is included in any php file requiring 
+mysql information. If you are using a local mysql database, you could simply store the  username and password in a text file and
+parse them out in base.php

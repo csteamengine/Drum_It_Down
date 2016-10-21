@@ -53,6 +53,7 @@ include "includes/php/header.php";
     </form>
     <div id="song_guesses"></div>
     <form id="search_song">
+
         <h3>Didn't find the song you were looking for? Search here.</h3>
         <input type="text" name="title" id="song_title" placeholder="Title">
         <input type="submit" value="Search">
@@ -85,6 +86,7 @@ include "includes/php/footer.php";
 
         $.ajax({
             url: '/includes/php/upload.php?action=upload', // point to server-side PHP script
+
             dataType: 'text',  // what to expect back from the PHP script, if anything
             cache: false,
             contentType: false,
@@ -121,7 +123,6 @@ include "includes/php/footer.php";
             var top_hits = [];
             var search_term = "";
             var limit = 1;
-
             for(i = 0;i<midiFile.tracks.length;i++){
                 for(j =0;j<midiFile.tracks[i].length; j++){
                     if(midiFile.tracks[i][j].subtype == "trackName" && midiFile.tracks[i][j].text != ""){
@@ -163,6 +164,7 @@ include "includes/php/footer.php";
     }
     function search_song(){
         $('#song_guesses').html('');
+
         if($('#song_title').val() != ""){
             limit = 10;
             search_term = encodeURI($('#song_title').val());
