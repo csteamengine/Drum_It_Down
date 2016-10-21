@@ -1,7 +1,7 @@
 # The Mines of MIDIa
 
 
-![Drums in the Deep](drums_in_the_deep.gif)
+![Drums in the Deep](includes/images/drums_in_the_deep.gif)
 
 ## Goal
 

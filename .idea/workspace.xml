@@ -2,30 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a98a40d8-85f9-4123-b52d-e8848d077d53" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/midi_files/temp_1.mid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/midi_files/temp_10.mid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/midi_files/temp_11.mid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/midi_files/temp_12.mid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/midi_files/temp_13.mid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/midi_files/temp_14.mid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/midi_files/temp_15.mid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/midi_files/temp_16.mid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/midi_files/temp_17.mid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/midi_files/temp_18.mid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/midi_files/temp_19.mid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/midi_files/temp_2.mid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/midi_files/temp_20.mid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/midi_files/temp_21.mid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/midi_files/temp_22.mid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/midi_files/temp_23.mid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/midi_files/temp_3.mid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/midi_files/temp_4.mid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/midi_files/temp_5.mid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/midi_files/temp_6.mid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/midi_files/temp_7.mid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/midi_files/temp_8.mid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/midi_files/temp_9.mid" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/drums_in_the_deep.gif" afterPath="$PROJECT_DIR$/includes/images/drums_in_the_deep.gif" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <ignored path="se329_project_3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="52" column="26" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
+            <state relative-caret-position="150">
+              <caret line="30" column="62" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -62,19 +42,6 @@
             <state relative-caret-position="135">
               <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="60">
-                <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
             </state>
           </provider>
         </entry>
@@ -156,9 +123,9 @@
         <option value="$PROJECT_DIR$/includes/php/upload.php" />
         <option value="$PROJECT_DIR$/includes/jasmid/midifile.js" />
         <option value="$PROJECT_DIR$/includes/js/shared.js" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -245,6 +212,24 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="se329_project_3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="se329_project_3" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -265,8 +250,9 @@
       <recent name="F:\Desktop\projects\se329_project_3\includes\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/midi_files" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/includes/images" />
+      <recent name="$PROJECT_DIR$/midi_files" />
       <recent name="$PROJECT_DIR$/includes" />
       <recent name="F:\Desktop\projects\se329_project_3" />
     </key>
@@ -340,18 +326,18 @@
       <updated>1476883013513</updated>
       <workItem from="1476883018779" duration="3104000" />
       <workItem from="1476907793514" duration="14142000" />
-      <workItem from="1476991904142" duration="17135000" />
+      <workItem from="1476991904142" duration="17730000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34381000" />
+    <option name="totallyTimeSpent" value="34976000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14962727" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14962727" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907662" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907662" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2185501" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -386,14 +372,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/php/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/js/shared.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -702,12 +680,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="52" column="26" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="45">
+            <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/images/drums_in_the_deep.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
@@ -718,19 +704,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drums_in_the_deep.gif">
+    <entry file="file://$PROJECT_DIR$/favicon.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="60">
-            <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="30" column="62" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
