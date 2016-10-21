@@ -49,4 +49,4 @@ International Justice League of Super Acquaintances
 - Stefan Kraus
 - Gregory Steenhagen
 
-![International Justice League of Super Acquaintances](IJLSA.jpg)
+![International Justice League of Super Acquaintances](includes/images/IJLSA.jpg)
