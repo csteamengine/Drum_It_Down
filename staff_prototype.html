@@ -105,6 +105,7 @@
         MIDI.loader = new sketch.ui.Timer;
         MIDI.loadPlugin({
             soundfontUrl: "includes/midi-js/MIDI.js-master/examples/soundfont/",
+            instruments: ["synth_drum","synth_drum","synth_drum","synth_drum","synth_drum","synth_drum","synth_drum","synth_drum","synth_drum"],
             onprogress: function (state, progress) {
                 MIDI.loader.setValue(progress * 100);
             },
@@ -116,7 +117,12 @@
                 /// this sets up the MIDI.Player and gets things going...
                 player = MIDI.Player;
                 player.timeWarp = 1; // speed the song is played back
-                player.loadFile(song[songid++ % song.length], player.start);
+                player.loadFile("midi_files/MyHero.mid", function(onsuccess) {
+//                    player.getFileInstruments();
+                    MIDI.programChange(9, 9);
+//                    MIDI.programChange(9, MIDI.GM.byName["synth_drum"].number);
+                    player.start(onsuccess);
+                });
 
                 /// control the piano keys colors
                 player.addListener(function (data) {
@@ -124,6 +130,7 @@
                     var d = colorElements[pianoKey];
                     if (d) {
                         if (data.message === 144) {
+                            console.log(data);
                             d.style.background = '#f00';
                             d.style.color = "#fff";
                         } else {
@@ -136,6 +143,7 @@
                 MIDIPlayerPercentage(player);
             }
         });
+        console.log(MIDI.GM.byName);
     });
 
     var MIDIPlayerPercentage = function (player) {
