@@ -56,6 +56,8 @@ include "includes/php/header.php";
     <input type="text" name="title" id="song_title" placeholder="Title">
     <input type="submit" value="Search">
 </form>
+
+<a href="player.html"><h2>Go to Player view!!! (Testing purposes)</h2></a>
 </body>
 
 <?php
