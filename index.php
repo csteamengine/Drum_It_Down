@@ -58,6 +58,10 @@ include "includes/php/header.php";
 </form>
 
 <a href="player.html"><h2>Go to Player view!!! (Testing purposes)</h2></a>
+
+<a href="http://jazz-soft.net/demo/GeneralMidiPerc.html" target="_blank">This could prove useful later...</a><br>
+<a href="https://groovemonkee.com/pages/free-midi-loops" target="_blank">Might want to check out these drum loops...</a><br>
+<a href="https://en.wikipedia.org/wiki/General_MIDI#Percussion" target="_blank">We'll probably need these too...</a><br>
 </body>
 
 <?php
