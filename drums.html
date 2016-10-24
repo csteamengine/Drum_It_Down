@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="drumset.png" style="position: absolute;top:0;left:0;z-index: -1;">
+<canvas id="canvas" width="971" height="557" style="border:1px solid black;position: absolute;top:0;left:0;z-index:1;">
+</canvas>
+<div style="position:absolute; top:570px; left: 10px;">
+    <div>Click the red rectangle.</div>
+    <div id="out"></div>
+</div>
+<script>
+    // Clickable canvas elements taken from
+    // https://pterkildsen.com/2013/06/28/create-a-html5-canvas-element-with-clickable-elements/
+
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext("2d");
+
+    var hitareas = [];
+
+    var Hitarea = function(x, y, l, w, callback){
+        this.x = x;
+        this.y = y;
+        this.l = l;
+        this.w = w;
+        this.callback = callback;
+    };
+
+    var drawRect = function(x, y, l, w, strokestyle, callback){
+        ctx.strokeStyle = strokestyle;
+        ctx.rect(x, y, l, w);
+        var hitarea = new Hitarea(x, y, l, w, callback);
+        hitareas.push(hitarea);
+    };
+
+
+    ctx.rect(140,60,160,45);
+    drawRect(140, 60, 160, 45, 'red', function(){console.log('badum- TSCHHHHH!'); document.getElementById('out').innerHTML = 'badum- TSCHHHHH!'});
+    ctx.stroke();
+
+    canvas.addEventListener('click', function(e) {
+        var clickedX = e.pageX - this.offsetLeft;
+        var clickedY = e.pageY - this.offsetTop;
+
+        for (var i = 0; i < hitareas.length; i++) {
+            if (clickedX > hitareas[i].x && clickedX < (hitareas[i].x +  hitareas[i].l) &&
+                    clickedY > hitareas[i].y && clickedY < (hitareas[i].y +  hitareas[i].w)) {
+                hitareas[i].callback();
+            } else {
+                document.getElementById('out').innerHTML = '';
+            }
+        }
+    });
+</script>
+</body>
+</html>
