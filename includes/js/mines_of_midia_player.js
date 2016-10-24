@@ -1,6 +1,6 @@
 // TODO: Populate these songs programmatically with user input
 var songId = 0;
-var songs = ["MyHero.mid", "SweetHomeAlabama.mid"];
+var songs = [$('#song_file').val()];
 var player;
 
 if (typeof (console) === "undefined") var console = {
@@ -47,7 +47,7 @@ eventjs.add(window, "load", function (event) {
         },
         onsuccess: function () {
             player = MIDI.Player;
-            player.timeWarp = 1; // speed the song is played back
+            player.timeWarp = .85; // speed the song is played back
             player.loadFile("midi_files/" + songs[songId], onSuccessfulSongLoad);
 
             /// control the piano keys colors
@@ -74,8 +74,6 @@ eventjs.add(window, "load", function (event) {
 
 var onSuccessfulSongLoad = function (onsuccess) {
     // Show song filename
-    var title = document.getElementById("title");
-    title.innerHTML = songs[songId];
 
     // Default drum track is 9
     var drumTrack = 9;

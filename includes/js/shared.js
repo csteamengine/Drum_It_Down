@@ -184,7 +184,10 @@ function specify_song(id) {
             dataType: 'text',  // what to expect back from the PHP script, if anything
             cache: false,
             success: function (php_script_response) {
-                console.log(php_script_response);
+                var json = JSON.parse(php_script_response);
+                if(json['code'] == 200){
+                    window.location = "player.php?action=play&track="+json['track']+"&file="+json['file'];
+                }
             }
         });
 

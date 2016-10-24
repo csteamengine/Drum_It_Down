@@ -48,8 +48,7 @@ include "includes/php/header.php";
     <input type="submit" value="Upload">
 </form>
 <div id="song_guesses"></div>
-<form id="search_song">
-
+<form id="search_song" hidden>
     <h3>Didn't find the song you were looking for? Search here.</h3>
     <input type="text" name="title" id="song_title" placeholder="Title">
     <input type="submit" value="Search">
@@ -72,6 +71,7 @@ include "includes/php/footer.php";
         var midiFile;
         $('#file_upload').submit(function (event) {
             event.preventDefault();
+            $('#search_song').show();
             if ($('#midi_file').val() != null) {
                 upload_file();
             }

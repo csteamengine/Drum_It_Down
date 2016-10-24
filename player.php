@@ -1,3 +1,39 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: adm_gcs
+ * Date: 10/24/2016
+ * Time: 9:15 AM
+ */
+include "includes/php/base.php";
+$action = $_GET['action'];
+if($action != ""){
+    switch($action){
+        case 'play':
+            $track = $_GET['track'];
+            $file = $_GET['file'];
+            //TODO select file and track info from db.
+            $sql = "SELECT * FROM midi_files WHERE id=".$file;
+            $query = mysqli_query($conn, $sql);
+            if(mysqli_num_rows($query) == 0){
+                //TODO error
+            }
+            $file = mysqli_fetch_assoc($query);
+
+            $sql = "SELECT * FROM tracks WHERE id=".$track;
+            $query = mysqli_query($conn, $sql);
+            if(mysqli_num_rows($query) == 0){
+                //TODO error
+            }
+            $track = mysqli_fetch_assoc($query);
+
+
+            break;
+
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -31,6 +67,7 @@
     <script src="includes/js/event.js" type="text/javascript"></script>
 </head>
 <body>
+<input type="hidden" id="song_file" value="<?= $file['file_name'] ?>">
 <h1>Mines of MIDIa</h1>
 
 <div style="position: fixed; top: 0; left: 0; z-index: 4; overflow: hidden;" id="colors"></div>
@@ -57,12 +94,12 @@
     </div>
     <div id="title"
          style="background: rgba(255,255,0,0.5); position: relative;color: #000; z-index: -1;padding: 5px 11px 5px;">
-        Loading MIDI interface...
+             <?= $track['title']." - ".$track['artist'] ?>
     </div>
     <p>This page is just for testing and figuring out how MIDI.js works. It can be built upon
         as the MIDI player page for our app.</p>
 </div>
-
+<script src="includes/js/jquery-2.2.4.min.js" type="text/javascript"></script>
 <script src="includes/js/mines_of_midia_player.js" type="text/javascript"></script>
 </body>
 </html>
