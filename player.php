@@ -68,6 +68,7 @@ if($action != ""){
 </head>
 <body>
 <input type="hidden" id="song_file" value="<?= $file['file_name'] ?>">
+<input type="hidden" id="duration" value="<?= $track['duration'] ?>">
 <h1>Mines of MIDIa</h1>
 
 <div style="position: fixed; top: 0; left: 0; z-index: 4; overflow: hidden;" id="colors"></div>
@@ -98,7 +99,12 @@ if($action != ""){
     </div>
     <p>This page is just for testing and figuring out how MIDI.js works. It can be built upon
         as the MIDI player page for our app.</p>
+
 </div>
+<?php
+include "drum.php";
+
+?>
 <script src="includes/js/jquery-2.2.4.min.js" type="text/javascript"></script>
 <script src="includes/js/mines_of_midia_player.js" type="text/javascript"></script>
 </body>

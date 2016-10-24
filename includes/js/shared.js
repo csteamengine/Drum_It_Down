@@ -71,7 +71,6 @@ function guess_track_info(midiFile) {
     var songGuesses = $('#song_guesses');
     songGuesses.html('');
     if (midiFile != null) {
-        console.log(midiFile);
         //An array that I'm storing all the spotify result in. Not going to work for the final product, due to cl
         var top_hits = [];
         var search_term = "";
@@ -158,7 +157,6 @@ function search_song() {
         $.getJSON(url, function (result) {
             if (result.tracks.items.length > 0) {
                 for (var m = 0; m < result.tracks.items.length; m++) {
-//                        console.log(result.tracks.items[m].name + " -- " + result.tracks.items[m].artists[0].name );
                     songGuesses.append(
                         '<div class="guess" >' + result.tracks.items[m].name.trim() + " -- " + result.tracks.items[m].artists[0].name.trim() + '<button onclick="specify_song(\'' + result.tracks.items[m].id + '\')">Select</button></div>'
                     );

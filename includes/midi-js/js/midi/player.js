@@ -167,7 +167,6 @@ midi.getFileInstruments = function() {
 		var channel = event.channel;
 		switch(event.subtype) {
 			case 'controller':
-//				console.log(event.channel, MIDI.defineControl[event.controllerType], event.value);
 				break;
 			case 'programChange':
 				programs[channel] = event.programNumber;

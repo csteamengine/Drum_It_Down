@@ -37,6 +37,7 @@
         cursor: pointer;
     }
 </style>
+
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="300 300 1400 1400">
     <g id="Drums">
         <g>
@@ -738,72 +739,11 @@
                 </g>
             </g>
         </g>
-        <g id="All-Keys" class="hidden" opacity="0.9">
-            <g id="Key-66">
-                <path fill="none" stroke="#FDFFFC" stroke-width="9" stroke-miterlimit="10" d="M1103.5,1442.5c0,6.6-5.4,12-12,12h-107
-				c-6.6,0-12-5.4-12-12v-107c0-6.6,5.4-12,12-12h107c6.6,0,12,5.4,12,12V1442.5z"/>
-                <text transform="matrix(1 0 0 1 1011.9473 1411.7119)" fill="#FDFFFC" font-family="'Montserrat'" font-size="76.2579">B</text>
-            </g>
-            <g id="Key-74">
-                <path fill="none" stroke="#FDFFFC" stroke-width="9" stroke-miterlimit="10" d="M1551.5,1442.5c0,6.6-5.4,12-12,12h-107
-				c-6.6,0-12-5.4-12-12v-107c0-6.6,5.4-12,12-12h107c6.6,0,12,5.4,12,12V1442.5z"/>
-                <text transform="matrix(1 0 0 1 1466.3574 1411.7119)" fill="#FDFFFC" font-family="'Montserrat'" font-size="76.2579">J</text>
-            </g>
-            <g id="Key-72">
-                <path fill="none" stroke="#FDFFFC" stroke-width="9" stroke-miterlimit="10" d="M1393.5,1442.5c0,6.6-5.4,12-12,12h-107
-				c-6.6,0-12-5.4-12-12v-107c0-6.6,5.4-12,12-12h107c6.6,0,12,5.4,12,12V1442.5z"/>
-                <text transform="matrix(1 0 0 1 1300.0742 1411.7119)" fill="#FDFFFC" font-family="'Montserrat'" font-size="76.2579">H</text>
-            </g>
-            <g id="Key-71">
-                <path fill="none" stroke="#FDFFFC" stroke-width="9" stroke-miterlimit="10" d="M751.5,1442.5c0,6.6-5.4,12-12,12h-107
-				c-6.6,0-12-5.4-12-12v-107c0-6.6,5.4-12,12-12h107c6.6,0,12,5.4,12,12V1442.5z"/>
-                <text transform="matrix(1 0 0 1 658.1689 1411.5645)" fill="#FDFFFC" font-family="'Montserrat'" font-size="76.2579">G</text>
-            </g>
-            <g id="Key-70">
-                <path fill="none" stroke="#FDFFFC" stroke-width="9" stroke-miterlimit="10" d="M564.5,1442.5c0,6.6-5.4,12-12,12h-107
-				c-6.6,0-12-5.4-12-12v-107c0-6.6,5.4-12,12-12h107c6.6,0,12,5.4,12,12V1442.5z"/>
-                <text transform="matrix(1 0 0 1 477.3369 1411.7119)" fill="#FDFFFC" font-family="'Montserrat'" font-size="76.2579">F</text>
-            </g>
-            <g id="Key-89">
-                <path fill="none" stroke="#FDFFFC" stroke-width="9" stroke-miterlimit="10" d="M1278.5,638.5c0,6.6-5.4,12-12,12h-107
-				c-6.6,0-12-5.4-12-12v-107c0-6.6,5.4-12,12-12h107c6.6,0,12,5.4,12,12V638.5z"/>
-                <text transform="matrix(1 0 0 1 1190.5742 607.7119)" fill="#FDFFFC" font-family="'Montserrat'" font-size="76.2579">Y</text>
-            </g>
-            <g id="Key-84">
-                <path fill="none" stroke="#FDFFFC" stroke-width="9" stroke-miterlimit="10" d="M928.5,638.5c0,6.6-5.4,12-12,12h-107
-				c-6.6,0-12-5.4-12-12v-107c0-6.6,5.4-12,12-12h107c6.6,0,12,5.4,12,12V638.5z"/>
-                <text transform="matrix(1 0 0 1 841.3369 607.7119)" fill="#FDFFFC" font-family="'Montserrat'" font-size="76.2579">T</text>
-            </g>
-        </g>
+
     </g>
 </svg>
 
 
-<!-- Audio stuff -->
-<audio id="Big-Rack-Tom-Audio">
-    <source src="https://s3.amazonaws.com/iamjoshellis-codepen/pens-of-rock/drums/Big-Rack-Tom.mp3" preload="auto" type="audio/mp3" />
-</audio>
-<audio id="Crash-Audio">
-    <source src="https://s3.amazonaws.com/iamjoshellis-codepen/pens-of-rock/drums/Crash.mp3" preload="auto" type="audio/mp3" />
-</audio>
-<audio id="Floor-Tom-Audio">
-    <source src="https://s3.amazonaws.com/iamjoshellis-codepen/pens-of-rock/drums/Floor-Tom.mp3" preload="auto" type="audio/mp3" />
-</audio>
-<audio id="Hi-Hat-Closed-Audio">
-    <source src="https://s3.amazonaws.com/iamjoshellis-codepen/pens-of-rock/drums/Hi-Hat-Closed.mp3" preload="auto" type="audio/mp3" />
-</audio>
-<audio id="Hi-Hat-Open-Audio">
-    <source src="https://s3.amazonaws.com/iamjoshellis-codepen/pens-of-rock/drums/High-Hat-Open.mp3" preload="auto" type="audio/mp3" />
-</audio>
-<audio id="Kick-Audio">
-    <source src="https://s3.amazonaws.com/iamjoshellis-codepen/pens-of-rock/drums/Kick.mp3" preload="auto" type="audio/mp3" />
-</audio>
-<audio id="Small-Rack-Tom-Audio">
-    <source src="https://s3.amazonaws.com/iamjoshellis-codepen/pens-of-rock/drums/Small-Rack-Tom.mp3" preload="auto" type="audio/mp3" />
-</audio>
-<audio id="Snare-Audio">
-    <source src="https://s3.amazonaws.com/iamjoshellis-codepen/pens-of-rock/drums/Snare.mp3" preload="auto" type="audio/mp3" />
-</audio>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 
 <script>
@@ -812,32 +752,25 @@
     // crash varibles
     crashCymbolAll = document.getElementById('Crash');
     crashCymbol = document.getElementById('Crash-Cymbol');
-    crashAudio = document.getElementById('Crash-Audio');
     // right tom drum varibles
     rightTomDrumAll = document.getElementById('Tom-Right-All');
     rightTomDrum = document.getElementById('Tom-Right-Drum');
-    smallTomAudio = document.getElementById('Small-Rack-Tom-Audio');
     // left tom drum varibles
     leftTomDrumAll = document.getElementById('Tom-Left-All');
     leftTomDrum = document.getElementById('Tom-Left-Drum');
-    bigTomAudio = document.getElementById('Big-Rack-Tom-Audio');
     // hi-hat varibles
     hiHatAll = document.getElementById('Hi-Hat');
     hiHatTop = document.getElementById('Hi-Hat-Top');
     hiHatBottom = document.getElementById('Hi-Hat-Bottom');
     hiHatStandTop = document.getElementById('Hi-Hat-Stand-Top');
-    hiHatOpenAudio = document.getElementById('Hi-Hat-Open-Audio');
-    hiHatClosedAudio = document.getElementById('Hi-Hat-Closed-Audio');
+
     // floor tom drum varibles
     floorTomDrumAll = document.getElementById('Floor-Tom');
-    floorTomAudio = document.getElementById('Floor-Tom-Audio');
     // snare drum varibles
     snareDrumAll = document.getElementById('Snare');
     snareDrum = document.getElementById('Snare-Drum');
-    snareAudio = document.getElementById('Snare-Audio');
     // kick drum varibles
     kickDrumAll = document.getElementById('Kick');
-    kickAudio = document.getElementById('Kick-Audio');
     // Autoplay button
     autoButton = document.getElementById('auto-button');
 
@@ -848,21 +781,14 @@
     crashtl.to(crashCymbol, 0.1, {rotation: 8, transformOrigin: "50% 50%"})
         .to(crashCymbol,1.5, {rotation: 0, transformOrigin: "50% 50%", ease: Elastic.easeOut.config(2.5, 0.3)});
 
-    // crash audio
-    function playCrashAudio() {
-        crashAudio.currentTime = 0;
-        crashAudio.play();
-    }
-
     // crash stuff
-    function crash(){
+    function crash_hit(){
         crashtl.restart();
         crashtl.play();
-        playCrashAudio();
     }
 
     // Do the crash stuff when clicked
-    crashCymbolAll.addEventListener("click", crash);
+    crashCymbolAll.addEventListener("click", crash_hit);
 
     // right tom drum wobble
     var rightTomtl = new TimelineMax({
@@ -874,17 +800,11 @@
         .to(rightTomDrum, 0.4, {scale: 1, transformOrigin: "50% 50%", ease: Elastic.easeOut})
         .to(rightTomDrumAll, 0.6, {rotation: 0, transformOrigin: "0 50%", ease: Elastic.easeOut}, '-=0.4');
 
-    // right tom audio
-    function playSmallTomAudio() {
-        smallTomAudio.currentTime = 0;
-        smallTomAudio.play();
-    }
 
     // right tom stuff
     function rightTom(){
         rightTomtl.restart();
         rightTomtl.play();
-        playSmallTomAudio();
     }
 
     // Do the right tom stuff when clicked
@@ -900,17 +820,11 @@
         .to(leftTomDrum, 0.4, {scale: 1, transformOrigin: "50% 50%", ease: Elastic.easeOut})
         .to(leftTomDrumAll, 0.6, {rotation: 0, transformOrigin: "100% 50%", ease: Elastic.easeOut}, '-=0.4');
 
-    // left tom audio
-    function playBigTomAudio() {
-        bigTomAudio.currentTime = 0;
-        bigTomAudio.play();
-    }
 
     // left tom tl stuff
     function leftTom(){
         leftTomtl.restart();
         leftTomtl.play();
-        playBigTomAudio();
     }
 
     // Do the left tom stuff when clicked
@@ -924,17 +838,11 @@
         .to(floorTomDrumAll, 0.1, {scaleY: 0.95, transformOrigin: "50% 100%", ease: Expo.easeOut}, '0')
         .to(floorTomDrumAll, 0.4, {scale: 1, transformOrigin: "50% 100%", ease: Elastic.easeOut});
 
-    // floor tom audio
-    function playFloorTomAudio() {
-        floorTomAudio.currentTime = 0;
-        floorTomAudio.play();
-    }
 
     // floor tom tl stuff
     function floorTom(){
         floorTomtl.restart();
         floorTomtl.play();
-        playFloorTomAudio();
     }
 
     // Do the floor tom stuff when clicked
@@ -948,21 +856,16 @@
         .to(snareDrum, 0.1, {scaleY: 0.9, transformOrigin: "50% 100%", ease: Expo.easeOut}, '0')
         .to(snareDrum, 0.4, {scale: 1, transformOrigin: "50% 100%", ease: Elastic.easeOut});
 
-    // snare audio
-    function playSnareAudio() {
-        snareAudio.currentTime = 0;
-        snareAudio.play();
-    }
+
 
     // snare tl stuff
-    function snare(){
+    function snare_hit(){
         snaretl.restart();
         snaretl.play();
-        playSnareAudio();
     }
 
     // Do the snare stuff when clicked
-    snareDrumAll.addEventListener("click", snare);
+    snareDrumAll.addEventListener("click", snare_hit);
 
     // kick drum wobble
     var kicktl = new TimelineMax({
@@ -971,17 +874,11 @@
     kicktl.to(kickDrumAll, 0.1, {scale: 1.02, transformOrigin: "50% 100%", ease: Expo.easeOut})
         .to(kickDrumAll, 0.4, {scale: 1, transformOrigin: "50% 100%", ease: Elastic.easeOut});
 
-    // kick audio
-    function playKickAudio() {
-        kickAudio.currentTime = 0;
-        kickAudio.play();
-    }
 
     // kick tl stuff
     function kick(){
         kicktl.restart();
         kicktl.play();
-        playKickAudio();
     }
 
     // Do the kick stuff when clicked
@@ -1000,15 +897,6 @@
     hiHattl.to([hiHatTop, hiHatBottom], 0.1, {rotation: -4, transformOrigin: "50% 50%"})
         .to([hiHatTop, hiHatBottom], 0.6, {rotation: 0, transformOrigin: "50% 50%", ease: Elastic.easeOut.config(1.5, 0.2)});
 
-    // high hat audio
-    function playHiHatClosedAudio() {
-        hiHatClosedAudio.currentTime = 0;
-        hiHatClosedAudio.play();
-    }
-    function playHiHatOpenAudio() {
-        hiHatOpenAudio.currentTime = 0;
-        hiHatOpenAudio.play();
-    }
 
     // hi-hat counter and tl stuff
     hiHati = 0;
@@ -1016,64 +904,12 @@
         ++hiHati;
         hiHattl.restart();
         hiHattl.play();
-        if (hiHati < 8) {
-            hiHatUptl.reverse();
-            playHiHatClosedAudio();
-        } else {
-            hiHatUptl.play();
-            playHiHatOpenAudio();
-            hiHati = 0;
-        }
+        hiHatUptl.reverse();
+
     }
 
     // Do the hi-hat stuff when clicked
     hiHatAll.addEventListener("click", hiHat);
 
-    // key guide
-    allKeys = document.getElementById('All-Keys');
-    key66 = document.getElementById('Key-66');
-    key72 = document.getElementById('Key-72');
-
-    // key wobble
-    function animateKey(key) {
-        keytl = new TimelineMax({
-            paused: true
-        });
-        keytl.to(key, 0.1, {scale: 1.1, transformOrigin: "50% 50%", ease: Expo.easeOut})
-            .to(key, 0.4, {scale: 1, transformOrigin: "50% 50%", ease: Elastic.easeOut});
-        keytl.restart();
-        keytl.play();
-    }
-
-    // key triggers
-    document.onkeydown = function(e) {
-        allKeys.classList.remove("hidden");
-        thisKeyID = 'Key-' + e.keyCode;
-        thisKey = document.getElementById(thisKeyID);
-        animateKey(thisKey);
-        switch (e.keyCode) {
-            case 74:
-                hiHat();
-                break;
-            case 72:
-                snare();
-                break;
-            case 66:
-                kick();
-                break;
-            case 71:
-                floorTom();
-                break;
-            case 70:
-                crash();
-                break;
-            case 84:
-                leftTom();
-                break;
-            case 89:
-                rightTom();
-                break;
-        }
-    };
 
 </script>

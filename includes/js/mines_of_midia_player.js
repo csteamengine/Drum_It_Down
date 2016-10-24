@@ -1,8 +1,11 @@
 // TODO: Populate these songs programmatically with user input
+
+
+
 var songId = 0;
 var songs = [$('#song_file').val()];
 var player;
-
+var drumTrack = 9;
 if (typeof (console) === "undefined") var console = {
     log: function () {
     }
@@ -25,14 +28,7 @@ var pausePlayStop = function (stop) {
 //noinspection JSUnusedLocalSymbols
 eventjs.add(window, "load", function (event) {
     /// TODO: Replace the piano keys with an SVG drum kit.
-    var colors = document.getElementById("colors");
-    var colorElements = [];
-    for (var n = 0; n < 88; n++) {
-        var d = document.createElement("div");
-        d.innerHTML = MIDI.noteToKey[n + 21];
-        colorElements.push(d);
-        colors.appendChild(d);
-    }
+
 
     /// Show a loading image while everything is loading up
     MIDI.loader = new sketch.ui.Timer;
@@ -47,23 +43,38 @@ eventjs.add(window, "load", function (event) {
         },
         onsuccess: function () {
             player = MIDI.Player;
-            player.timeWarp = .85; // speed the song is played back
+            player.timeWarp = 1; // speed the song is played back
             player.loadFile("midi_files/" + songs[songId], onSuccessfulSongLoad);
+
 
             /// control the piano keys colors
             player.addListener(function (data) {
-                var pianoKey = data.note - 21;
-                var d = colorElements[pianoKey];
-                if (d) {
-                    if (data.message === 144) {
-//                            console.log(data);
-                        d.style.background = '#f00';
-                        d.style.color = "#fff";
-                    } else {
-                        d.style.background = "";
-                        d.style.color = "";
+
+                var bass = [35,36];
+                var crash = [49,51,53,57];
+                var low_tom = [41,43];
+                var mid_tom = [45,47];
+                var high_tom = [48,50];
+                var snare = [38,40];
+                var high_hat = [42,44,46];
+                if(data.channel == drumTrack){
+                    if(bass.indexOf(data.note) != -1){
+                        kick();
+                    }else if(crash.indexOf(data.note) != -1){
+                        crash_hit();
+                    }else if(high_tom.indexOf(data.note) != -1){
+                        rightTom();
+                    }else if(mid_tom.indexOf(data.note) != -1){
+                        leftTom();
+                    }else if(low_tom.indexOf(data.note) != -1){
+                        floorTom();
+                    }else if(snare.indexOf(data.note) != -1){
+                        snare_hit();
+                    }else if(high_hat.indexOf(data.note) != -1){
+                        hiHat();
                     }
                 }
+
             });
 
             /// Show the player progress bar
@@ -74,18 +85,23 @@ eventjs.add(window, "load", function (event) {
 
 var onSuccessfulSongLoad = function (onsuccess) {
     // Show song filename
-
-    // Default drum track is 9
-    var drumTrack = 9;
-
+//TODO might need to loadMidiFile again so that it recalculates the endTime.
+    if(player.endTime < parseInt($('#duration').val())){
+        //TODO figure out how to change the timeWarp here. This is the right place.
+        //The following correctly changes the timeWarp, just need to get it to change to the right value.
+        // player.timeWarp = 3;
+        // player.loadFile("midi_files/" + songs[songId], onSuccessfulSongLoad);
+        // return;
+    }else if(player.endTime < parseInt($('#duration').val())){
+        //TODO figure out how to change the timeWarp here.
+    }
     // Log all meta data
     for (var i = 0; i < player.data.length; i++) {
         var obj = player.data[i][0];
         if (obj.event.type == "meta") {
-            console.log(obj.event.subtype + ": " + ((obj.event.text) ? obj.event.text : ""));
-            console.log(obj);
+
             if (obj.event.subtype == "trackName" && obj.event.text && obj.event.text.toLowerCase() == "drums") {
-//                    drumTrack = obj.track;
+                // drumTrack = obj.track;
                 console.log("DRUM TRACK: " + drumTrack);
             }
         }
