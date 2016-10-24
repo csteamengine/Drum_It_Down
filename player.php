@@ -39,7 +39,7 @@ if($action != ""){
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title>Mines of MIDIa</title>
-    <link rel="icon" type="image/x-icon" href="favicon.png?v=2"/>
+    <link rel="icon" type="image/x-icon" href="favicon.png?v=3"/>
     <!-- midi.js css -->
     <link href="includes/css/MIDIPlayer.css" rel="stylesheet" type="text/css"/>
     <!-- shim -->

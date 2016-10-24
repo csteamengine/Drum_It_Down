@@ -24,7 +24,7 @@ include "includes/php/general.php";
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Mines of Midia</title>
-    <link rel="icon" type="image/x-icon" href="favicon.png?v=2"/>
+    <link rel="icon" type="image/x-icon" href="favicon.png?v=3"/>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="includes/css/shared.css">
     <link rel="stylesheet" href="includes/css/header.css">
