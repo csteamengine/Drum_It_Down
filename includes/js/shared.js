@@ -185,6 +185,8 @@ function specify_song(id) {
                 var json = JSON.parse(php_script_response);
                 if(json['code'] == 200){
                     window.location = "player.php?action=play&track="+json['track']+"&file="+json['file'];
+                }else{
+                    console.log(json);
                 }
             }
         });

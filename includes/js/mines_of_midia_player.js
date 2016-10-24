@@ -36,7 +36,7 @@ eventjs.add(window, "load", function (event) {
     /// Load the MIDI plugin to play music
     MIDI.loadPlugin({
         soundfontUrl: "includes/soundfonts/",
-        instrument: "synth_drum",
+        instruments: "synth_drum, acoustic_grand_piano",
         onprogress: function (state, progress) {
             // update the MIDI loader progress graphic as it loads
             MIDI.loader.setValue(progress * 100);
@@ -82,18 +82,31 @@ eventjs.add(window, "load", function (event) {
         }
     });
 });
-
+var lower = false;
+var higher = false;
+var tempo_found = false;
 var onSuccessfulSongLoad = function (onsuccess) {
     // Show song filename
-//TODO might need to loadMidiFile again so that it recalculates the endTime.
-    if(player.endTime < parseInt($('#duration').val())){
-        //TODO figure out how to change the timeWarp here. This is the right place.
-        //The following correctly changes the timeWarp, just need to get it to change to the right value.
-        // player.timeWarp = 3;
-        // player.loadFile("midi_files/" + songs[songId], onSuccessfulSongLoad);
-        // return;
-    }else if(player.endTime < parseInt($('#duration').val())){
-        //TODO figure out how to change the timeWarp here.
+
+    //The following adjusts the timeWarp to match it as close to the spotify songs duration as possible.
+    var time_goal = parseInt($('#duration').val())
+    if(player.endTime < time_goal){
+        lower = true;
+        if(!higher){
+            // The following correctly changes the timeWarp, just need to get it to change to the right value.
+            player.timeWarp = player.timeWarp += .01;
+            player.loadFile("midi_files/" + songs[songId], onSuccessfulSongLoad);
+        }else{
+            tempo_found = true;
+        }
+    }else if(player.endTime > time_goal){
+        higher = true;
+        if(!lower){
+            player.timeWarp = player.timeWarp -= .01;
+            player.loadFile("midi_files/" + songs[songId], onSuccessfulSongLoad);
+        }else{
+            tempo_found = true;
+        }
     }
     // Log all meta data
     for (var i = 0; i < player.data.length; i++) {

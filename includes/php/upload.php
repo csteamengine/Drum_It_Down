@@ -79,10 +79,7 @@ if($action != ""){
             $json = array('code' => 200, 'track' => $id, 'file' => mysqli_insert_id($conn));
             echo json_encode($json);
             exit;
-            //TODO rename temp.mid and return the information to the client.
-            //TODO get all the GET variables that are passed in and rename the file and store the info in the database.
-            //Store the new midi file in the db and point it towards the corresponding track.
-            //Use rename() to rename the file to a relevant file name
+
             break;
         case 'upload':
             $target_dir = $_SERVER['DOCUMENT_ROOT']."/midi_files/";
