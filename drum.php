@@ -8,35 +8,6 @@
 
 ?>
 
-<style>
-    html,
-    body {
-        overflow: hidden;
-    }
-
-    body {
-        background: #EC4A5E;
-    }
-
-    svg {
-        height: 100vh;
-        width: 100vw;
-        display: block;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    }
-
-    i {
-        color: $white;
-    }
-
-    i:hover {
-        color: $gray-light;
-    }
-
-    #Drums:hover {
-        cursor: pointer;
-    }
-</style>
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="300 300 1400 1400">
     <g id="Drums">
@@ -46,7 +17,7 @@
             <g id="Snare">
                 <g id="Snare-Drum">
 
-                    <rect x="1219" y="885" fill="#0BC1F8" stroke="#333333" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="223" height="110"/>
+                    <rect x="1219" y="885" fill="#7A9A95" stroke="#333333" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="223" height="110"/>
                     <line fill="none" stroke="#0891BA" stroke-width="8" stroke-miterlimit="10" x1="1438" y1="914" x2="1223" y2="914"/>
                     <g>
 
@@ -174,7 +145,7 @@
             <g id="Floor-Tom">
                 <g id="Floor-Tom-Drum">
 
-                    <rect x="541" y="878" fill="#0BC1F8" stroke="#333333" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="287" height="320"/>
+                    <rect x="541" y="878" fill="#7A9A95" stroke="#333333" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="287" height="320"/>
                     <line fill="none" stroke="#0891BA" stroke-width="8" stroke-miterlimit="10" x1="824" y1="907" x2="545" y2="907"/>
                     <g>
                         <g>
@@ -369,7 +340,7 @@
                     <g id="Tom-Left-All">
                         <g id="Tom-Left-Drum">
 
-                            <rect x="750" y="679" fill="#0BC1F8" stroke="#333333" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="221" height="184"/>
+                            <rect x="750" y="679" fill="#7A9A95" stroke="#333333" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="221" height="184"/>
                             <line fill="none" stroke="#0891BA" stroke-width="8" stroke-miterlimit="10" x1="754" y1="708" x2="967" y2="708"/>
                             <g>
                                 <g>
@@ -446,7 +417,7 @@
                     <g id="Tom-Right-All">
                         <g id="Tom-Right-Drum">
 
-                            <rect x="1101" y="679" fill="#0BC1F8" stroke="#333333" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="221" height="184"/>
+                            <rect x="1101" y="679" fill="#7A9A95" stroke="#333333" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="221" height="184"/>
                             <line fill="none" stroke="#0891BA" stroke-width="8" stroke-miterlimit="10" x1="1105" y1="708" x2="1318" y2="708"/>
                             <g>
                                 <g>
@@ -550,7 +521,7 @@
                     </g>
                     <g id="Kick-Drum">
 
-                        <circle fill="#0BC1F8" stroke="#333333" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="1035.7" cy="1085" r="210"/>
+                        <circle fill="#7A9A95" stroke="#333333" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="1035.7" cy="1085" r="210"/>
                         <circle id="Inner-Drum-Wobble" fill="none" cx="1035.7" cy="1085" r="201.2"/>
 
                         <circle id="Inner-Drum" fill="#FDFFFC" stroke="#333333" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="1035.7" cy="1085" r="192.6"/>

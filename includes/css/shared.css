@@ -1,0 +1,34 @@
+/*#3f2860*/
+/*#90C5A9*/
+/*#7a9a95*/
+/*#EF6D3B*/
+/*#FA8B60*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #90C5A9;
+}
+svg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*display: block;*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+i {
+    color: white;
+}
+
+i:hover {
+    color: gray-light;
+}
+
+#Drums:hover {
+    cursor: pointer;
+}

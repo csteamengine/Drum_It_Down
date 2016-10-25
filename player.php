@@ -39,6 +39,10 @@ if($action != ""){
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title>Mines of MIDIa</title>
+    <link rel="stylesheet" href="includes/css/player.css">
+    <link rel="stylesheet" href="includes/css/shared.css">
+    <link rel="stylesheet" href="includes/css/header.css">
+    <link rel="stylesheet" href="includes/css/footer.css">
     <link rel="icon" type="image/x-icon" href="favicon.png?v=3"/>
     <!-- midi.js css -->
     <link href="includes/css/MIDIPlayer.css" rel="stylesheet" type="text/css"/>
@@ -66,15 +70,17 @@ if($action != ""){
     <script src="includes/js/timer.js" type="text/javascript"></script>
     <script src="includes/js/event.js" type="text/javascript"></script>
 </head>
+<?php
+include "includes/php/header.php";
+?>
 <body>
 <input type="hidden" id="song_file" value="<?= $file['file_name'] ?>">
 <input type="hidden" id="duration" value="<?= $track['duration'] ?>">
-<h1>Mines of MIDIa</h1>
+<h2 id="title"><?= $track['title']." -- ". $track['artist'] ?></h2>
 
 <div style="position: fixed; top: 0; left: 0; z-index: 4; overflow: hidden;" id="colors"></div>
-<div style="margin-bottom: 50px; border: 1px solid #000; background: rgba(255,255,255,0.5); border-radius: 11px; float: left; width: 800px; padding-bottom: 15px; position: relative; z-index: 2;">
-    <div class="player"
-         style="height: 42px; box-shadow: 0 -1px #000; margin-bottom: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0;">
+<div id="player" style="">
+    <div class="player">
         <div style="margin: 0 auto; width: 160px; float: right;">
             <input type="image" src="includes/images/pause.png" align="absmiddle" value="pause"
                    onclick="pausePlayStop()" id="pausePlayStop">
@@ -93,12 +99,6 @@ if($action != ""){
             <span id="time2" class="time" style="text-align: left;">-0:00</span>
         </div>
     </div>
-    <div id="title"
-         style="background: rgba(255,255,0,0.5); position: relative;color: #000; z-index: -1;padding: 5px 11px 5px;">
-             <?= $track['title']." - ".$track['artist'] ?>
-    </div>
-    <p>This page is just for testing and figuring out how MIDI.js works. It can be built upon
-        as the MIDI player page for our app.</p>
 
 </div>
 <?php
@@ -108,4 +108,7 @@ include "drum.php";
 <script src="includes/js/jquery-2.2.4.min.js" type="text/javascript"></script>
 <script src="includes/js/mines_of_midia_player.js" type="text/javascript"></script>
 </body>
+<?php
+include "includes/php/footer.php";
+?>
 </html>

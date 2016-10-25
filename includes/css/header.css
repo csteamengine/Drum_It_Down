@@ -1,0 +1,19 @@
+/*#3f2860*/
+/*#90C5A9*/
+/*#7a9a95*/
+/*#EF6D3B*/
+/*#FA8B60*/
+header{
+    height: 50px;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    background-color:#3f2860;
+    color:#EF6D3B;
+}
+#header_title{
+    position: absolute;
+    margin: 10px auto;
+    width: 100%;
+    text-align: center;
+}
