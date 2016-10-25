@@ -44,9 +44,6 @@ if($action != ""){
     <link rel="stylesheet" href="includes/css/header.css">
     <link rel="stylesheet" href="includes/css/footer.css">
     <link rel="icon" type="image/x-icon" href="favicon.png?v=3"/>
-    <!-- midi.js css -->
-    <link href="includes/css/MIDIPlayer.css" rel="stylesheet" type="text/css"/>
-    <!-- shim -->
     <!--<script src="includes/shim/Base64.js" type="text/javascript"></script>-->
     <script src="includes/shim/Base64binary.js" type="text/javascript"></script>
     <script src="includes/shim/WebAudioAPI.js" type="text/javascript"></script>
