@@ -43,6 +43,8 @@ if($action != ""){
                 $count++;
             }
             $file_name = $file_name."_".$count.".mid";
+            $file_name = str_replace("'","", $file_name);
+            $file_name = str_replace("\\", "", $file_name);
             $rename = rename($_SERVER['DOCUMENT_ROOT']."/midi_files/".$file, $_SERVER['DOCUMENT_ROOT']."/midi_files/".$file_name);
             if(!$rename){
                 $json = array('code' => 404, 'error' => 'Failed to rename the file.', 'file_name' => $_SERVER['DOCUMENT_ROOT']."/midi_files/".$file_name, 'old' => $_SERVER['DOCUMENT_ROOT']."/midi_files/".$file);

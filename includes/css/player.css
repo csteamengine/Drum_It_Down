@@ -1,5 +1,7 @@
 #title{
-    position: relative;
-    margin: 0 auto;
+    position: absolute;
+    text-align: center;
+    bottom: 150px;
+    width: 100%;
     text-align: center;
 }

@@ -81,7 +81,7 @@ include "includes/php/header.php";
 <div style="position: fixed; top: 0; left: 0; z-index: 4; overflow: hidden;" id="colors"></div>
 <div id="player" style="">
     <div class="player">
-        <div style="margin: 0 auto; width: 160px; float: right;">
+        <div id="controls">
             <input type="image" src="includes/images/pause.png" align="absmiddle" value="pause"
                    onclick="pausePlayStop()" id="pausePlayStop">
             <input type="image" src="includes/images/stop.png" align="absmiddle" value="stop"
@@ -91,12 +91,12 @@ include "includes/php/header.php";
             <input type="image" src="includes/images/forward.png" align="absmiddle" value="stop"
                    onclick="player.getNextSong(+1);">
         </div>
-        <div class="time-controls" style="float: left; margin: 0; position: relative; top: 5px;">
+        <div class="time-controls">
             <span id="time1" class="time">0:00</span>
             <span id="capsule">
 					<span id="cursor"></span>
 				</span>
-            <span id="time2" class="time" style="text-align: left;">-0:00</span>
+            <span id="time2" class="time">-0:00</span>
         </div>
     </div>
 

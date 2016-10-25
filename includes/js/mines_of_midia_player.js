@@ -137,7 +137,7 @@ var MIDIPlayerPercentage = function (player) {
     // Adjust the play location when the user click-drags in the song progress bar.
     eventjs.add(capsule, "drag", function (event, self) {
         eventjs.cancel(event);
-        player.currentTime = (self.x) / 420 * player.endTime;
+        player.currentTime = (self.x) / 650 * player.endTime;
         if (player.currentTime < 0) player.currentTime = 0;
         if (player.currentTime > player.endTime) player.currentTime = player.endTime;
         if (self.state === "down") {

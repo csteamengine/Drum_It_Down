@@ -41,24 +41,31 @@ include "includes/php/general.php";
 include "includes/php/header.php";
 ?>
 <body>
-<h1>Mines of Midia</h1>
-<h2>Drums, Drums in the deep.</h2>
+
 <form id="file_upload" method="post" enctype="multipart/form-data">
     <input type="file" name="midi_file" id="midi_file">
-    <input type="submit" value="Upload">
+    <h4 id="file_name"></h4>
+    <div id="submit_div" hidden>
+        <input type="submit" value="Upload" id="submit">
+    </div>
 </form>
-<div id="song_guesses"></div>
+<button id="other_midi" hidden>Upload Another File</button>
+<div id="song_guesses" hidden>
+    <h3>No results for that search</h3>
+</div>
 <form id="search_song" hidden>
-    <h3>Didn't find the song you were looking for? Search here.</h3>
-    <input type="text" name="title" id="song_title" placeholder="Title">
+    <h3>Didn't find the song you were looking for?</h3>
+    <input type="text" name="title" id="song_title" placeholder="Search Again">
     <input type="submit" value="Search">
 </form>
+<h1 id="loading" hidden>Loading...</h1>
 
-<a href="player.html"><h2>Go to Player view!!! (Testing purposes)</h2></a>
 
-<a href="http://jazz-soft.net/demo/GeneralMidiPerc.html" target="_blank">This could prove useful later...</a><br>
-<a href="https://groovemonkee.com/pages/free-midi-loops" target="_blank">Might want to check out these drum loops...</a><br>
-<a href="https://en.wikipedia.org/wiki/General_MIDI#Percussion" target="_blank">We'll probably need these too...</a><br>
+<!--<a href="player.html"><h2>Go to Player view!!! (Testing purposes)</h2></a>-->
+<!---->
+<!--<a href="http://jazz-soft.net/demo/GeneralMidiPerc.html" target="_blank">This could prove useful later...</a><br>-->
+<!--<a href="https://groovemonkee.com/pages/free-midi-loops" target="_blank">Might want to check out these drum loops...</a><br>-->
+<!--<a href="https://en.wikipedia.org/wiki/General_MIDI#Percussion" target="_blank">We'll probably need these too...</a><br>-->
 </body>
 
 <?php
@@ -67,20 +74,49 @@ include "includes/php/footer.php";
 <script src="/includes/js/shared.js"></script>
 <!--suppress JSUnresolvedVariable -->
 <script>
+
     $().ready(function () {
+        $('#other_midi').click(function(){
+            $('#file_upload').show();
+            $('#song_guesses').html('');
+            $('#song_guesses').hide();
+            $('#specify_song').hide();
+        });
+        $("input[type=file]").each(function () {
+            var thisInput$ = $(this);
+            var newElement = $("<input type='button' value='Choose File' />");
+            newElement.click(function() {
+                thisInput$.click();
+            });
+            thisInput$.after(newElement);
+            thisInput$.hide();
+        });
         var midiFile;
         $('#file_upload').submit(function (event) {
             event.preventDefault();
+            $('#file_upload').hide();
             $('#search_song').show();
+            $('#other_midi').show();
+            $('#song_guesses').show();
             if ($('#midi_file').val() != null) {
                 upload_file();
             }
         });
         $('#search_song').submit(function (event) {
             event.preventDefault();
+            $('#file_upload').hide();
+            $('#song_guesses').show();
             search_song();
         });
-
+        $('#midi_file').change(function(){
+           if($('#midi_file').prop('files')[0] != null){
+               $('#file_name').html($('#midi_file').prop('files')[0].name);
+               $('#submit_div').show();
+           }else{
+               $('#file_name').html('');
+               $('#submit_div').hide();
+           }
+        });
     });
 </script>
 </html>

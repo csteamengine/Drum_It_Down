@@ -83,9 +83,10 @@ function guess_track_info(midiFile) {
                     $.getJSON(url, function (result) {
 
                         if (result.tracks.items.length > 0) {
+                            songGuesses.append('<h3 id="instructions">Click a song to pair it with the your midi file.</h3>');
 //                                top_hits.push(result.tracks.items[0].name + " -- " + result.tracks.items[0].artists[0].name);
                             songGuesses.append(
-                                '<div class="guess" >' + result.tracks.items[0].name + " -- " + result.tracks.items[0].artists[0].name + '<button onclick="specify_song(\'' + result.tracks.items[0].id + '\')">Select</button></div>'
+                                '<div class="guess" onclick="specify_song(\'' + result.tracks.items[0].id + '\')">' + result.tracks.items[0].name + " -- " + result.tracks.items[0].artists[0].name + '</div>'
                             );
                         }
                     });
@@ -103,7 +104,7 @@ function guess_track_info(midiFile) {
                     for (m = 0; m < result.tracks.items.length; m++) {
 //                            top_hits.push(result.tracks.items[m].name + " -- " + result.tracks.items[m].artists[0].name );
                         $('#song_guesses').append(
-                            '<div class="guess" >' + result.tracks.items[m].name.trim() + " -- " + result.tracks.items[m].artists[0].name.trim() + '<button onclick="specify_song(\'' + result.tracks.items[m].id + '\')">Select</button> </div>'
+                            '<div class="guess" onclick="specify_song(\'' + result.tracks.items[m].id + '\')" >' + result.tracks.items[m].name.trim() + " -- " + result.tracks.items[m].artists[0].name.trim() + '</div>'
                         );
                     }
                 }
@@ -156,11 +157,15 @@ function search_song() {
         var url = "https://api.spotify.com/v1/search?q=" + search_term + "&type=track&limit=" + limit;
         $.getJSON(url, function (result) {
             if (result.tracks.items.length > 0) {
+                songGuesses.append('<h3 id="instructions">Click a song to pair it with the your midi file.</h3>');
                 for (var m = 0; m < result.tracks.items.length; m++) {
                     songGuesses.append(
-                        '<div class="guess" >' + result.tracks.items[m].name.trim() + " -- " + result.tracks.items[m].artists[0].name.trim() + '<button onclick="specify_song(\'' + result.tracks.items[m].id + '\')">Select</button></div>'
+                        '<div class="guess" onclick="specify_song(\'' + result.tracks.items[m].id + '\')">' + result.tracks.items[m].name.trim() + " -- " + result.tracks.items[m].artists[0].name.trim() + '</div>'
                     );
                 }
+            }else{
+                songGuesses.append('<h3>No results for that search</h3>')
+
             }
 
         });
@@ -169,7 +174,11 @@ function search_song() {
 
 function specify_song(id) {
     $('#song_guesses').html('');
-
+    $('#song_guesses').hide();
+    $('#file_upload').hide();
+    $('#search_song').hide();
+    $('#loading').show();
+    $('#other_midi').hide();
     var url = "https://api.spotify.com/v1/tracks/" + id;
     $.getJSON(url, function (result) {
 

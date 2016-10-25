@@ -1,15 +1,26 @@
-/*#3f2860*/
-/*#90C5A9*/
-/*#7a9a95*/
-/*#EF6D3B*/
-/*#FA8B60*/
-
+/*#393939*/
+/*#ff5a09*/
+/*#F3843E*/
+/*#FF9900*/
+/*#6E6E6E*/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 *{
+    font-family: "Ubuntu", sans-serif;
     margin: 0;
     padding: 0;
 }
 body{
-    background-color: #90C5A9;
+    color: white;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #393939; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#555555, #333333); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#555555, #333333); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#555555, #333333); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#555555, #333333); /* Standard syntax */
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
 }
 svg {
     height: 100%;
