@@ -36,7 +36,7 @@ eventjs.add(window, "load", function (event) {
     /// Load the MIDI plugin to play music
     MIDI.loadPlugin({
         soundfontUrl: "includes/soundfonts/",
-        instruments: "synth_drum, acoustic_grand_piano",
+        instrument: "synth_drum",
         onprogress: function (state, progress) {
             // update the MIDI loader progress graphic as it loads
             MIDI.loader.setValue(progress * 100);
@@ -49,7 +49,6 @@ eventjs.add(window, "load", function (event) {
 
             /// control the piano keys colors
             player.addListener(function (data) {
-
                 var bass = [35,36];
                 var crash = [49,51,53,57];
                 var low_tom = [41,43];
@@ -122,6 +121,7 @@ var onSuccessfulSongLoad = function (onsuccess) {
 
     // Add MIDI drums
     MIDI.programChange(drumTrack, MIDI.GM.byName["synth_drum"].number);
+    //TODO figure out how to get other instruments playing too.
 
     // Start the player
     player.start(onsuccess);
