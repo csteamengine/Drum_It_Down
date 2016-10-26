@@ -45,7 +45,7 @@ eventjs.add(window, "load", function (event) {
             player = MIDI.Player;
             player.timeWarp = 1; // speed the song is played back
             player.loadFile("midi_files/" + songs[songId], onSuccessfulSongLoad);
-
+            $('#loading').show();
 
             /// control the piano keys colors
             player.addListener(function (data) {
@@ -55,7 +55,7 @@ eventjs.add(window, "load", function (event) {
                 var mid_tom = [45,47];
                 var high_tom = [48,50];
                 var snare = [38,40];
-                var high_hat = [42,44,46];
+                var high_hat = [42,44];
                 if(data.channel == drumTrack){
                     if(bass.indexOf(data.note) != -1){
                         kick();
@@ -106,6 +106,9 @@ var onSuccessfulSongLoad = function (onsuccess) {
         }else{
             tempo_found = true;
         }
+    }
+    if(tempo_found){
+        $('#loading').hide();
     }
     // Log all meta data
     for (var i = 0; i < player.data.length; i++) {
