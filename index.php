@@ -53,7 +53,7 @@ include "includes/php/header.php";
 <div id="song_guesses" hidden>
     <h3>No results for that search</h3>
 </div>
-<form id="search_song" hidden>
+<form id="search_song">
     <h3>Didn't find the song you were looking for?</h3>
     <input type="text" name="title" id="song_title" placeholder="Search Again">
     <input type="submit" value="Search">

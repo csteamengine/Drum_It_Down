@@ -14,10 +14,14 @@ form{
     text-align: left;
     position: relative;
     font-size: 20px;
+    height: 30px;
+    width: 100%;
+    overflow: hidden;
     cursor: pointer;
     cursor: hand;
     padding-top: 5px;
     padding-bottom: 5px;
+    padding-left:10px;
 }
 #instructions{
     position: absolute;
@@ -29,19 +33,26 @@ form{
 .guess:hover{
     background-color: rgba(0,0,0,.5);
 }
-.guess button{
-    cursor: pointer;
-    cursor: hand;
+.guess p{
+    margin: 0;
+    padding: 0;
+}
+.guess:hover div {
+    animation: slide 8s 2s infinite;
+}
+.guess audio{
     position: absolute;
     right: 10px;
+    top: 3px;
 }
 #song_guesses{
     padding: 20px 0 20px 0;
-    width: 400px;
+    width: 800px;
     position: relative;
     margin: 50px auto;
     border: 5px solid #E05151;
     border-radius: 10px;
+    overflow: hidden;
 }
 #file_upload{
     width: 400px;
@@ -168,4 +179,10 @@ input[type=submit]:active {
     top: 50%;
     left: 0;
 
+}
+@keyframes slide {
+    0% { margin-left: 0;  }
+
+    100% { margin-left: -200%;
+    }
 }

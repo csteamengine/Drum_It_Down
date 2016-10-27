@@ -164,14 +164,14 @@ root.ui.Timer = function(opts) {
 		cancelAnimationFrame(requestId);
 		///
 		that.hidden = false;
-		parent.style.display = 'block';
-		parent.style.opacity = 1.0;
+		// parent.style.display = 'block';
+		// parent.style.opacity = 1.0;
 		///
 		if ((value = Math.ceil(percent)) >= 100) {
 			that.hide();
 		}
 		///
-		render();
+		// render();
 	};
 
 	addStyleSheet();
