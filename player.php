@@ -76,6 +76,7 @@ include "includes/php/header.php";
 <h2 id="title"><?= $track['title']." -- ". $track['artist'] ?></h2>
 
 <div style="position: fixed; top: 0; left: 0; z-index: 4; overflow: hidden;" id="colors"></div>
+
 <div id="player" style="">
     <div class="player">
         <div id="controls">
@@ -88,6 +89,8 @@ include "includes/php/header.php";
             <input type="image" src="includes/images/forward.png" align="absmiddle" value="stop"
                    onclick="player.getNextSong(+1);">
         </div>
+
+
         <div class="time-controls">
             <span id="time1" class="time">0:00</span>
             <span id="capsule">

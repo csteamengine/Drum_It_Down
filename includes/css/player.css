@@ -88,3 +88,202 @@ div.player div.time-controls {
     text-align: center;
     bottom: 100px;
 }
+#loading{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,.5);
+}
+#loading h1{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -60px;
+    margin-top: -60px;
+}
+
+
+.blob {
+    width: 2rem;
+    height: 2rem;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 1rem);
+    top: calc(50% - 1rem);
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.15);
+}
+
+.blob-2 {
+    animation: animate-to-2 1.5s infinite;
+}
+
+.blob-3 {
+    animation: animate-to-3 1.5s infinite;
+}
+
+.blob-1 {
+    animation: animate-to-1 1.5s infinite;
+}
+
+.blob-4 {
+    animation: animate-to-4 1.5s infinite;
+}
+
+.blob-0 {
+    animation: animate-to-0 1.5s infinite;
+}
+
+.blob-5 {
+    animation: animate-to-5 1.5s infinite;
+}
+
+@keyframes animate-to-2 {
+    25%,
+    75% {
+        transform: translateX(-1.5rem) scale(0.75);
+    }
+    95% {
+        transform: translateX(0rem) scale(1);
+    }
+}
+
+@keyframes animate-to-3 {
+    25%,
+    75% {
+        transform: translateX(1.5rem) scale(0.75);
+    }
+    95% {
+        transform: translateX(0rem) scale(1);
+    }
+}
+
+@keyframes animate-to-1 {
+    25% {
+        transform: translateX(-1.5rem) scale(0.75);
+    }
+    50%,
+    75% {
+        transform: translateX(-4.5rem) scale(0.6)
+    }
+    95% {
+        transform: translateX(0rem) scale(1);
+    }
+}
+
+@keyframes animate-to-4 {
+    25% {
+        transform: translateX(1.5rem) scale(0.75);
+    }
+    50%,
+    75% {
+        transform: translateX(4.5rem) scale(0.6)
+    }
+    95% {
+        transform: translateX(0rem) scale(1);
+    }
+}
+
+@keyframes animate-to-0 {
+    25% {
+        transform: translateX(-1.5rem) scale(0.75);
+    }
+    50% {
+        transform: translateX(-4.5rem) scale(0.6)
+    }
+    75% {
+        transform: translateX(-7.5rem) scale(0.5)
+    }
+    95% {
+        transform: translateX(0rem) scale(1);
+    }
+}
+
+@keyframes animate-to-5 {
+    25% {
+        transform: translateX(1.5rem) scale(0.75);
+    }
+    50% {
+        transform: translateX(4.5rem) scale(0.6)
+    }
+    75% {
+        transform: translateX(7.5rem) scale(0.5)
+    }
+    95% {
+        transform: translateX(0rem) scale(1);
+    }
+}
+#mute_bass{
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    top: 50%;
+    margin-top: -10px;
+    opacity: .5;
+    pointer-events: none;
+}
+#mute_crash{
+    height: 100px;
+    position: absolute;
+    left: 33%;
+    margin-left: -30px;
+    top: 20%;
+    margin-top: -10px;
+    opacity: .5;
+    pointer-events: none;
+}
+#mute_floortom{
+    height: 100px;
+    position: absolute;
+    left: 37%;
+    margin-left: -30px;
+    top: 45%;
+    margin-top: -10px;
+    opacity: .5;
+    pointer-events: none;
+}
+#mute_hightom{
+    height: 100px;
+    position: absolute;
+    left: 57%;
+    margin-left: -30px;
+    top: 28%;
+    margin-top: -10px;
+    opacity: .5;
+    pointer-events: none;
+}
+#mute_midtom{
+    height: 100px;
+    position: absolute;
+    left: 43%;
+    margin-left: -30px;
+    top: 28%;
+    margin-top: -10px;
+    opacity: .5;
+    pointer-events: none;
+}
+#mute_snare{
+    height: 100px;
+    position: absolute;
+    left: 62%;
+    margin-left: -30px;
+    top: 40%;
+    margin-top: -10px;
+    opacity: .5;
+    pointer-events: none;
+}
+#mute_hihat{
+    height: 100px;
+    position: absolute;
+    left: 68%;
+    margin-left: -30px;
+    top: 30%;
+    margin-top: -10px;
+    opacity: .5;
+    pointer-events: none;
+}

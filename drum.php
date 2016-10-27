@@ -694,7 +694,13 @@
 
     </g>
 </svg>
-
+<img src="/includes/images/mute.png" id="mute_bass" hidden>
+<img src="/includes/images/mute.png" id="mute_snare" hidden>
+<img src="/includes/images/mute.png" id="mute_hihat" hidden>
+<img src="/includes/images/mute.png" id="mute_hightom" hidden>
+<img src="/includes/images/mute.png" id="mute_midtom" hidden>
+<img src="/includes/images/mute.png" id="mute_floortom" hidden>
+<img src="/includes/images/mute.png" id="mute_crash" hidden>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 
@@ -740,7 +746,10 @@
     }
 
     // Do the crash stuff when clicked
-    crashCymbolAll.addEventListener("click", crash_hit);
+    crashCymbolAll.addEventListener("click", function(){
+        crash_hit();
+        $('#mute_crash').toggle();
+    });
 
     // right tom drum wobble
     var rightTomtl = new TimelineMax({
@@ -760,7 +769,10 @@
     }
 
     // Do the right tom stuff when clicked
-    rightTomDrumAll.addEventListener("click", rightTom);
+    rightTomDrumAll.addEventListener("click", function(){
+        rightTom();
+        $('#mute_hightom').toggle();
+    });
 
     // left tom drum wobble
     var leftTomtl = new TimelineMax({
@@ -780,7 +792,10 @@
     }
 
     // Do the left tom stuff when clicked
-    leftTomDrumAll.addEventListener("click", leftTom);
+    leftTomDrumAll.addEventListener("click", function(){
+        leftTom();
+        $('#mute_midtom').toggle();
+    });
 
     // floor tom drum wobble
     var floorTomtl = new TimelineMax({
@@ -798,7 +813,10 @@
     }
 
     // Do the floor tom stuff when clicked
-    floorTomDrumAll.addEventListener("click", floorTom);
+    floorTomDrumAll.addEventListener("click", function(){
+        floorTom();
+        $('#mute_floortom').toggle();
+    });
 
     // snare drum wobble
     var snaretl = new TimelineMax({
@@ -817,7 +835,10 @@
     }
 
     // Do the snare stuff when clicked
-    snareDrumAll.addEventListener("click", snare_hit);
+    snareDrumAll.addEventListener("click", function(){
+        snare_hit();
+        $('#mute_snare').toggle();
+    });
 
     // kick drum wobble
     var kicktl = new TimelineMax({
@@ -834,7 +855,10 @@
     }
 
     // Do the kick stuff when clicked
-    kickDrumAll.addEventListener("click", kick);
+    kickDrumAll.addEventListener("click", function(){
+        kick();
+        $('#mute_bass').toggle();
+    });
 
     // hi-hat stand up/down
     var hiHatUptl = new TimelineMax({
@@ -861,7 +885,10 @@
     }
 
     // Do the hi-hat stuff when clicked
-    hiHatAll.addEventListener("click", hiHat);
+    hiHatAll.addEventListener("click", function(){
+        hiHat();
+        $('#mute_hihat').toggle();
+    });
 
 
 </script>
