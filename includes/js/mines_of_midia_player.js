@@ -57,7 +57,7 @@ eventjs.add(window, "load", function (event) {
                 var snare = [38,40];
                 var high_hat = [42,44];
                 if(data.channel == drumTrack){
-                    if(bass.indexOf(data.note) != -1 && $('#mute_bass').is(':visible')){
+                    if(bass.indexOf(data.note) != -1){
                         kick();
                     }else if(crash.indexOf(data.note) != -1){
                         crash_hit();

@@ -8,7 +8,6 @@
 
 ?>
 
-
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="300 300 1400 1400">
     <g id="Drums">
         <g>
@@ -493,7 +492,9 @@
                     </g>
                 </g>
                 <g id="Kick">
+
                     <g id="Kick-Stand">
+
                         <g>
 
                             <path fill="#aaaaaa" stroke="#333333" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
@@ -525,7 +526,7 @@
                         <circle id="Inner-Drum-Wobble" fill="none" cx="1035.7" cy="1085" r="201.2"/>
 
                         <circle id="Inner-Drum" fill="#FDFFFC" stroke="#333333" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="1035.7" cy="1085" r="192.6"/>
-                        <g id="Drum-Logo-Wobble">
+                        <g id="Drum-Logo-Wobble" style="position: relative">
                             <g>
                                 <path fill="none" d="M980.6,942.2l-4.3,19.9h0.8c7.1,0,12.2-8.3,12.2-15c0-4.8-2.7-9-9.4-9c-13.9,0-23.1,7.8-23.1,20.8
 								c0,4.4,1.1,5.1,1.2,5.8c-5.9,0-9.2-2.1-9.2-8.3c0-11.4,15.8-22.3,30.1-22.3c13.5,0,19.4,6.7,19.4,13.7
@@ -694,13 +695,6 @@
 
     </g>
 </svg>
-<img src="/includes/images/mute.png" id="mute_bass" hidden>
-<img src="/includes/images/mute.png" id="mute_snare" hidden>
-<img src="/includes/images/mute.png" id="mute_hihat" hidden>
-<img src="/includes/images/mute.png" id="mute_hightom" hidden>
-<img src="/includes/images/mute.png" id="mute_midtom" hidden>
-<img src="/includes/images/mute.png" id="mute_floortom" hidden>
-<img src="/includes/images/mute.png" id="mute_crash" hidden>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 
@@ -748,7 +742,6 @@
     // Do the crash stuff when clicked
     crashCymbolAll.addEventListener("click", function(){
         crash_hit();
-        $('#mute_crash').toggle();
     });
 
     // right tom drum wobble
@@ -771,7 +764,6 @@
     // Do the right tom stuff when clicked
     rightTomDrumAll.addEventListener("click", function(){
         rightTom();
-        $('#mute_hightom').toggle();
     });
 
     // left tom drum wobble
@@ -794,7 +786,6 @@
     // Do the left tom stuff when clicked
     leftTomDrumAll.addEventListener("click", function(){
         leftTom();
-        $('#mute_midtom').toggle();
     });
 
     // floor tom drum wobble
@@ -815,7 +806,6 @@
     // Do the floor tom stuff when clicked
     floorTomDrumAll.addEventListener("click", function(){
         floorTom();
-        $('#mute_floortom').toggle();
     });
 
     // snare drum wobble
@@ -837,7 +827,6 @@
     // Do the snare stuff when clicked
     snareDrumAll.addEventListener("click", function(){
         snare_hit();
-        $('#mute_snare').toggle();
     });
 
     // kick drum wobble
@@ -857,7 +846,6 @@
     // Do the kick stuff when clicked
     kickDrumAll.addEventListener("click", function(){
         kick();
-        $('#mute_bass').toggle();
     });
 
     // hi-hat stand up/down
@@ -887,7 +875,6 @@
     // Do the hi-hat stuff when clicked
     hiHatAll.addEventListener("click", function(){
         hiHat();
-        $('#mute_hihat').toggle();
     });
 
 
