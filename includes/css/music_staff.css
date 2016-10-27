@@ -1,0 +1,14 @@
+svg {
+    border: solid 1px grey;
+}
+
+svg * {
+    fill: black;
+    stroke: black;
+    stroke-width: 1;
+}
+
+svg ellipse {
+    rx: 31;
+    ry: 22;
+}

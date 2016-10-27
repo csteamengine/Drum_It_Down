@@ -27,8 +27,11 @@ var pausePlayStop = function (stop) {
 
 //noinspection JSUnusedLocalSymbols
 eventjs.add(window, "load", function (event) {
-    /// TODO: Replace the piano keys with an SVG drum kit.
-
+    if (songs.length == 1 && songs[0] == "") {
+        // TODO: Redirect the page to somewhere the user can select a song
+        // For now, I'm going to put a default song in there for testing...
+        songs[0] = "Take_The_Money_And_Run_Steve_Miller_Band_Greatest_Hits_1974-78_1.mid";
+    }
 
     /// Show a loading image while everything is loading up
     MIDI.loader = new sketch.ui.Timer;
