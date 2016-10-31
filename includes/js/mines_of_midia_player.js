@@ -9,7 +9,9 @@ if (typeof (console) === "undefined") var console = {
 };
 
 var handleNote = {
-    notImplemented: function(){},
+    notImplemented: function(){
+        console.log("Not Implemented");
+    },
     35: kick,
     36: kick,
     37: this.notImplemented,
@@ -21,7 +23,7 @@ var handleNote = {
     43: floorTom,
     44: hiHat,
     45: rightTom,
-    46: this.notImplemented,
+    46: hiHat,
     47: rightTom,
     48: leftTom,
     49: crash_hit,
