@@ -40,12 +40,12 @@ var pausePlayStop = function (stop) {
     var d = document.getElementById("pausePlayStop");
     if (stop) {
         MIDI.Player.stop();
-        d.src = "includes/images/play.png";
+        d.src = "/includes/images/play.png";
     } else if (MIDI.Player.playing) {
-        d.src = "includes/images/play.png";
+        d.src = "/includes/images/play.png";
         MIDI.Player.pause(true);
     } else {
-        d.src = "includes/images/pause.png";
+        d.src = "/includes/images/pause.png";
         MIDI.Player.resume();
     }
 };
@@ -63,7 +63,7 @@ eventjs.add(window, "load", function (event) {
 
     /// Load the MIDI plugin to play music
     MIDI.loadPlugin({
-        soundfontUrl: "includes/soundfonts/",
+        soundfontUrl: "/includes/soundfonts/",
         instrument: "synth_drum",
         onprogress: function (state, progress) {
             // update the MIDI loader progress graphic as it loads
@@ -72,7 +72,7 @@ eventjs.add(window, "load", function (event) {
         onsuccess: function () {
             player = MIDI.Player;
             player.timeWarp = 1; // speed the song is played back
-            player.loadFile("midi_files/" + songs[songId], onSuccessfulSongLoad);
+            player.loadFile("/midi_files/" + songs[songId], onSuccessfulSongLoad);
             $('#loading').show();
 
             /// Handle note events
@@ -99,7 +99,7 @@ var onSuccessfulSongLoad = function (onsuccess) {
         if(!higher){
             // The following correctly changes the timeWarp, just need to get it to change to the right value.
             player.timeWarp = player.timeWarp += .01;
-            player.loadFile("midi_files/" + songs[songId], onSuccessfulSongLoad);
+            player.loadFile("/midi_files/" + songs[songId], onSuccessfulSongLoad);
         }else{
             tempo_found = true;
         }
@@ -107,7 +107,7 @@ var onSuccessfulSongLoad = function (onsuccess) {
         higher = true;
         if(!lower){
             player.timeWarp = player.timeWarp -= .01;
-            player.loadFile("midi_files/" + songs[songId], onSuccessfulSongLoad);
+            player.loadFile("/midi_files/" + songs[songId], onSuccessfulSongLoad);
         }else{
             tempo_found = true;
         }
@@ -153,7 +153,7 @@ var MIDIPlayerPercentage = function (player) {
 
     player.getNextSong = function (n) {
         var id = Math.abs((songId += n) % songs.length);
-        player.loadFile("midi_files/" + songs[id], onSuccessfulSongLoad);
+        player.loadFile("/midi_files/" + songs[id], onSuccessfulSongLoad);
     };
 
     //noinspection JSUnusedLocalSymbols
@@ -163,7 +163,7 @@ var MIDIPlayerPercentage = function (player) {
         var end = data.end >> 0; // end of song
         if (now === end) { // go to next song
             var id = ++songId % songs.length;
-            player.loadFile("midi_files/" + songs[id], player.start); // load MIDI
+            player.loadFile("/midi_files/" + songs[id], player.start); // load MIDI
         }
         // display the information to the user
         timeCursor.style.width = (percent * 100) + "%";
