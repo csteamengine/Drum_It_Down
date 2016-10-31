@@ -40,27 +40,37 @@ var svg = {
     }
 };
 
+
 var initMusicStaff = function(midiFile) {
-    var ticks = 0;
+    var ticksPerBeat = midiFile.header.ticksPerBeat;
     var notes = [];
+    var ticks = 0;
+
+    var handleNoteOn = function() {
+        var exactBeat = ticks / ticksPerBeat;
+        var roundedBeat = Math.round(exactBeat * 8) / 8.0;
+        var noteData = noteInfo.get(obj.noteNumber);
+        var xOffset = 8*(roundedBeat-5)*svg.lineSpacing();
+        var yOffset = noteData.y;
+        notes.push(svg.get("note", xOffset, yOffset,
+            'id="' + i + '_beat' + roundedBeat + '"'));
+        var xAdjustment = (noteData.rawY > 7) ? -28 : 24;
+        var yAdjustment = (noteData.rawY > 7) ? 0 : -165;
+        notes.push(svg.get("stem", xOffset + xAdjustment, yOffset + yAdjustment));
+    };
+
+    console.log(midiFile.tracks[0][42]);
     for (var i = 0; i < midiFile.tracks[0].length / 100; i++) {
         var obj = midiFile.tracks[0][i];
         ticks += obj.deltaTime;
-        if (obj.subtype == "noteOn") {
-            var exactBeat = ticks / midiFile.header.ticksPerBeat;
-            var roundedBeat = Math.round(exactBeat * 8) / 8.0;
-            var noteData = noteInfo.get(obj.noteNumber);
-            var xOffset = 8*(roundedBeat-5)*svg.lineSpacing();
-            var yOffset = noteData.y;
-            notes.push(svg.get("note", xOffset, yOffset,
-                'id="' + i + '_beat' + roundedBeat + '"'));
-            var xAdjustment = (noteData.rawY > 7) ? -28 : 24;
-            var yAdjustment = (noteData.rawY > 7) ? 0 : -165;
-            notes.push(svg.get("stem", xOffset + xAdjustment, yOffset + yAdjustment));
+        if (obj.subtype == "noteOn" && obj.channel == 9) {
+            handleNoteOn(obj, ticks, i);
         }
     }
+
     $("#music-staff").html(svg.getSvg(notes));
 };
+
 
 var noteInfo = {
     get: function(note) {
