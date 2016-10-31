@@ -10,6 +10,7 @@ $action = $_GET['action'];
 if($action != ""){
     switch($action){
         case 'play':
+            //TODO get likes and check if current user has already liked the file
             $track = $_GET['track'];
             $file = $_GET['file'];
             //TODO select file and track info from db.
@@ -29,7 +30,9 @@ if($action != ""){
 
 
             break;
-
+        case 'like':
+            //TODO add a like to the current track under the current username
+            break;
     }
 }
 

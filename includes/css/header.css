@@ -44,6 +44,9 @@ header{
 #browse{
     right: 150px;
 }
+#upload{
+    left: 150px;
+}
 #logout{
     right: 50px;
 }
