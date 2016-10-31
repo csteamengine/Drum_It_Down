@@ -54,12 +54,15 @@ var drum_numbers = {
 };
 
 
-function parse_midi(file_name, original_file_name){
+function parse_midi(file_name, original_file_name, callback){
     file_name = "midi_files/"+file_name;
     loadRemote(file_name, function(data) {
         var midiFile = MidiFile(data);
         midiFile.header.original_file_name = original_file_name;
         guess_track_info(midiFile);
+        if (callback != undefined) {
+            callback(midiFile);
+        }
         return midiFile;
     });
 }
