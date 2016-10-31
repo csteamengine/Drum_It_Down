@@ -12,3 +12,12 @@ svg ellipse {
     rx: 31;
     ry: 22;
 }
+
+svg line {
+    stroke-width: 8;
+}
+
+svg .open {
+    stroke-width: 8;
+    fill: none;
+}

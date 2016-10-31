@@ -8,8 +8,30 @@ var svg = {
             misc = "";
         }
         switch (type) {
-            case "note":
+            case "filled ellipse":
                 return '<ellipse transform="translate(' + x + ' ' + y + ') rotate(-30)" ' + misc + '></ellipse>';
+            case "circled dot":
+                return '<circle cx="' + x + '" cy="' + y + '" r="28" class="open" ' + misc + '></circle>' +
+                    '<circle cx="' + x + '" cy="' + y + '" r="5"></circle>';
+            case "x":
+                return '<line x1="' + (x-22) + '" y1="' + (y-22) + '" x2="' + (x+22) +'" y2="' + (y+22) + '" ' +
+                    misc + '></line>' +
+                    '<line x1="' + (x+22) + '" y1="' + (y-22) + '" x2="' + (x-22) +'" y2="' + (y+22) + '"></line>';
+            case "x open":
+                return '<line x1="' + (x-22) + '" y1="' + (y-22) + '" x2="' + (x+22) +'" y2="' + (y+22) + '" ' +
+                    misc + '></line>' +
+                    '<line x1="' + (x+22) + '" y1="' + (y-22) + '" x2="' + (x-22) +'" y2="' + (y+22) + '"></line>' +
+                    '<circle cx="' + x + '" cy="' + (y-50) + '" r="10" class="open"></circle>';
+            case "circled x":
+                return '<line x1="' + (x-22) + '" y1="' + (y-22) + '" x2="' + (x+22) +'" y2="' + (y+22) + '"></line>' +
+                    '<line x1="' + (x+22) + '" y1="' + (y-22) + '" x2="' + (x-22) +'" y2="' + (y+22) + '"></line>' +
+                    '<circle cx="' + x + '" cy="' + y + '" r="28" ' + misc + '></circle>';
+            case "filled diamond":
+                return '<polygon points="0,-28 28,0 0,28 -28,0" transform="translate(' + x + ' ' + y + ')" ' +
+                    misc + '></polygon>';
+            case "open diamond":
+                return '<polygon points="0,-24 24,0 0,24 -24,0" transform="translate(' +
+                    x + ' ' + y + ')" class="open" ' + misc + '></polygon>';
             case "stem":
                 return '<rect width="4.6" height="165" transform="translate(' + x + ' ' + y + ')" ' + misc + '></rect>';
             default:
@@ -52,7 +74,7 @@ var initMusicStaff = function(midiFile) {
         var noteData = noteInfo.get(obj.noteNumber);
         var xOffset = 8*(roundedBeat-5)*svg.lineSpacing();
         var yOffset = noteData.y;
-        notes.push(svg.get("note", xOffset, yOffset,
+        notes.push(svg.get(noteData.noteHead, xOffset, yOffset,
             'id="' + i + '_beat' + roundedBeat + '"'));
         var xAdjustment = (noteData.rawY > 7) ? -28 : 24;
         var yAdjustment = (noteData.rawY > 7) ? 0 : -165;
