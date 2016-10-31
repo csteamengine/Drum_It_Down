@@ -5,6 +5,7 @@
  * Date: 10/31/16
  * Time: 10:51 AM
  */
+
 include "includes/php/base.php";
 include "includes/php/general.php";
 
@@ -127,6 +128,7 @@ if($_SESSION['logged_in']){
     <?php
     include "includes/php/footer.php";
 }else{
+    include "includes/php/header.php";
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -136,6 +138,8 @@ if($_SESSION['logged_in']){
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Mines of Midia</title>
+    <link rel="stylesheet" href="includes/css/header.css">
+    <link rel="stylesheet" href="includes/css/footer.css">
     <link rel="icon" type="image/x-icon" href="favicon.png?v=3"/>
     <link rel="stylesheet" href="includes/css/login.css">
     <script src="/includes/js/jquery-2.2.4.min.js" type="application/javascript"></script>
@@ -167,6 +171,7 @@ if($_SESSION['logged_in']){
     </body>
 </html>
     <?php
+    include "includes/php/footer.php";
 }
 ?>
 <script>

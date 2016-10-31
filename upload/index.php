@@ -13,6 +13,7 @@ if(!$_SESSION['logged_in']){
     header("Location: /");
 }
 
+
 ####################################################
 ###############   Preprocessing   ##################
 ####################################################
@@ -26,7 +27,7 @@ if(!$_SESSION['logged_in']){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Mines of Midia</title>
+    <title>Upload | Mines of Midia</title>
     <link rel="icon" type="image/x-icon" href="../favicon.png?v=3"/>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../includes/css/shared.css">

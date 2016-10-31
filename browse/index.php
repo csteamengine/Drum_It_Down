@@ -11,9 +11,6 @@ include "../includes/php/general.php";
 
 
 
-if(!$_SESSION['logged_in']){
-    header("Location: /");
-}
 
 ####################################################
 ###############   Preprocessing   ##################

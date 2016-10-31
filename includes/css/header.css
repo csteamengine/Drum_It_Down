@@ -50,3 +50,9 @@ header{
 #logout{
     right: 50px;
 }
+#browse_logged_out{
+    right: 50px;
+}
+#login_link{
+    left: 50px;
+}

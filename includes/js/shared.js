@@ -55,7 +55,7 @@ var drum_numbers = {
 
 
 function parse_midi(file_name, original_file_name){
-    file_name = "midi_files/"+file_name;
+    file_name = "/midi_files/"+file_name;
     loadRemote(file_name, function(data) {
         var midiFile = MidiFile(data);
         midiFile.header.original_file_name = original_file_name;
@@ -122,7 +122,7 @@ function upload_file() {
 
 
     $.ajax({
-        url: '/includes/php/index.php?action=upload', // point to server-side PHP script
+        url: '/includes/php/upload.php?action=upload', // point to server-side PHP script
 
         dataType: 'text',  // what to expect back from the PHP script, if anything
         cache: false,
@@ -184,7 +184,7 @@ function specify_song(id) {
     var url = "https://api.spotify.com/v1/tracks/" + id;
     $.getJSON(url, function (result) {
 
-        var new_url = "includes/php/index.php?action=rename&title=" + encodeURI(result.name) + "&artist=" + encodeURI(result.artists[0].name) + "&album=" +
+        var new_url = "/includes/php/upload.php?action=rename&title=" + encodeURI(result.name) + "&artist=" + encodeURI(result.artists[0].name) + "&album=" +
             encodeURI(result.album.name) + "&duration=" + encodeURI(result.duration_ms) + "&spotify_id=" + encodeURI(result.id) + "&spotify_url=" + encodeURI(result.href) + "&spotify_popularity=" +
             encodeURI(result.popularity) + "&preview_url=" + encodeURI(result.preview_url) + "&spotify_uri=" + encodeURI(result.uri) + "&image_url=" + encodeURI(result.album.images[0].url);
 
@@ -195,7 +195,7 @@ function specify_song(id) {
             success: function (php_script_response) {
                 var json = JSON.parse(php_script_response);
                 if(json['code'] == 200){
-                    window.location = "player.php?action=play&track="+json['track']+"&file="+json['file'];
+                    window.location = "/player/index.php?action=play&track="+json['track']+"&file="+json['file'];
                 }else{
                     console.log(json);
                 }
