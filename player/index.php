@@ -42,7 +42,6 @@ if($action != ""){
 
             break;
         case 'upvote':
-            update_pop($_GET['file_id']);
             $sql = "SELECT * FROM downvotes WHERE user_id=(SELECT id FROM users WHERE username='".$_SESSION['username']."') AND file_id=".$_GET['file_id']." AND active = 'yes'";
             $sql_up = "SELECT * FROM upvotes WHERE user_id=(SELECT id FROM users WHERE username='".$_SESSION['username']."') AND file_id=".$_GET['file_id']." AND active = 'yes'";
 
@@ -54,15 +53,8 @@ if($action != ""){
 
                 $upvote = "INSERT INTO upvotes (file_id, user_id) VALUES (".$_GET['file_id'].",(SELECT id FROM users WHERE username='".$_SESSION['username']."'))";
                 $query_upvote = mysqli_query($conn, $upvote);
-
-
-
-                $pop = "UPDATE midi_files SET popularity=(SELECT COUNT(id) FROM upvotes WHERE file_id=".$_GET['file_id']." AND active = 'yes')";
-                $pop_query = mysqli_query($conn, $pop);
-
-
-                $json = array('code' => 200, 'action' => 'Upvoted');
-//                update_pop($_GET['file_id']);
+                $returned = update_pop($conn);
+                $json = array('code' => 200, 'action' => 'Upvoted', 'returned' => $returned);
                 echo json_encode($json);
                 exit;
 
@@ -72,20 +64,16 @@ if($action != ""){
             if(mysqli_num_rows($query_up) > 0){
                 $result = mysqli_fetch_assoc($query_up);
                 $unvote = "UPDATE upvotes SET active='no' WHERE id=".$result['id'];
-
-//                $up = "SELECT COUNT(*) as the_count FROM upvotes WHERE file_id=".$_GET['file_id']." AND active = 'yes'";
-//                $q_up = mysqli_query($conn, $up);
-//                $up_result = mysqli_fetch_assoc($q_up);
-                $json = array('code' => 200, 'action' => 'Unvoted');
-
+                $query_unvote = mysqli_query($conn, $unvote);
+                $returned = update_pop($conn);
+                $json = array('code' => 200, 'action' => 'Unvoted', 'returned' => $returned);
                 echo json_encode($json);
                 exit;
             }else{
                 $upvote = "INSERT INTO upvotes (file_id, user_id) VALUES (".$_GET['file_id'].", (SELECT id FROM users WHERE username='".$_SESSION['username']."'))";
                 $query_upvote = mysqli_query($conn, $upvote);
-                $count = update_pop($_GET['file_id']);
-                $json = array('code' => 200, 'action' => 'Upvoted', 'count' => $result);
-
+                $returned = update_pop($conn);
+                $json = array('code' => 200, 'action' => 'Upvoted', 'returned' => $returned);
                 echo json_encode($json);
                 exit;
             }
@@ -101,10 +89,10 @@ if($action != ""){
                 $result = mysqli_fetch_assoc($query_up);
                 $deactivate = "UPDATE upvotes SET active = 'no' WHERE id=".$result['id'];
                 $query_deactivate = mysqli_query($conn, $deactivate);
-
-                update_pop($_GET['file_id']);
-
-                $json = array('code' => 200, 'action' => 'Downvoted');
+                $downvote = "INSERT INTO downvotes (file_id, user_id) VALUES (".$_GET['file_id'].",(SELECT id FROM users WHERE username='".$_SESSION['username']."'))";
+                $query_upvote = mysqli_query($conn, $downvote);
+                $returned = update_pop($conn);
+                $json = array('code' => 200, 'action' => 'Downvoted', 'returned' => $returned);
                 echo json_encode($json);
                 exit;
 
@@ -115,20 +103,38 @@ if($action != ""){
                 $result = mysqli_fetch_assoc($query_down);
                 $unvote = "UPDATE downvotes SET active='no' WHERE id=".$result['id'];
                 $query_unvote = mysqli_query($conn, $unvote);
-                $json = array('code' => 200, 'action' => 'Unvoted');
-                update_pop($_GET['file_id']);
+                $returned = update_pop($conn);
+                $json = array('code' => 200, 'action' => 'Unvoted', 'returned' => $returned);
                 echo json_encode($json);
                 exit;
             }else{
                 $downvote = "INSERT INTO downvotes (file_id, user_id) VALUES (".$_GET['file_id'].", (SELECT id FROM users WHERE username='".$_SESSION['username']."'))";
                 $query_downvote = mysqli_query($conn, $downvote);
-                $json = array('code' => 200, 'action' => 'Downvoted');
-                update_pop($_GET['file_id']);
+                $returned = update_pop($conn);
+                $json = array('code' => 200, 'action' => 'Downvoted', 'returned' => $returned);
                 echo json_encode($json);
                 exit;
             }
             break;
     }
+}
+
+
+function update_pop($conn){
+    $sql_up = "SELECT * FROM upvotes WHERE file_id=".$_GET['file_id']." AND active = 'yes'";
+    $query_up = mysqli_query($conn, $sql_up);
+    $sql_down = "SELECT * FROM downvotes WHERE file_id=".$_GET['file_id']." AND active = 'yes'";
+    $query_down = mysqli_query($conn, $sql_down);
+
+    $up = mysqli_num_rows($query_up);
+    $down = mysqli_num_rows($query_down);
+
+    $count  = $up - $down;
+
+    $insert = "UPDATE midi_files SET popularity=".$count." WHERE id=".$_GET['file_id'];
+    $query = mysqli_query($conn,$insert);
+
+    return $count;
 }
 
 ?>
@@ -260,6 +266,7 @@ include "../drum.php";
     function down_vote(id){
         var url = "/player/index.php?action=downvote&file_id="+id;
         $.getJSON(url, function(response){
+            console.log(response);
             if(response.action == 'Downvoted'){
                 upvoter.attr('src','/includes/images/upvote.png');
                 downvoter.attr('src','/includes/images/downvoted.png');
@@ -275,5 +282,6 @@ include "../drum.php";
 include "../includes/php/footer.php";
 ?>
 </html>
+<?php
 
 
