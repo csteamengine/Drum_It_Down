@@ -38,8 +38,33 @@ var initMusicStaff = function(midiFile) {
     var measureTree = new MeasureTree(4);
 
     var generateFlagsAndRests = function(tree) {
-        console.log(tree);
+        // console.log(tree);
         console.log(tree.getNotes());
+        var parsedMeasure = measureTree.getNotes();
+        for (var beatIndex in parsedMeasure) {
+            if (parsedMeasure.hasOwnProperty(beatIndex)) {
+                var beat = parsedMeasure[beatIndex];
+
+                // var xAdjustment = (noteData.rawY > 7) ? -28 : 24;
+                // var yAdjustment = (noteData.rawY > 7) ? 0 : -165;
+
+                if (beat == "rest") {
+                    var noteData = noteInfo.getRest("1");
+                    var xOffset = (2 + 9*parseInt(beatIndex))*svg.lineSpacing();
+                    var yOffset = 0;
+                    notes.push(getSvgElement(noteData.noteHead, xOffset, yOffset));
+                    console.log("Quarter Rest found");
+                }
+                for (var subdivisionKey in beat) {
+                    if (beat.hasOwnProperty(subdivisionKey)) {
+                        var subdivision = beat[subdivisionKey];
+                        // if (subdivision.type == "rest") {
+                        //     notes.push(getSvgElement("8th rest", 50, 50)); // FIXME
+                        // }
+                    }
+                }
+            }
+        }
     };
 
     var handleNoteOn = function() {
@@ -49,8 +74,8 @@ var initMusicStaff = function(midiFile) {
         var measuresPassed = measure - lastMeasureDisplayed;
         if (measuresPassed > 0) {
             for (var i = 0; i < measuresPassed; i++) {
-                musicStaff.append(svg.getSvg(notes));
                 generateFlagsAndRests(measureTree);
+                musicStaff.append(svg.getSvg(notes));
                 notes = [];
                 measureTree = new MeasureTree(4);
             }
@@ -58,8 +83,8 @@ var initMusicStaff = function(midiFile) {
         }
 
         measureTree.add(roundedBeat - measure*4);
-        var noteData = noteInfo.get(obj.noteNumber);
-        var xOffset = (svg.lineSpacing()*2) + 9*(roundedBeat-measure*4)*svg.lineSpacing();
+        var noteData = noteInfo.getNote(obj.noteNumber);
+        var xOffset = (2 + 9*(roundedBeat-measure*4))*svg.lineSpacing();
         var yOffset = noteData.y;
         notes.push(getSvgElement(noteData.noteHead, xOffset, yOffset,
             'id="' + i + '_beat' + roundedBeat + '"'));
@@ -80,7 +105,7 @@ var initMusicStaff = function(midiFile) {
 
 
 var noteInfo = {
-    get: function(note) {
+    getNote: function(note) {
         var n = this.notes[String(note)];
         if (n == undefined) {
             return {
@@ -94,6 +119,40 @@ var noteInfo = {
                 rawY: n.y,
                 y: n.y * svg.lineSpacing()
             };
+        }
+    },
+    getRest: function(rest) {
+        var r = this.rests[String(rest)];
+        if (r == undefined) {
+            return {
+                noteHead: this.rests['DEFAULT'].noteHead,
+                rawY: this.rests['DEFAULT'].y,
+                y: this.rests['DEFAULT'].y * svg.lineSpacing()
+            };
+        } else {
+            return {
+                noteHead: r.noteHead,
+                rawY: r.y,
+                y: r.y * svg.lineSpacing()
+            };
+        }
+    },
+    rests: {
+        DEFAULT: { // No SVG shown
+            noteHead: "NOT IMPLEMENTED",
+            y: 8
+        },
+        "1": {     // Quarter note rest
+            noteHead: "4th rest",
+            y: 8
+        },
+        "0.5": {   // Eighth note rest
+            noteHead: "8th rest",
+            y: 8
+        },
+        "0.25": {  // Sixteenth note rest
+            noteHead: "16th rest",
+            y: 8
         }
     },
     notes: {
@@ -247,7 +306,7 @@ MeasureTree.prototype.getNotes = function() {
         if (this.beats[i] == null) {
             notes[i] = "rest";
         } else {
-            notes[i] = this.beats[i].getNotes(0, 1);
+            notes[i] = this.beats[i].getNotes(i, 1);
         }
     }
     return notes;
@@ -362,8 +421,8 @@ function getSvgElement(type, x, y, misc) {
                 '1.17-11.6-3.61-16.7-2.44-5.18-5.6-9.82-9.39-13.8-3.79-4-7.94-7.54-12.4-10.7-4.51-3.18-9.2-6.09-' +
                 '14.2-8.82z" fill-rule="evenodd" /></g>';
         case "4th rest":
-            return '<g transform="translate(' + x + ' ' + y + ')" ' + misc + '>' +
-                '<g fill-rule="evenodd" transform="matrix(1.8 0 0 1.8 -644 352)" stroke-miterlimit="10" ' +
+            return '<g transform="translate(' + (x-4900) + ' ' + (y-720) + ')" ' + misc + '>' +
+                '<g fill-rule="evenodd" transform="matrix(1.8 0 0 1.8 -644 352) scale(6 6)" stroke-miterlimit="10" ' +
                 'stroke-width="0">' +
                 '<path d="m512 71c-0.137 0.058-0.219 0.258-0.156 0.398 0.019 0.02 0.218 0.258 0.418 0.52 0.457 ' +
                 '0.515 0.535 0.637 0.636 0.875 0.399 0.816 0.18 1.86-0.519 2.51-0.059 0.078-0.317 0.296-0.559 ' +
@@ -376,7 +435,7 @@ function getSvgElement(type, x, y, misc) {
                 '0.082-0.141 0.039-0.238-0.141-0.457-0.336-0.399-1.35-1.59-1.49-1.77-0.36-0.418-0.52-0.816-0.559-' +
                 '1.32-0.019-0.637 0.238-1.31 0.719-1.75 0.058-0.078 0.316-0.297 0.555-0.476 0.738-0.618 1.04-' +
                 '0.957 1.16-1.28 0.082-0.258 0.043-0.496-0.137-0.715-0.062-0.058-0.758-0.918-1.57-1.89-1.12-1.31-' +
-                '1.52-1.79-1.57-1.81-0.082-0.019-0.18-0.019-0.262 0.02z" stroke="#000"/></g></g>';
+                '1.52-1.79-1.57-1.81-0.082-0.019-0.18-0.019-0.262 0.02z" /></g></g>';
         case "8th rest":
             return '<g transform="translate(' + x + ' ' + y + ')" ' + misc + '>' +
                 '<g fill-rule="evenodd" transform="matrix(1.8 0 0 1.8 -593 341)" stroke-miterlimit="10">' +
