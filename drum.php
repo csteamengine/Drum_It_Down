@@ -8,7 +8,6 @@
 
 ?>
 
-
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="300 300 1400 1400">
     <g id="Drums">
         <g>
@@ -493,7 +492,9 @@
                     </g>
                 </g>
                 <g id="Kick">
+
                     <g id="Kick-Stand">
+
                         <g>
 
                             <path fill="#aaaaaa" stroke="#333333" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
@@ -525,7 +526,7 @@
                         <circle id="Inner-Drum-Wobble" fill="none" cx="1035.7" cy="1085" r="201.2"/>
 
                         <circle id="Inner-Drum" fill="#FDFFFC" stroke="#333333" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="1035.7" cy="1085" r="192.6"/>
-                        <g id="Drum-Logo-Wobble">
+                        <g id="Drum-Logo-Wobble" style="position: relative">
                             <g>
                                 <path fill="none" d="M980.6,942.2l-4.3,19.9h0.8c7.1,0,12.2-8.3,12.2-15c0-4.8-2.7-9-9.4-9c-13.9,0-23.1,7.8-23.1,20.8
 								c0,4.4,1.1,5.1,1.2,5.8c-5.9,0-9.2-2.1-9.2-8.3c0-11.4,15.8-22.3,30.1-22.3c13.5,0,19.4,6.7,19.4,13.7
@@ -695,7 +696,6 @@
     </g>
 </svg>
 
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 
 <script>
@@ -740,7 +740,9 @@
     }
 
     // Do the crash stuff when clicked
-    crashCymbolAll.addEventListener("click", crash_hit);
+    crashCymbolAll.addEventListener("click", function(){
+        crash_hit();
+    });
 
     // right tom drum wobble
     var rightTomtl = new TimelineMax({
@@ -760,7 +762,9 @@
     }
 
     // Do the right tom stuff when clicked
-    rightTomDrumAll.addEventListener("click", rightTom);
+    rightTomDrumAll.addEventListener("click", function(){
+        rightTom();
+    });
 
     // left tom drum wobble
     var leftTomtl = new TimelineMax({
@@ -780,7 +784,9 @@
     }
 
     // Do the left tom stuff when clicked
-    leftTomDrumAll.addEventListener("click", leftTom);
+    leftTomDrumAll.addEventListener("click", function(){
+        leftTom();
+    });
 
     // floor tom drum wobble
     var floorTomtl = new TimelineMax({
@@ -798,7 +804,9 @@
     }
 
     // Do the floor tom stuff when clicked
-    floorTomDrumAll.addEventListener("click", floorTom);
+    floorTomDrumAll.addEventListener("click", function(){
+        floorTom();
+    });
 
     // snare drum wobble
     var snaretl = new TimelineMax({
@@ -817,7 +825,9 @@
     }
 
     // Do the snare stuff when clicked
-    snareDrumAll.addEventListener("click", snare_hit);
+    snareDrumAll.addEventListener("click", function(){
+        snare_hit();
+    });
 
     // kick drum wobble
     var kicktl = new TimelineMax({
@@ -834,7 +844,9 @@
     }
 
     // Do the kick stuff when clicked
-    kickDrumAll.addEventListener("click", kick);
+    kickDrumAll.addEventListener("click", function(){
+        kick();
+    });
 
     // hi-hat stand up/down
     var hiHatUptl = new TimelineMax({
@@ -861,7 +873,9 @@
     }
 
     // Do the hi-hat stuff when clicked
-    hiHatAll.addEventListener("click", hiHat);
+    hiHatAll.addEventListener("click", function(){
+        hiHat();
+    });
 
 
 </script>

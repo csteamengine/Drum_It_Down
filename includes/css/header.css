@@ -24,14 +24,14 @@ header{
 }
 .header_link{
     position: absolute;
-    height: 30px;
-    font-size: 25px;
+    height: 15px;
+    font-size: 15px;
     text-decoration: none;
     color: white;
     background-color: #E05151;
     border-radius: 5px;
     padding: 10px;
-    top: 15px;
+    top: 25px;
 }
 .header_link:hover{
     -webkit-box-shadow:  2px 2px 10px black;
@@ -42,5 +42,17 @@ header{
     left: 50px;
 }
 #browse{
+    right: 150px;
+}
+#upload{
+    left: 150px;
+}
+#logout{
     right: 50px;
+}
+#browse_logged_out{
+    right: 50px;
+}
+#login_link{
+    left: 50px;
 }

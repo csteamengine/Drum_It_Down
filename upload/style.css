@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+}
+body{
+    background-color: #E9EBEE;
+    text-align: center;
+    padding-top: 50px;
+}
+form{
+    margin: 100px;
+}
+.guess{
+    background-color: transparent;
+    text-align: left;
+    position: relative;
+    font-size: 20px;
+    height: 30px;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    cursor: hand;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left:10px;
+}
+#instructions{
+    position: absolute;
+    top: -30px;
+    text-align: center;
+    width: 100%;
+    left: 0;
+}
+.guess:hover{
+    background-color: rgba(0,0,0,.5);
+}
+.guess p{
+    margin: 0;
+    padding: 0;
+}
+.guess:hover div {
+    animation: slide 8s 2s infinite;
+}
+.guess audio{
+    position: absolute;
+    right: 10px;
+    top: 3px;
+}
+#song_guesses{
+    padding: 20px 0 20px 0;
+    width: 800px;
+    position: relative;
+    margin: 50px auto;
+    border: 5px solid #E05151;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#file_upload{
+    width: 400px;
+    margin: 50px auto;
+    border: 5px solid #E05151;
+    border-radius: 10px;
+    position: relative;
+}
+input[type=button] {
+    margin: 25px;
+    position: relative;
+    vertical-align: top;
+    width: 150px;
+    height: 60px;
+    padding: 0;
+    font-size: 22px;
+    color:white;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    background: #454545;
+    border: 0;
+    border: 2px solid #2f2e2e;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type=button]:hover{
+    background: #2f2e2e;
+}
+input[type=button]:active {
+    top: 1px;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+input[type=submit] {
+    margin: 25px;
+    position: relative;
+    vertical-align: top;
+    width: 150px;
+    height: 60px;
+    padding: 0;
+    font-size: 22px;
+    color:white;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    background: #454545;
+    border: 0;
+    border: 2px solid #2f2e2e;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type=submit]:hover{
+    background: #2f2e2e;
+}
+input[type=submit]:active {
+    top: 1px;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+#other_midi{
+    margin: 25px;
+    position: relative;
+    vertical-align: top;
+    width: 150px;
+    height: 60px;
+    padding: 0;
+    font-size: 22px;
+    color:white;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    background: #454545;
+    border: 0;
+    border: 2px solid #2f2e2e;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#other_midi:hover{
+    background: #2f2e2e;
+}
+#search_song{
+    width: 100%;
+    margin: 0 auto;
+    width: 400px;
+}
+#search_song input{
+    display: block;
+    margin: 20px auto;
+}
+#song_title{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #E05151;
+    padding-left: 5px;
+    font-size: 20px;
+}
+#song_title:focus{
+    outline:none;
+
+}
+#midi_file{
+    display: block;
+    margin: 25px auto;
+}
+
+#submit{
+    display: block;
+    margin: 25px auto;
+}
+#file_name{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 20px;
+    width: 100%;
+    margin-top: -10px;
+    z-index: -1;
+}
+#loading{
+    position: fixed;
+    width: 100%;
+    height: 20px;
+    top: 50%;
+    left: 0;
+
+}
+@keyframes slide {
+    0% { margin-left: 0;  }
+
+    100% { margin-left: -200%;
+    }
+}

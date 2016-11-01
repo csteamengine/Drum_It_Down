@@ -55,7 +55,7 @@ var drum_numbers = {
 
 
 function parse_midi(file_name, original_file_name, callback){
-    file_name = "midi_files/"+file_name;
+    file_name = "/midi_files/"+file_name;
     loadRemote(file_name, function(data) {
         var midiFile = MidiFile(data);
         midiFile.header.original_file_name = original_file_name;
@@ -89,7 +89,7 @@ function guess_track_info(midiFile) {
                             songGuesses.append('<h3 id="instructions">Click a song to pair it with the your midi file.</h3>');
 //                                top_hits.push(result.tracks.items[0].name + " -- " + result.tracks.items[0].artists[0].name);
                             songGuesses.append(
-                                '<div class="guess" onclick="specify_song(\'' + result.tracks.items[0].id + '\')">' + result.tracks.items[0].name + " -- " + result.tracks.items[0].artists[0].name + '</div>'
+                                '<div class="guess" onclick="specify_song(\'' + result.tracks.items[0].id + '\')"><div>' + result.tracks.items[0].name + " -- " + result.tracks.items[0].artists[0].name + '</div><audio style="background-color: transparent" controls><source src="'+ result.tracks.items[0].preview_url +'" type="audio/mpeg" ></audio></div>'
                             );
                         }
                     });
@@ -107,7 +107,7 @@ function guess_track_info(midiFile) {
                     for (m = 0; m < result.tracks.items.length; m++) {
 //                            top_hits.push(result.tracks.items[m].name + " -- " + result.tracks.items[m].artists[0].name );
                         $('#song_guesses').append(
-                            '<div class="guess" onclick="specify_song(\'' + result.tracks.items[m].id + '\')" >' + result.tracks.items[m].name.trim() + " -- " + result.tracks.items[m].artists[0].name.trim() + '</div>'
+                            '<div class="guess" onclick="specify_song(\'' + result.tracks.items[m].id + '\')" ><div>' + result.tracks.items[m].name.trim() + " -- " + result.tracks.items[m].artists[0].name.trim() + '</div><audio controls><source src="'+ result.tracks.items[m].preview_url +'" type="audio/mpeg" ></audio></div>'
                         );
                     }
                 }
@@ -163,8 +163,9 @@ function search_song() {
                 songGuesses.append('<h3 id="instructions">Click a song to pair it with the your midi file.</h3>');
                 for (var m = 0; m < result.tracks.items.length; m++) {
                     songGuesses.append(
-                        '<div class="guess" onclick="specify_song(\'' + result.tracks.items[m].id + '\')">' + result.tracks.items[m].name.trim() + " -- " + result.tracks.items[m].artists[0].name.trim() + '</div>'
+                        '<div class="guess" onclick="specify_song(\'' + result.tracks.items[m].id + '\')"><div>' + result.tracks.items[m].name.trim() + " -- " + result.tracks.items[m].artists[0].name.trim() + '</div><audio controls><source src="'+ result.tracks.items[m].preview_url +'" type="audio/mpeg" ></audio></div>'
                     );
+                // <audio controls><source src="'+ result.tracks.items[m].preview_url +'" type="audio/mpeg" ></audio>
                 }
             }else{
                 songGuesses.append('<h3>No results for that search</h3>')
@@ -174,6 +175,7 @@ function search_song() {
         });
     }
 }
+
 
 function specify_song(id) {
     $('#song_guesses').html('');
@@ -185,7 +187,7 @@ function specify_song(id) {
     var url = "https://api.spotify.com/v1/tracks/" + id;
     $.getJSON(url, function (result) {
 
-        var new_url = "includes/php/upload.php?action=rename&title=" + encodeURI(result.name) + "&artist=" + encodeURI(result.artists[0].name) + "&album=" +
+        var new_url = "/includes/php/upload.php?action=rename&title=" + encodeURI(result.name) + "&artist=" + encodeURI(result.artists[0].name) + "&album=" +
             encodeURI(result.album.name) + "&duration=" + encodeURI(result.duration_ms) + "&spotify_id=" + encodeURI(result.id) + "&spotify_url=" + encodeURI(result.href) + "&spotify_popularity=" +
             encodeURI(result.popularity) + "&preview_url=" + encodeURI(result.preview_url) + "&spotify_uri=" + encodeURI(result.uri) + "&image_url=" + encodeURI(result.album.images[0].url);
 
@@ -196,7 +198,7 @@ function specify_song(id) {
             success: function (php_script_response) {
                 var json = JSON.parse(php_script_response);
                 if(json['code'] == 200){
-                    window.location = "player.php?action=play&track="+json['track']+"&file="+json['file'];
+                    window.location = "/player/index.php?action=play&track="+json['track']+"&file="+json['file'];
                 }else{
                     console.log(json);
                 }
