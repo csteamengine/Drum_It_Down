@@ -10,7 +10,19 @@ include "../includes/php/base.php";
 include "../includes/php/general.php";
 
 
+if($_GET['action'] != ""){
+    $action = $_GET['action'];
+    switch($action){
+        case 'search':
+            $track = $_GET['track'];
+            $sql = "SELECT * FROM ";
+            break;
+        default:
 
+            break;
+
+    }
+}
 
 ####################################################
 ###############   Preprocessing   ##################
@@ -43,12 +55,26 @@ include "../includes/php/header.php";
     <div class="item" id="search_songs_div">
         <input type="text" id="search_songs" placeholder="Search Songs">
         <button id="search_songs_button">Search</button>
+        <div id="results"></div>
+    </div>
+    <div class="item" id="popular_files">
+        <h1>Popular Files</h1>
+        <?php
+        $sql = "SELECT * FROM midi_files mf INNER JOIN tracks tr WHERE mf.track_id = tr.id GROUP BY tr.title ORDER BY mf.popularity DESC LIMIT 5";
+        $query = mysqli_query($conn, $sql);
+        while($result = mysqli_fetch_assoc($query)){
+            $string = $result['title']." -- ".$result['artist'];
+            ?>
+            <p onclick="relocate(<?= $result['id'] ?>)" class="song <?= strlen($string) > 30 ? 'marquee' : '' ?>"><?= $string  ?></p>
+            <?php
+        }
+        ?>
     </div>
     <div class="item" id="popular_songs">
-        <h1>Top 5 Songs</h1>
+        <h1>Popular Tracks</h1>
 
         <?php
-        $sql = "SELECT * FROM midi_files mf INNER JOIN tracks t WHERE mf.track_id = t.id ORDER BY mf.popularity LIMIT 5";
+        $sql = "SELECT * FROM tracks ORDER BY popularity DESC LIMIT 5";
         $query = mysqli_query($conn, $sql);
         while($result = mysqli_fetch_assoc($query)){
             $string = $result['title']." -- ".$result['artist'];
@@ -68,5 +94,33 @@ include "../includes/php/header.php";
     function relocate(id){
         window.location = '/player/?action=play&track='+id;
     }
+    $('#search_songs_button').click(function(){
+        if($('#search_songs').val() != ""){
+            var limit = 5;
+            var search_term = encodeURI($('#search_songs').val());
+            var url = "https://api.spotify.com/v1/search?q=" + search_term + "&type=track&limit=" + limit;
+            $.getJSON(url, function (result) {
+                var new_url = "/?action=search&track="+ result[0].title;
+                $.getJSON(url, function (result2) {
+                    var results = $('#results');
+                    if(result2.code == 200){
+                        var classAdd = "";
+                        var string = result.title + " -- " + result2.artist;
+                        if(string.length > 30){
+                            classAdd = "marquee";
+                        }
+                        results.append(
+                            '<p onclick="relocate('+ result2.id +')" class="song '+ classAdd+'">'+string+'</p>'
+                        );
+                    }else{
+                        //TODO append no results
+                    }
+                });
+
+            });
+
+        }
+
+    });
 </script>
 </html>
