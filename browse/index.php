@@ -81,7 +81,7 @@ include "../includes/php/header.php";
         while($result = mysqli_fetch_assoc($query)){
             $string = $result['title']." -- ".$result['artist'];
             ?>
-            <p onclick="relocate(<?= $result['id'] ?>)" class="song <?= strlen($string) > 30 ? 'marquee' : '' ?>"><?= $string  ?></p>
+            <p onclick="relocate(<?= $result['id'] ?>)" class="song <?= strlen($string) >= 30 ? 'marquee' : '' ?>"><?= $string  ?></p>
             <?php
         }
         ?>
@@ -90,12 +90,12 @@ include "../includes/php/header.php";
         <h1>Popular Tracks</h1>
 
         <?php
-        $sql = "SELECT * FROM tracks ORDER BY popularity DESC LIMIT 5";
+        $sql = "SELECT * FROM tracks ORDER BY spotify_popularity DESC LIMIT 5";
         $query = mysqli_query($conn, $sql);
         while($result = mysqli_fetch_assoc($query)){
             $string = $result['title']." -- ".$result['artist'];
             ?>
-            <p onclick="relocate(<?= $result['id'] ?>)" class="song <?= strlen($string) > 30 ? 'marquee' : '' ?>"><?= $string  ?></p>
+            <p onclick="relocate(<?= $result['id'] ?>)" class="song <?= strlen($string) >= 30 ? 'marquee' : '' ?>"><?= $string  ?></p>
             <?php
         }
         ?>
@@ -200,7 +200,7 @@ include "../includes/php/header.php";
                         if(result2.code == 200){
                             var classAdd = "";
                             var string = result2.track.title + ' -- ' + result2.track.artist;
-                            if(string.length > 30){
+                            if(string.length >= 30){
                                 classAdd = "marquee";
                             }
                             results.append(

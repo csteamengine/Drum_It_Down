@@ -45,6 +45,9 @@ body{
     font-size: 18px;
     height: 25px
 }
+/*.song_wide{*/
+    /*font-size: 25px;*/
+/*}*/
 .song_wide, .song_wide_names, hr{
     margin-left: 20px;
     margin-right: 20px;
