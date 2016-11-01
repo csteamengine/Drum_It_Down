@@ -70,6 +70,7 @@ var initMusicStaff = function(midiFile) {
     var beatsPerMeasure = 4;
     var musicStaff = $("#music-staff");
     var lastMeasureDisplayed = 0;
+    var measureTree = new MeasureTree(4);
 
     var handleNoteOn = function() {
         var exactBeat = ticks / ticksPerBeat;
@@ -79,11 +80,15 @@ var initMusicStaff = function(midiFile) {
         if (measuresPassed > 0) {
             for (var i = 0; i < measuresPassed; i++) {
                 musicStaff.append(svg.getSvg(notes));
+                console.log({measure: measure, tree: measureTree}); // TODO: generateNoteFlags();
+                console.log(measureTree.getNotes());
                 notes = [];
+                measureTree = new MeasureTree(4);
             }
             lastMeasureDisplayed = measure;
         }
 
+        measureTree.add(roundedBeat - measure*4);
         var noteData = noteInfo.get(obj.noteNumber);
         var xOffset = (svg.lineSpacing()*2) + 9*(roundedBeat-measure*4)*svg.lineSpacing();
         var yOffset = noteData.y;
@@ -95,7 +100,7 @@ var initMusicStaff = function(midiFile) {
     };
 
     console.log(midiFile.tracks[0][42]);
-    for (var i = 0; i < midiFile.tracks[0].length; i++) {
+    for (var i = 0; i < midiFile.tracks[0].length / 100; i++) {
         var obj = midiFile.tracks[0][i];
         ticks += obj.deltaTime;
         if (obj.subtype == "noteOn" && obj.channel == 9) {
@@ -243,19 +248,89 @@ var noteInfo = {
     }
 };
 
-// var notes = [
-// ];
-// for (var i = 1; i < 7; i+=0.5) {
-//     notes.push(svg.get("note",
-//         4*i*svg.lineSpacing(),
-//         svg.lineSpacing()*(i+4),
-//         'id="' + i + '"'));
-// }
-// for (i = 1; i < 7; i+=0.5) {
-//     var xAdjustment = (i < 4) ? -28 : 24;
-//     var yAdjustment = (i < 4) ? 0 : -165;
-//     notes.push(svg.get("stem",
-//         4 * i * svg.lineSpacing() + xAdjustment,
-//         svg.lineSpacing() * (i + 4) + yAdjustment));
-// }
-// $("#music-staff").html(svg.getSvg(notes));
+function Node(val) {
+    // If left or right is null, it means it's a rest. Otherwise, it's a note
+    // or has subdivision with a note.
+    var decimalPart = val - Math.floor(val);
+    if (decimalPart == 0) {
+        this.left = null;
+        this.right = null;
+    } else if (decimalPart < 0.5) {
+        this.left = new Node(val * 2);
+        this.right = null;
+    } else {
+        this.left = new Node(0);
+        this.right = new Node(val * 2);
+    }
+}
+Node.prototype.add = function(val) {
+    var decimalPart = val - Math.floor(val);
+    if (decimalPart == 0) {
+        // Do nothing
+    } else if (decimalPart < 0.5) {
+        if (this.left == null) {
+            this.left = new Node(val * 2);
+        } else {
+            this.left.add(val * 2);
+        }
+    } else {
+        if (this.left == null) {
+            this.left = new Node(0);
+        }
+        if (this.right == null) {
+            this.right = new Node(val * 2);
+        } else {
+            this.right.add(val * 2);
+        }
+    }
+};
+Node.prototype.getNotes = function(root, noteSize) {
+    var notes = {};
+    if (this.left == null && this.right == null) {
+        notes[String(root)] = {type: "note", size: noteSize};
+        return notes;
+    }
+
+    if (this.left != null) {
+        notes = this.left.getNotes(root, noteSize/2);
+    } else {
+        notes[String(root)] = {type: "rest", size: noteSize};
+    }
+    if (this.right != null) {
+        notes = $.extend(notes, this.right.getNotes(root + noteSize/2, noteSize/2));
+    }
+    return notes;
+};
+
+function MeasureTree(beats) {
+    if ((typeof beats !== "number") || Math.floor(beats) !== beats) {
+        throw new TypeError("The MeasureTree constructor must be given an integer!");
+    }
+    this.beatsPerMeasure = beats;
+    this.beats = [];
+    for (var i = 0; i < beats; i++) {
+        this.beats.push(null);
+    }
+}
+MeasureTree.prototype.add = function(val) {
+    if (val >= this.beatsPerMeasure || val < 0) {
+        throw new RangeError("Invalid value (" + val + ") added to MeasureTree with beatsPerMeasure=" + this.beatsPerMeasure)
+    }
+    var beat = Math.floor(val);
+    if (this.beats[beat] == null) {
+        this.beats[beat] = new Node(val, val);
+    } else {
+        this.beats[beat].add(val, val);
+    }
+};
+MeasureTree.prototype.getNotes = function() {
+    var notes = {};
+    for (var i = 0; i < this.beats.length; i++) {
+        if (this.beats[i] == null) {
+            notes[i] = "rest";
+        } else {
+            notes[i] = this.beats[i].getNotes(0, 1);
+        }
+    }
+    return notes;
+};
