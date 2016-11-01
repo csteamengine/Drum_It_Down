@@ -67,12 +67,25 @@ var initMusicStaff = function(midiFile) {
     var ticksPerBeat = midiFile.header.ticksPerBeat;
     var notes = [];
     var ticks = 0;
+    var beatsPerMeasure = 4;
+    var musicStaff = $("#music-staff");
+    var lastMeasureDisplayed = 0;
 
     var handleNoteOn = function() {
         var exactBeat = ticks / ticksPerBeat;
         var roundedBeat = Math.round(exactBeat * 8) / 8.0;
+        var measure = Math.floor(roundedBeat / beatsPerMeasure);
+        var measuresPassed = measure - lastMeasureDisplayed;
+        if (measuresPassed > 0) {
+            for (var i = 0; i < measuresPassed; i++) {
+                musicStaff.append(svg.getSvg(notes));
+                notes = [];
+            }
+            lastMeasureDisplayed = measure;
+        }
+
         var noteData = noteInfo.get(obj.noteNumber);
-        var xOffset = 8*(roundedBeat-5)*svg.lineSpacing();
+        var xOffset = (svg.lineSpacing()*2) + 9*(roundedBeat-measure*4)*svg.lineSpacing();
         var yOffset = noteData.y;
         notes.push(svg.get(noteData.noteHead, xOffset, yOffset,
             'id="' + i + '_beat' + roundedBeat + '"'));
@@ -82,15 +95,13 @@ var initMusicStaff = function(midiFile) {
     };
 
     console.log(midiFile.tracks[0][42]);
-    for (var i = 0; i < midiFile.tracks[0].length / 100; i++) {
+    for (var i = 0; i < midiFile.tracks[0].length; i++) {
         var obj = midiFile.tracks[0][i];
         ticks += obj.deltaTime;
         if (obj.subtype == "noteOn" && obj.channel == 9) {
             handleNoteOn(obj, ticks, i);
         }
     }
-
-    $("#music-staff").html(svg.getSvg(notes));
 };
 
 
