@@ -15,7 +15,21 @@ if($_GET['action'] != ""){
     switch($action){
         case 'search':
             $track = $_GET['track'];
-            $sql = "SELECT * FROM ";
+            $sql = "SELECT * FROM midi_files WHERE track_id = (SELECT id FROM tracks WHERE spotify_id='".$track."')";
+            $query = mysqli_query($conn, $sql);
+            if(mysqli_num_rows($query) > 0){
+                $result = mysqli_fetch_assoc($query);
+                $sql2 = "SELECT * FROM tracks WHERE spotify_id='".$track."'";
+                $query2 = mysqli_query($conn, $sql2);
+                $result2 = mysqli_fetch_assoc($query2);
+                $json = array('code' => 200, 'track' => $result2, 'file' => $result, 'number' => $_GET['number']);
+                echo json_encode($json);
+                exit;
+            }else{
+                $json = array('code' => 404, 'error' => 'No Search Results', 'number' => $_GET['number']);
+                echo json_encode($json);
+                exit;
+            }
             break;
         default:
 
@@ -53,8 +67,10 @@ include "../includes/php/header.php";
 
 <div id="popular" class="grid">
     <div class="item" id="search_songs_div">
-        <input type="text" id="search_songs" placeholder="Search Songs">
-        <button id="search_songs_button">Search</button>
+        <form id="search_songs_form">
+            <input type="text" id="search_songs" placeholder="Search Songs">
+            <button id="search_songs_button">Search</button>
+        </form>
         <div id="results"></div>
     </div>
     <div class="item" id="popular_files">
@@ -92,32 +108,44 @@ include "../includes/php/header.php";
 </body>
 <script>
     function relocate(id){
-        window.location = '/player/?action=play&track='+id;
+        window.location = '/player/?action=play&file='+id;
     }
-    $('#search_songs_button').click(function(){
+    $('#search_songs_form').submit(function(event){
+        event.preventDefault();
+        $('#results').html('');
         if($('#search_songs').val() != ""){
             var limit = 5;
             var search_term = encodeURI($('#search_songs').val());
             var url = "https://api.spotify.com/v1/search?q=" + search_term + "&type=track&limit=" + limit;
             $.getJSON(url, function (result) {
-                var new_url = "/?action=search&track="+ result[0].title;
-                $.getJSON(url, function (result2) {
-                    var results = $('#results');
-                    if(result2.code == 200){
-                        var classAdd = "";
-                        var string = result.title + " -- " + result2.artist;
-                        if(string.length > 30){
-                            classAdd = "marquee";
+                for(i = 0;i< 5;i++){
+                    var new_url = "/browse/index.php?action=search&track="+ result.tracks.items[i].id + '&number='+i;
+                    $.getJSON(new_url, function (result2) {
+                        var results = $('#results');
+                        console.log(result2);
+                        if(result2.code == 200){
+                            var classAdd = "";
+                            var string = result2.track.title + ' -- ' + result2.track.artist;
+                            if(string.length > 30){
+                                classAdd = "marquee";
+                            }
+                            results.append(
+                                '<p onclick="relocate('+ result2.file.id +')" class="song '+ classAdd+'">'+string+'</p>'
+                            );
                         }
-                        results.append(
-                            '<p onclick="relocate('+ result2.id +')" class="song '+ classAdd+'">'+string+'</p>'
-                        );
-                    }else{
-                        //TODO append no results
-                    }
-                });
+                        if(result2.number ==4 ){
+                            if(results.html() == ""){
+                                results.append(
+                                    '<p class="song " style="text-align: center; width: 100%; pointer-events: none;">No Search Results</p>'
+                                )
+                            }
+                        }
+                    });
+
+                }
 
             });
+
 
         }
 

@@ -15,7 +15,7 @@ if($action != ""){
             $track = $_GET['track'];
             $file = $_GET['file'];
             if($file == ""){
-                $sql = "SELECT *, MAX(popularity) FROM midi_files WHERE track_id = ".$track;
+                $sql = "SELECT * FROM midi_files WHERE track_id = ".$track." ORDER BY popularity DESC";
                 $query = mysqli_query($conn, $sql);
                 if(mysqli_num_rows($query) > 0){
                     $file = mysqli_fetch_assoc($query);
