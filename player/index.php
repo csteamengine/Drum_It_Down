@@ -14,13 +14,21 @@ if($action != ""){
             //TODO get likes and check if current user has already liked the file
             $track = $_GET['track'];
             $file = $_GET['file'];
-            //TODO select file and track info from db.
-            $sql = "SELECT * FROM midi_files WHERE id=".$file;
-            $query = mysqli_query($conn, $sql);
-            if(mysqli_num_rows($query) == 0){
-                //TODO error
+            if($file == ""){
+                $sql = "SELECT *, MAX(popularity) FROM midi_files WHERE track_id = ".$track;
+                $query = mysqli_query($conn, $sql);
+                if(mysqli_num_rows($query) > 0){
+                    $file = mysqli_fetch_assoc($query);
+                }
+            }else{
+                //TODO select file and track info from db.
+                $sql = "SELECT * FROM midi_files WHERE id=".$file;
+                $query = mysqli_query($conn, $sql);
+                if(mysqli_num_rows($query) == 0){
+                    //TODO error
+                }
+                $file = mysqli_fetch_assoc($query);
             }
-            $file = mysqli_fetch_assoc($query);
 
             $sql = "SELECT * FROM tracks WHERE id=".$track;
             $query = mysqli_query($conn, $sql);

@@ -1,0 +1,109 @@
+#popular {
+    width: 90%;
+    margin-left: 5%;
+}
+.grid{
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+.item{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin: 20px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    overflow: hidden;
+    border: 1px solid #E05151;
+    padding: 10px;
+}
+.item h1{
+    text-align: center;
+    margin: 10px auto;
+}
+.song{
+    height: 30px;
+    font-size: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    cursor: hand;
+    text-decoration: none;
+    color: inherit;
+}
+.song:hover{
+    color: #E05151;
+}
+
+#search_songs{
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    display: inline-block;
+    color: #75A3D1;
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #E05151;
+    background: transparent;
+    padding-left: 5px;
+}
+#search_songs:focus{
+    outline: none;
+}
+#search_songs_button{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    display: inline-block;
+    height: 33px;
+    width: 60px;
+    border: 1px solid #E05151;
+    background-color: transparent;
+    color: #E05151;
+    border-radius: 5px;
+    cursor: pointer;
+    cursor: hand;
+}
+#search_songs_button:hover{
+    background-color: #E05151;
+    color: white;
+
+}
+#search_songs_button:focus{
+    outline: none;
+}
+#results{
+    width: 100%;
+    margin-top: 50px;
+}
+/* Make it a marquee */
+.marquee {
+    width: 450px;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    animation-play-state: paused;
+
+}
+
+.marquee:hover {
+    animation: marquee 10s linear infinite;
+    animation-play-state: running;
+}
+
+/* Make it move */
+@keyframes marquee {
+    0%   { text-indent: 0}
+    100% { text-indent: -100% }
+}
