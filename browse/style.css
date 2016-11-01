@@ -1,6 +1,82 @@
+body{
+    overflow-x: hidden;
+    padding-bottom: 50px;
+}
 #popular {
     width: 90%;
     margin-left: 5%;
+}
+#songs{
+    display: inline-flex;
+    width: 100%;
+    margin: 0 0 50px;
+    position: relative;
+    padding-bottom: 10px;
+}
+#all_songs{
+    width: 90%;
+    margin: 0 auto 50px;
+    border: 1px solid #E05151;
+    border-radius: 5px;
+    padding: 20px 0 20px 0 ;
+}
+#all_files{
+    width: 90%;
+    margin: 0 auto 50px;
+    border: 1px solid #E05151;
+    border-radius: 5px;
+    padding: 20px 0 20px 0;
+}
+#all_songs hr{
+    margin-bottom: 15px;
+}
+#all_files hr{
+    margin-bottom: 15px;
+}
+.votes{
+    height: 15px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+.column{
+    width: 43%;
+    margin: 0;
+    display: inline-flex;
+    font-size: 18px;
+    height: 25px
+}
+.song_wide, .song_wide_names, hr{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.song_wide:hover{
+    background-color: rgba(0,0,0,.5);
+    cursor: pointer;
+    cursor: hand;
+}
+.popularity{
+    width: 10%;
+    margin: 0 auto;
+    justify-content: center;
+}
+.song_wide_names .column{
+    font-size: 25px;
+}
+#view_all{
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+.click_title{
+    margin: 0 25px 15px 25px;
+    cursor: pointer;
+    cursor: hand;
+}
+.selected_title{
+    text-decoration: underline;
 }
 .grid{
     display: flex;

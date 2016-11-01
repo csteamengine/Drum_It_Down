@@ -101,14 +101,89 @@ include "../includes/php/header.php";
         ?>
     </div>
 </div>
-<div id="all_songs" hidden>
-<!--    TODO display a list of all the songs we have, with lots of information about them-->
-<!--    When Clicked, it will take them to the player.php page and start playing.-->
+<div id="view_all">
+    <h1 class="click_title selected_title" id="all_songs_title">All Songs</h1>
+    <h1 class="click_title" id="all_files_title">All Files</h1>
 </div>
+<?php
+
+?>
+<div id="songs" >
+    <div id="all_songs">
+
+        <div class="song_wide_names" id="column_names">
+            <div class="title column">Title</div>
+            <div class="artist column">Artist</div>
+            <div class="popularity column">Popularity</div>
+        </div>
+        <hr>
+        <?php
+        $sql = "SELECT * FROM tracks ORDER BY title";
+        $query = mysqli_query($conn, $sql);
+        while($result = mysqli_fetch_assoc($query)) {
+            ?>
+            <div class="song_wide" onclick="relocate(<?= $result['id'] ?>)">
+                <div class="title column"><?= $result['title'] ?></div>
+                <div class="artist column"><?= $result['artist'] ?></div>
+                <div class="popularity column"><?= $result['spotify_popularity'] ?></div>
+            </div>
+            <?php
+        }
+        ?>
+    </div>
+    <div id="all_files" hidden>
+
+        <div class="song_wide_names">
+            <div class="title column">Title</div>
+            <div class="artist column">Artist</div>
+            <div class="popularity column">Popularity</div>
+        </div>
+        <hr>
+        <?php
+        $sql = "SELECT mf.*, tr.title, tr.artist, tr.id as tr_id FROM midi_files mf INNER JOIN tracks tr on mf.track_id = tr.id ORDER BY tr.title, mf.popularity DESC";
+        $query = mysqli_query($conn, $sql);
+        while($result = mysqli_fetch_assoc($query)) {
+            $up = "SELECT * FROM upvotes WHERE file_id=".$result['id']." AND active = 'yes'";
+            $down = "SELECT * FROM downvotes WHERE file_id=".$result['id']." AND active = 'yes'";
+            $query1 = mysqli_query($conn, $up);
+            $query2 = mysqli_query($conn, $down);
+            $up_count = mysqli_num_rows($query1);
+            $down_count = mysqli_num_rows($query2);
+
+            ?>
+            <div class="song_wide" onclick="relocate(<?= $result['tr_id'] ?>)">
+                <div class="title column"><?= $result['title'] ?></div>
+                <div class="artist column"><?= $result['artist'] ?></div>
+                <div class="popularity column">
+                    <img class="votes" src="/includes/images/upvote.png"><?= $up_count ?>
+                    <img class="votes" src="/includes/images/downvote.png"><?= $down_count ?>
+                </div>
+            </div>
+            <?php
+        }
+        ?>
+    </div>
+</div>
+
 </body>
 <script>
+    var all_songs = $('#all_songs_title');
+    var all_files = $('#all_files_title');
+
+    all_songs.click(function(){
+        $('#all_files').hide();
+        $('#all_songs').show();
+        all_songs.addClass('selected_title');
+        all_files.removeClass('selected_title');
+    });
+    all_files.click(function(){
+        $('#all_files').show();
+        $('#all_songs').hide();
+        all_songs.removeClass('selected_title');
+        all_files.addClass('selected_title');
+    });
     function relocate(id){
-        window.location = '/player/?action=play&file='+id;
+        window.location = '/player/?action=play&track='+id;
     }
     $('#search_songs_form').submit(function(event){
         event.preventDefault();
@@ -122,7 +197,6 @@ include "../includes/php/header.php";
                     var new_url = "/browse/index.php?action=search&track="+ result.tracks.items[i].id + '&number='+i;
                     $.getJSON(new_url, function (result2) {
                         var results = $('#results');
-                        console.log(result2);
                         if(result2.code == 200){
                             var classAdd = "";
                             var string = result2.track.title + ' -- ' + result2.track.artist;
@@ -130,7 +204,7 @@ include "../includes/php/header.php";
                                 classAdd = "marquee";
                             }
                             results.append(
-                                '<p onclick="relocate('+ result2.file.id +')" class="song '+ classAdd+'">'+string+'</p>'
+                                '<p onclick="relocate('+ result2.track.id +')" class="song '+ classAdd+'">'+string+'</p>'
                             );
                         }
                         if(result2.number ==4 ){
