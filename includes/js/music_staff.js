@@ -34,7 +34,10 @@ var svg = {
             'viewBox="0 0 ' + this.vbWidth() + ' ' + this.vbHeight() + '">' + this.getStaff() +
             notes.join("") + '</svg>';
     },
-    beatYMap: {}
+    yBeatMaps: {
+        high: {},
+        low: {}
+    }
 };
 
 
@@ -63,26 +66,33 @@ var initMusicStaff = function(midiFile) {
                         var subdivision = beat[subdivisionKey];
                         if (subdivision.type == "note") {
                             var subdivFloat = parseFloat(subdivisionKey);
-                            var rawY = svg.beatYMap[String(subdivFloat + (measureNumber-1)*4)];
-                            if (rawY == undefined) {
-                                console.log(subdivFloat + measureNumber*4);
-                                console.log(svg.beatYMap);
-                                rawY = 8;
-                            }
+                            var rawYHigh = svg.yBeatMaps.high[String(subdivFloat + (measureNumber-1)*4)];
+                            var rawYLow = svg.yBeatMaps.low[String(subdivFloat + (measureNumber-1)*4)];
                             var xOffset = (2 + 9*subdivFloat)*svg.lineSpacing();
-                            var yOffset = rawY * svg.lineSpacing();
                             if (subdivision.size == 0.5) {
-                                console.log(subdivision);
-                                var xAdjustment = (rawY > 7) ? 445 : 0;
-                                var yAdjustment = (rawY > 7) ? 1000 : 0;
                                 var identifier = "8th flag";
                             } else {
-                                xAdjustment = (rawY > 7) ? 726 : 0;
-                                yAdjustment = (rawY > 7) ? 1200 : 0;
                                 identifier = "16th flag";
                             }
-                            var misc = (rawY > 7) ? "rotate(180)" : "";
-                            notes.push(getSvgElement(identifier, xOffset + xAdjustment, yOffset + yAdjustment, misc)); // FIXME
+
+                            if (rawYHigh != undefined) {
+                                var yOffset = rawYHigh * svg.lineSpacing();
+                                notes.push(getSvgElement(identifier, xOffset, yOffset));
+                            }
+
+                            if (rawYLow != undefined) {
+                                yOffset = rawYLow * svg.lineSpacing();
+                                if (subdivision.size == 0.5) {
+                                    var xAdjustment = (rawYLow > 7) ? 445 : 0;
+                                    var yAdjustment = (rawYLow > 7) ? 1000 : 0;
+                                } else {
+                                    xAdjustment = (rawYLow > 7) ? 726 : 0;
+                                    yAdjustment = (rawYLow > 7) ? 1200 : 0;
+                                }
+                                var misc = "rotate(180)";
+                                notes.push(
+                                    getSvgElement(identifier, xOffset + xAdjustment, yOffset + yAdjustment, misc));
+                            }
                         }
                     }
                 }
@@ -147,14 +157,21 @@ var initMusicStaff = function(midiFile) {
         var noteData = noteInfo.getNote(obj.noteNumber);
         if (noteData.rawY > 7) {
             lowerMeasureTree.add(roundedBeat - measure*4);
+            var currentBeatMapping = svg.yBeatMaps.low[String(roundedBeat)];
+            if (currentBeatMapping == undefined || noteData.rawY > currentBeatMapping) {
+                svg.yBeatMaps.low[String(roundedBeat)] = noteData.rawY;
+            }
         } else {
             upperMeasureTree.add(roundedBeat - measure*4);
+            currentBeatMapping = svg.yBeatMaps.high[String(roundedBeat)];
+            if (currentBeatMapping == undefined || noteData.rawY < currentBeatMapping) {
+                svg.yBeatMaps.high[String(roundedBeat)] = noteData.rawY;
+            }
         }
         var xOffset = (2 + 9*(roundedBeat-measure*4))*svg.lineSpacing();
         var yOffset = noteData.y;
         notes.push(getSvgElement(noteData.noteHead, xOffset, yOffset,
             'id="' + i + '_beat' + roundedBeat + '"'));
-        svg.beatYMap[String(roundedBeat)] = noteData.rawY;
         var xAdjustment = (noteData.rawY > 7) ? -28 : 24;
         var yAdjustment = (noteData.rawY > 7) ? 0 : -165;
         notes.push(getSvgElement("stem", xOffset + xAdjustment, yOffset + yAdjustment));
@@ -379,10 +396,6 @@ MeasureTree.prototype.getNotes = function() {
 };
 
 function Node(val, rest) {
-    // If left or right is null, it means it's a rest. Otherwise, it's a note
-    // or has subdivision with a note.
-    var decimalPart = val - Math.floor(val);
-
     this.left = null;
     this.right = null;
     this.isRest = true;
