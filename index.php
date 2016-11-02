@@ -155,6 +155,3 @@ if(!$_SESSION['logged_in']){
     </div>
 </body>
 </html>
-    <?php
-    include "includes/php/footer.php";
-

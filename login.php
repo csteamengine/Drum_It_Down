@@ -58,10 +58,6 @@ if($_SESSION['logged_in']){
     </form>
     </body>
 </html>
-<?php
-include "includes/php/footer.php";
-
-?>
 <script>
     $('#login').submit(function(event){
         event.preventDefault();

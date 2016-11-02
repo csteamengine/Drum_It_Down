@@ -86,11 +86,16 @@ div.player #capsule #cursor {
 }
 div.player span.time {
     position: relative;
-    top: -9px;
-    padding: 0 10px;
+    /*top: -9px;*/
+    padding: 5px 10px;
     width: 40px;
     display: inline-block;
     text-align: right;
+    background-color: #2f2e2e;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #000;
 }
 div.player #time2{
     position: absolute;

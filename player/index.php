@@ -151,7 +151,7 @@ function update_pop($conn){
     <link rel="stylesheet" href="../includes/css/shared.css">
     <link rel="stylesheet" href="../includes/css/header.css">
     <link rel="stylesheet" href="../includes/css/footer.css">
-<!--    <link rel="stylesheet" href="../includes/css/music_staff.css">-->
+    <link rel="stylesheet" href="../includes/css/music_staff.css">
     <link rel="stylesheet" href="../includes/css/player.css">
     <link rel="icon" type="image/x-icon" href="../favicon.png?v=4"/>
     <!--<script src="includes/shim/Base64.js" type="text/javascript"></script>-->
@@ -176,6 +176,7 @@ function update_pop($conn){
     <!-- includes -->
     <script src="../includes/js/timer.js" type="text/javascript"></script>
     <script src="../includes/js/event.js" type="text/javascript"></script>
+    <script src="../includes/js/shared.js" type="text/javascript"></script>
 </head>
 <?php
 include "../includes/php/header.php";
@@ -183,7 +184,6 @@ include "../includes/php/header.php";
 <body>
 <input type="hidden" id="song_file" value="<?= $file['file_name'] ?>">
 <input type="hidden" id="duration" value="<?= $track['duration'] ?>">
-<div id="music-staff"></div>
 <h2 id="title"><?= $track['title']." -- ". $track['artist'] ?></h2>
 
 <div style="position: fixed; top: 0; left: 0; z-index: 4; overflow: hidden;" id="colors"></div>
@@ -242,6 +242,14 @@ $query_down = mysqli_query($conn, $sql2);
     </div>
 
 </div>
+
+<div id="sheet-music-header">
+    <h2>Generated Sheet Music</h2>
+    <p><b>Disclaimer:</b> Sheet music generation can only match quarter, eighth, and 16th notes in 4/4 time. It can't
+        do triplets, odd groupings, odd time signatures, or anything smaller in duration than 16th notes. At
+        least not yet...</p><div id="music-staff"></div>
+</div>
+
 <?php
 include "../drum.php";
 
@@ -282,9 +290,6 @@ include "../drum.php";
     }
 </script>
 </body>
-<?php
-include "../includes/php/footer.php";
-?>
 </html>
 <?php
 

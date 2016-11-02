@@ -9,32 +9,29 @@ if (typeof (console) === "undefined") var console = {
 };
 
 var handleNote = {
-    notImplemented: function(){
-        console.log("Not Implemented");
-    },
-    35: kick,
-    36: kick,
-    37: this.notImplemented,
-    38: snare_hit,
-    39: this.notImplemented,
-    40: snare_hit,
-    41: floorTom,
-    42: hiHat,
-    43: floorTom,
-    44: hiHat,
-    45: rightTom,
-    46: hiHat,
-    47: rightTom,
-    48: leftTom,
-    49: crash_hit,
-    50: leftTom,
-    51: crash_hit,
-    52: this.notImplemented,
-    53: crash_hit,
-    54: this.notImplemented,
-    55: this.notImplemented,
-    56: this.notImplemented,
-    57: crash_hit
+    35: kick,      // Bass Drum 2
+    36: kick,      // Bass Drum 1
+    37: undefined, // Side Stick/Rimshot
+    38: snare_hit, // Snare Drum 1
+    39: undefined, // Hand Clap
+    40: snare_hit, // Snare Drum 2
+    41: floorTom,  // Low Tom 2
+    42: hiHat,     // Closed Hi-hat
+    43: floorTom,  // Low Tom 1
+    44: hiHat,     // Pedal Hi-hat
+    45: rightTom,  // Mid Tom 2
+    46: hiHat,     // Open Hi-hat
+    47: rightTom,  // Mid Tom 1
+    48: leftTom,   // High Tom 2
+    49: crash_hit, // Crash Cymbal 1
+    50: leftTom,   // High Tom 1
+    51: crash_hit, // Ride Cymbal 1
+    52: crash_hit, // Chinese Cymbal
+    53: crash_hit, // Ride Bell
+    54: undefined, // Tambourine
+    55: crash_hit, // Splash Cymbal
+    56: undefined, // Cowbell
+    57: crash_hit  // Crash Cymbal 2
 };
 
 // Toggle between Pause and Play modes.
@@ -80,7 +77,10 @@ eventjs.add(window, "load", function (event) {
             /// Handle note events
             player.addListener(function (data) {
                 // We only care about "note on" messages in the drum track between notes 35-57
-                if (data.message === 144 && data.channel == drumTrack && data.note >= 35 && data.note <= 57) {
+                if (data.message === 144
+                    && data.channel == drumTrack
+                    && data.note >= 35 && data.note <= 57
+                    && handleNote[data.note] != undefined) {
                     handleNote[data.note]();
                 }
             });
@@ -88,6 +88,13 @@ eventjs.add(window, "load", function (event) {
             /// Show the player progress bar
             MIDIPlayerPercentage(player);
         }
+    });
+
+    /// Load the MidiFile for parsing as staff music
+    parse_midi(songs[songId], songs[songId], function(midiFile) {
+        console.log(songs[songId]);
+        console.log(midiFile);
+        initMusicStaff(midiFile);
     });
 });
 var lower = false;
@@ -156,6 +163,12 @@ var MIDIPlayerPercentage = function (player) {
     player.getNextSong = function (n) {
         var id = Math.abs((songId += n) % songs.length);
         player.loadFile("/midi_files/" + songs[id], onSuccessfulSongLoad);
+
+        /// Load the MidiFile for parsing as staff music
+        parse_midi(songs[songId], songs[songId], function(midiFile) {
+            // console.log(midiFile);
+            initMusicStaff(midiFile);
+        });
     };
 
     //noinspection JSUnusedLocalSymbols
