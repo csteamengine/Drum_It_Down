@@ -1,6 +1,9 @@
+#sheet-music-header{
+    margin-top: -500px;
+
+}
 #music-staff, #sheet-music-header p {
     margin: 1em auto;
-    padding-bottom: 100px;
     position: relative;
     display: block;
     width: 1220px;

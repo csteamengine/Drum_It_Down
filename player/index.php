@@ -184,7 +184,7 @@ include "../includes/php/header.php";
 <body>
 <input type="hidden" id="song_file" value="<?= $file['file_name'] ?>">
 <input type="hidden" id="duration" value="<?= $track['duration'] ?>">
-<h2 id="title"><?= $track['title']." -- ". $track['artist'] ?></h2>
+
 
 <div style="position: fixed; top: 0; left: 0; z-index: 4; overflow: hidden;" id="colors"></div>
 <?php
@@ -214,11 +214,12 @@ $query_down = mysqli_query($conn, $sql2);
     <div class="blob blob-4"></div>
     <div class="blob blob-5"></div>
 </div>
-<img id="upvote" onclick="up_vote('<?= $file['id'] ?>')" src="/includes/images/<?= mysqli_num_rows($query_up) > 0 ? 'upvoted' : 'upvote'  ?>.png">
-<img id="downvote" onclick="down_vote('<?= $file['id'] ?>')" src="/includes/images/<?= mysqli_num_rows($query_down) > 0 ? 'downvoted' : 'downvote' ?>.png">
+
 
 <div id="player" style="">
-
+    <h2 id="title"><?= $track['title']." -- ". $track['artist'] ?></h2>
+    <img id="upvote" onclick="up_vote('<?= $file['id'] ?>')" src="/includes/images/<?= mysqli_num_rows($query_up) > 0 ? 'upvoted' : 'upvote'  ?>.png">
+    <img id="downvote" onclick="down_vote('<?= $file['id'] ?>')" src="/includes/images/<?= mysqli_num_rows($query_down) > 0 ? 'downvoted' : 'downvote' ?>.png">
     <div class="player">
         <div id="controls">
             <input type="image" src="../includes/images/pause.png" align="absmiddle" value="pause"
@@ -240,9 +241,12 @@ $query_down = mysqli_query($conn, $sql2);
             <span id="time2" class="time">-0:00</span>
         </div>
     </div>
-
+    <h3 id="scroll_down">Scroll down for sheet music</h3>
 </div>
+<?php
+include "../drum.php";
 
+?>
 <div id="sheet-music-header">
     <h2>Generated Sheet Music</h2>
     <p><b>Disclaimer:</b> Sheet music generation can only match quarter, eighth, and 16th notes in 4/4 time. It can't
@@ -250,11 +254,6 @@ $query_down = mysqli_query($conn, $sql2);
         least not yet...</p><div id="music-staff"></div>
 </div>
 
-
-<?php
-include "../drum.php";
-
-?>
 
 <script src="../includes/js/music_staff.js" type="text/javascript"></script>
 <script src="../includes/js/jquery-2.2.4.min.js" type="text/javascript"></script>
