@@ -44,9 +44,10 @@ var initMusicStaff = function(midiFile) {
     var beatsPerMeasure = 4;
     var musicStaff = $("#music-staff");
     var lastMeasureDisplayed = 0;
-    var measureTree = new MeasureTree(4);
+    var upperMeasureTree = new MeasureTree(4);
+    var lowerMeasureTree = new MeasureTree(4);
 
-    var generateFlagsAndRests = function(tree) {
+    var generateRests = function(tree) {
         var parsedMeasure = tree.getNotes();
         dbPrint(tree);
         dbPrint(parsedMeasure);
@@ -71,7 +72,7 @@ var initMusicStaff = function(midiFile) {
                         if (subdivision.type == "rest") {
                             noteData = noteInfo.getRest(subdivision.size);
                             xOffset = (2 + 9*parseFloat(subdivisionKey))*svg.lineSpacing();
-                            yOffset = 0;
+                            yOffset = 58;
                             notes.push(getSvgElement(noteData.noteHead, xOffset, yOffset));
                         }
                     }
@@ -87,15 +88,23 @@ var initMusicStaff = function(midiFile) {
         var measure = Math.floor(roundedBeat / beatsPerMeasure);
         if (lastMeasureDisplayed != measure) {
             notes.push('<text x="15" y="30" transform="scale(3 3)">' + (measure) + '</text>');
-            generateFlagsAndRests(measureTree);
+            // generateRests(upperMeasureTree);
+            generateRests(lowerMeasureTree);
             musicStaff.append(svg.getSvg(notes));
             notes = [];
-            measureTree = new MeasureTree(4);
+            upperMeasureTree = new MeasureTree(4);
+            lowerMeasureTree = new MeasureTree(4);
             lastMeasureDisplayed = measure;
         }
 
-        measureTree.add(roundedBeat - measure*4);
         var noteData = noteInfo.getNote(obj.noteNumber);
+        if (noteData.rawY > 7) {
+            lowerMeasureTree.add(roundedBeat - measure*4);
+        } else {
+            // TODO: Intelligent parsing of notes for upper and lower parts of the measure.
+            // They're outside the scope of this project, but could be implemented down the road.
+            // upperMeasureTree.add(roundedBeat - measure*4);
+        }
         var xOffset = (2 + 9*(roundedBeat-measure*4))*svg.lineSpacing();
         var yOffset = noteData.y;
         notes.push(getSvgElement(noteData.noteHead, xOffset, yOffset,
