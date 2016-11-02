@@ -1,6 +1,25 @@
+#music-staff, #sheet-music-header p {
+    margin: 1em auto;
+    display: block;
+    width: 1220px;
+}
+
+@media (max-width: 1220px) {
+    #music-staff, #sheet-music-header p {
+        width: 810px;
+    }
+}
+
+@media (max-width: 810px) {
+    #music-staff, #sheet-music-header p {
+        width: 405px;
+    }
+}
+
 #music-staff svg {
     border-left: solid 1px grey;
     border-right: solid 1px grey;
+    background-color: white;
 }
 
 #music-staff svg * {

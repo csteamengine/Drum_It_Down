@@ -56,13 +56,8 @@ var svg = {
 // Creates an svg music staff for the given `midiFile`
 var initMusicStaff = function (midiFile) {
     var ticksPerBeat = midiFile.header.ticksPerBeat;
-    var notes = [];
-    var ticks = 0;
     var beatsPerMeasure = 4;
     var musicStaff = $("#" + svg.config.containerId);
-    var lastMeasureDisplayed = 0;
-    var upperMeasureTree = new MeasureTree(4);
-    var lowerMeasureTree = new MeasureTree(4);
 
     // Generates flags for notes, indicating if they are 8ths, 16ths, etc.
     // The `parsedTree` parameter should be a MeasureTree.getNotes() object. The `measureNumber` is zero-indexed.
@@ -208,11 +203,19 @@ var initMusicStaff = function (midiFile) {
     };
 
     // MAIN LOOP: This iterates through all the MIDI "noteOn" events in the `midiFile` drum track (channel 9)
-    for (var i = 0; i < midiFile.tracks[0].length; i++) {
-        var obj = midiFile.tracks[0][i];
-        ticks += obj.deltaTime;
-        if (obj.subtype == "noteOn" && obj.channel == 9) {
-            handleNoteOn(obj, ticks, i);
+    for (var trackIndex = 0; trackIndex < midiFile.tracks.length; trackIndex++) {
+        var notes = [];
+        var ticks = 0;
+        var lastMeasureDisplayed = 0;
+        var upperMeasureTree = new MeasureTree(4);
+        var lowerMeasureTree = new MeasureTree(4);
+
+        for (var i = 0; i < midiFile.tracks[trackIndex].length; i++) {
+            var obj = midiFile.tracks[trackIndex][i];
+            ticks += obj.deltaTime;
+            if (obj.subtype == "noteOn" && obj.channel == 9) {
+                handleNoteOn(obj, ticks, i);
+            }
         }
     }
 };

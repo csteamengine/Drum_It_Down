@@ -73,9 +73,6 @@ include "../includes/php/header.php";
 <!--<a href="https://en.wikipedia.org/wiki/General_MIDI#Percussion" target="_blank">We'll probably need these too...</a><br>-->
 </body>
 
-<?php
-include "../includes/php/footer.php";
-?>
 <script src="/includes/js/shared.js"></script>
 <!--suppress JSUnresolvedVariable -->
 <script>

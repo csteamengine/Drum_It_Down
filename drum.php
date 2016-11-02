@@ -8,7 +8,7 @@
 
 ?>
 
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="300 300 1400 1400">
+<svg id="svg-drums-container" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="300 300 1400 1400">
     <g id="Drums">
         <g>
             <path id="Drum-Shadow" opacity="0.1" fill="#333333" d="M1626.6,1282.8c0,45.4-280.5,82.1-626.6,82.1
