@@ -1,6 +1,6 @@
 -- --------------------------------------------------------
--- Host:                         66.147.244.88
--- Server version:               5.5.51-38.2-log - Percona Server (GPL), Release 38.2, Revision 2
+-- Host:                         mysql.kellydevittceramics.com
+-- Server version:               5.6.25-log - Source distribution
 -- Server OS:                    Linux
 -- HeidiSQL Version:             9.3.0.4984
 -- --------------------------------------------------------
@@ -10,123 +10,114 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
--- Dumping structure for table stonesu0_stonestreet.images
-CREATE TABLE IF NOT EXISTS `images` (
+-- Dumping structure for table drumsinthedeep.downvotes
+CREATE TABLE IF NOT EXISTS `downvotes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `project_id` int(10) DEFAULT NULL,
-  `file_name` varchar(50) DEFAULT NULL,
-  KEY `Index 1` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- Dumping data for table stonesu0_stonestreet.images: ~0 rows (approximately)
-/*!40000 ALTER TABLE `images` DISABLE KEYS */;
-/*!40000 ALTER TABLE `images` ENABLE KEYS */;
-
-
--- Dumping structure for table stonesu0_stonestreet.life_images
-CREATE TABLE IF NOT EXISTS `life_images` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `file_name` varchar(50) NOT NULL,
-  `active` varchar(10) DEFAULT 'yes',
+  `file_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `active` varchar(45) DEFAULT 'yes',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Dumping data for table stonesu0_stonestreet.life_images: 9 rows
-/*!40000 ALTER TABLE `life_images` DISABLE KEYS */;
-INSERT INTO `life_images` (`id`, `file_name`, `active`) VALUES
-	(1, 'KellySlalomCropped.jpg', 'yes'),
-	(2, 'NickNMeCropped.jpg', 'yes'),
-	(3, 'Megalodon.jpg', 'yes'),
-	(4, 'KellNMe.jpg', 'yes'),
-	(5, 'ClubFest_table_Fall_2015.JPG', 'yes'),
-	(6, 'WakeboardCropped.jpg', 'yes'),
-	(7, 'KellNMeChristmas.jpg', 'yes'),
-	(8, 'TheFamily.jpg', 'yes'),
-	(9, 'Slopes1.jpg', 'yes');
-/*!40000 ALTER TABLE `life_images` ENABLE KEYS */;
+-- Dumping data for table drumsinthedeep.downvotes: ~2 rows (approximately)
+/*!40000 ALTER TABLE `downvotes` DISABLE KEYS */;
+INSERT INTO `downvotes` (`id`, `file_id`, `user_id`, `active`) VALUES
+	(1, 7, 1, 'yes'),
+	(2, 4, 2, 'no');
+/*!40000 ALTER TABLE `downvotes` ENABLE KEYS */;
 
 
--- Dumping structure for table stonesu0_stonestreet.most_recent
-CREATE TABLE IF NOT EXISTS `most_recent` (
+-- Dumping structure for table drumsinthedeep.midi_files
+CREATE TABLE IF NOT EXISTS `midi_files` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `project_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `most_recent_projects_id_fk` (`project_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `track_id` int(11) NOT NULL,
+  `file_name` varchar(100) DEFAULT NULL,
+  `popularity` int(11) DEFAULT '0',
+  `created` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `active` varchar(45) DEFAULT 'yes',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
--- Dumping data for table stonesu0_stonestreet.most_recent: 1 rows
-/*!40000 ALTER TABLE `most_recent` DISABLE KEYS */;
-INSERT INTO `most_recent` (`id`, `project_id`) VALUES
-	(1, 2);
-/*!40000 ALTER TABLE `most_recent` ENABLE KEYS */;
+-- Dumping data for table drumsinthedeep.midi_files: ~7 rows (approximately)
+/*!40000 ALTER TABLE `midi_files` DISABLE KEYS */;
+INSERT INTO `midi_files` (`id`, `track_id`, `file_name`, `popularity`, `created`, `active`) VALUES
+	(3, 3, 'Take_The_Money_And_Run_Steve_Miller_Band_Greatest_Hits_1974-78_1.mid', 0, '2016-11-01 14:12:51', 'yes'),
+	(4, 4, 'My_Hero_Foo_Fighters_Greatest_Hits_1.mid', 2, '2016-11-01 14:16:28', 'yes'),
+	(5, 5, 'Fly_By_Night_Rush_Fly_By_Night_1.mid', 1, '2016-11-01 14:17:55', 'yes'),
+	(6, 6, 'Tom_Sawyer_Rush_Moving_Pictures_(2011_Remaster)_1.mid', 1, '2016-11-01 14:19:12', 'yes'),
+	(7, 7, 'Gimme_Three_Steps_Lynyrd_Skynyrd_Pronounced_Leh-Nerd_Skin-Nerd_1.mid', -1, '2016-11-01 14:22:32', 'yes'),
+	(8, 8, 'The_Joker_Steve_Miller_Band_The_Joker_1.mid', 1, '2016-11-01 14:24:37', 'yes'),
+	(9, 5, 'Fly_By_Night_Rush_Fly_By_Night_2.mid', 0, '2016-11-01 14:35:40', 'yes');
+/*!40000 ALTER TABLE `midi_files` ENABLE KEYS */;
 
 
--- Dumping structure for table stonesu0_stonestreet.projects
-CREATE TABLE IF NOT EXISTS `projects` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(50) DEFAULT NULL,
-  `text` text,
-  `description` varchar(100) DEFAULT NULL,
-  `image` varchar(50) DEFAULT NULL,
-  `category` varchar(20) DEFAULT NULL,
-  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `active` varchar(10) DEFAULT 'yes',
-  `main_page` varchar(10) DEFAULT 'no',
-  `url` varchar(100) DEFAULT NULL,
+-- Dumping structure for table drumsinthedeep.tracks
+CREATE TABLE IF NOT EXISTS `tracks` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `album` varchar(50) DEFAULT NULL,
+  `artist` varchar(100) DEFAULT NULL,
+  `duration` varchar(100) DEFAULT NULL,
+  `spotify_id` varchar(100) DEFAULT NULL,
+  `spotify_url` varchar(150) DEFAULT NULL,
+  `title` varchar(100) NOT NULL,
+  `spotify_popularity` int(11) DEFAULT NULL,
+  `popularity` int(11) DEFAULT '0',
+  `preview_url` varchar(150) DEFAULT NULL,
+  `spotify_uri` varchar(150) DEFAULT NULL,
+  `image_url` varchar(100) DEFAULT NULL,
+  `created` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   KEY `Index 1` (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='This table will hold all track info. A track is just a song.';
 
--- Dumping data for table stonesu0_stonestreet.projects: 9 rows
-/*!40000 ALTER TABLE `projects` DISABLE KEYS */;
-INSERT INTO `projects` (`id`, `title`, `text`, `description`, `image`, `category`, `created`, `active`, `main_page`, `url`) VALUES
-	(1, 'PiCopter', 'A friend and I built this quadcopter from scratch using a Raspberry Pi, Arduino, some brushless motors, and lots of K\'NEX. We built the PiCopter for HackISU which is a competition where computer nerds gather to build whatever crazy ideas they can think up.', 'Raspberry Pi Powered Quadcopter', 'PiCopter.jpg', 'hardware', '2016-07-01 02:41:30', 'yes', 'no', ''),
-	(2, 'BalanceBot', 'An autonomous self balancing robot built with an Arduino, a gyroscope, a custom circuit board and two brushless motors. This was built for HackISU for it, we were awarded the ingenuity award from Rockwell Collins.', 'Self Balancing Robot', 'BalanceBot.jpg', 'hardware', '2016-07-01 01:03:30', 'yes', 'yes', ''),
-	(3, 'BB-St8', 'We designed this BB-St8 during a HackISU competition. It is built with a Raspberry Pi, motors, and a PS3 Controller to drive it. In the end, it didn\'t work very well, but it was a blast to make. ', 'Our version of the very popular BB-8 Droid', 'BB-St8.jpg', 'hardware', '2016-07-01 12:11:39', 'yes', 'yes', ''),
-	(8, 'DrumItDown', 'This site allows user to upload a midi file and it shows them how to play the drum part using a graphical drum set. It will play the Spotify mp3 along with it so learners can learn by association.', 'My homemade drum instruction website', 'drumitdown.jpg', 'website', '2016-07-01 12:30:46', 'yes', 'yes', 'http://www.drumitdown.com'),
-	(7, 'Jewell Family Dentistry', 'I was asked to create this website for Jewell Family Dentistry in early 2016 by Dan and Meryl Scarrow. They were starting their company from scratch and wanted the site to have a very homespun feel to it. The building they are located in is brick and they wanted to site to reflect that. The site is fully functional and can be maintained by Dan and Meryl. They can add images, and edit other content on the site without having to touch the code.', 'A website for the new dentist in Jewell IA', 'JFD.png', 'website', '2016-07-01 12:27:51', 'yes', 'yes', 'http://www.jewellfamilydentistry.com'),
-	(12, 'MyLand', 'MyLand is a revolutionary social media website that takes a new approach to user interaction. Each user is given an island that they can do whatever they want with. Rather than following the traditional top to bottom feed, MyLand allows users to scroll around in all directions exploring other users islands. This website was built as a school project for ISU and is no longer live.', 'Social Media with a twist', 'myland.PNG', 'website', '2016-07-07 14:58:37', 'yes', 'no', ''),
-	(15, 'Rogue-Like Game', 'I designed this rogue-like game from scratch using C and C++ for a programming class at ISU. It is played from the command line, and controlled with the keyboard. We were given some liberty when it came to game design, so many of the colors and text I used were my own choice.', 'A traditional rogue-like game', 'rogue-like-game.png', 'software', '2016-08-17 15:54:42', 'yes', 'no', ''),
-	(16, 'oprah', 'When a user wants to transfer a repository from one git hosting site to another, it is easy do a simple git pull/git push to get the code switched over. For the issues, projects, and wiki, this is not the case. That is where oprah comes in. Oprah is a CLI that automatically transfers the code, branches, commits, and issues from GitHub to a specified GForge repository in under a minute. Simply run the command oprah and all your troubles will be over.\r\n\r\nGForge is a fairly new company that is trying to revolutionize the git community. They are making a website similar to GitHub, but with far more uses. They are mixing GitHub, Slack, and Jira to simplify the project management part of software projects. Once their site is complete, they will need a way to convince users to switch to their product, and that is the goal of oprah. We wanted to help GForge attract new customers, and automating the repo transfer process seemed like a good place to start.', 'CLI to transfer a repository from GitHub to GForge', 'gallery.jpg', 'software', '2016-09-19 08:29:17', 'yes', 'yes', '/portfolio/project_view.php?id=16'),
-	(17, 'Stonestreet Software', 'I built this website to serve as my online portfolio where I can store my projects as I complete them. It has a custom built admin page where I can upload new projects, images, snippets, and edit any contact information without having to edit the code and push it to the server. It has undergone many remakes since I first had it live, and I think I have gotten it to a point that I am happy with. However, as I love doing web development, I expect to revisit this site many times over the course of my career as I continue to learn. Every time I redo this site, it gets better and better, so there\'s no reason to stop improving it. ', 'My personal website built from scratch using PHP, CSS, HTML and Javascript.', 'stonestreet.png', 'website', '2016-09-19 08:34:29', 'yes', 'yes', 'http://www.stonestreetsoftware.com');
-/*!40000 ALTER TABLE `projects` ENABLE KEYS */;
+-- Dumping data for table drumsinthedeep.tracks: ~6 rows (approximately)
+/*!40000 ALTER TABLE `tracks` DISABLE KEYS */;
+INSERT INTO `tracks` (`id`, `album`, `artist`, `duration`, `spotify_id`, `spotify_url`, `title`, `spotify_popularity`, `popularity`, `preview_url`, `spotify_uri`, `image_url`, `created`) VALUES
+	(3, 'Greatest Hits 1974-78', 'Steve Miller Band', '172973', '2dV6oLMaJjV15KCVzcWLbF', 'https://api.spotify.com/v1/tracks/2dV6oLMaJjV15KCVzcWLbF', 'Take The Money And Run', 51, 0, 'https://p.scdn.co/mp3-preview/597a177b1e12b20ca739fa77b7b20668582301b1', 'spotify:track:2dV6oLMaJjV15KCVzcWLbF', 'https://i.scdn.co/image/2e6d1ba9fe9c5e264148ca9a1d1477a72c7ab181', '2016-11-01 14:12:50'),
+	(4, 'Greatest Hits', 'Foo Fighters', '258973', '7u5dBtASrtOuBTTZjJrvuJ', 'https://api.spotify.com/v1/tracks/7u5dBtASrtOuBTTZjJrvuJ', 'My Hero', 61, 0, 'https://p.scdn.co/mp3-preview/46145f46a9246e10f645929311a5a5ce8bd01d27', 'spotify:track:7u5dBtASrtOuBTTZjJrvuJ', 'https://i.scdn.co/image/3b505559c2bce1f6205eeb0b19d65e3a2c8f5617', '2016-11-01 14:16:28'),
+	(5, 'Fly By Night', 'Rush', '202200', '54TaGh2JKs1pO9daXNXI5q', 'https://api.spotify.com/v1/tracks/54TaGh2JKs1pO9daXNXI5q', 'Fly By Night', 46, 0, 'https://p.scdn.co/mp3-preview/d3b98ef6eb5a0932d030e7b5b076256c8fe123c8', 'spotify:track:54TaGh2JKs1pO9daXNXI5q', 'https://i.scdn.co/image/a3004eb1e2cc337ac5ee15655b0343b0cb61ff01', '2016-11-01 14:17:55'),
+	(6, 'Moving Pictures (2011 Remaster)', 'Rush', '276880', '3QZ7uX97s82HFYSmQUAN1D', 'https://api.spotify.com/v1/tracks/3QZ7uX97s82HFYSmQUAN1D', 'Tom Sawyer', 59, 0, 'https://p.scdn.co/mp3-preview/ac1926c98cd4566da7a5d9e76ff2165d37571564', 'spotify:track:3QZ7uX97s82HFYSmQUAN1D', 'https://i.scdn.co/image/14e0400fc347d4576721c02e15975c1dcda23fe7', '2016-11-01 14:19:11'),
+	(7, 'Pronounced\' Leh-\'Nerd \'Skin-\'Nerd', 'Lynyrd Skynyrd', '266826', '5x6vchLT7JBTZnLupOVeJe', 'https://api.spotify.com/v1/tracks/5x6vchLT7JBTZnLupOVeJe', 'Gimme Three Steps', 54, 0, 'https://p.scdn.co/mp3-preview/5cc15964c75f032972ee862ee6e6177fba274050', 'spotify:track:5x6vchLT7JBTZnLupOVeJe', 'https://i.scdn.co/image/2de99baeffaba7b8041383bd7f0eb9ab30e8276c', '2016-11-01 14:22:32'),
+	(8, 'The Joker', 'Steve Miller Band', '264503', '1bp2IO61zbQrbWNmKKxg3f', 'https://api.spotify.com/v1/tracks/1bp2IO61zbQrbWNmKKxg3f', 'The Joker', 62, 0, 'https://p.scdn.co/mp3-preview/9e24cd880771d78797a1b6831087938570e7eff5', 'spotify:track:1bp2IO61zbQrbWNmKKxg3f', 'https://i.scdn.co/image/2ce133525413324d9dcdcf1ce648dded7d9b0285', '2016-11-01 14:24:37');
+/*!40000 ALTER TABLE `tracks` ENABLE KEYS */;
 
 
--- Dumping structure for table stonesu0_stonestreet.snippets
-CREATE TABLE IF NOT EXISTS `snippets` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(50) DEFAULT NULL,
-  `url` varchar(100) DEFAULT NULL,
-  `description` varchar(5000) DEFAULT NULL,
-  `brief` varchar(100) DEFAULT NULL,
-  `directory` varchar(100) DEFAULT NULL,
-  `active` varchar(5) NOT NULL DEFAULT 'yes',
-  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  KEY `Index 1` (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+-- Dumping structure for table drumsinthedeep.upvotes
+CREATE TABLE IF NOT EXISTS `upvotes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `file_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `active` varchar(45) DEFAULT 'yes',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
--- Dumping data for table stonesu0_stonestreet.snippets: 4 rows
-/*!40000 ALTER TABLE `snippets` DISABLE KEYS */;
-INSERT INTO `snippets` (`id`, `title`, `url`, `description`, `brief`, `directory`, `active`, `created`) VALUES
-	(1, 'Slide Out Footer', '/snippets/not_ready.php', 'A hidden, static footer that slides out from under the content as you scroll down. The footer initially hides behind the body and reveals itself as you scroll down.', 'A hidden, static footer that slides out from under the content', 'Slide_Out_Footer', 'yes', '2016-07-08 09:54:07'),
-	(2, 'Responsive Header', '/snippets/HeaderShrink/', 'A responsive header that shrinks as you scroll down. This can be used if you want more room for displaying content on your page but also want to have lots of information in your header. If the user scrolls to the top, the header grows to show the extra information, but when they scroll down it hides it.', 'A responsive header that shrinks as you scroll down.', 'HeaderShrink', 'yes', '2016-08-02 11:20:07'),
-	(3, 'Hover Overlay', '/snippets/not_ready.php', 'An animated overlay that activates when you hover over an item. Can be used for images or divs as a way of displaying extra information on a given item.', 'An animated overlay that activates when you hover over an item. ', 'HoverOverlay', 'yes', '2016-08-02 11:22:33'),
-	(4, 'Responsive Grid', '/snippets/not_ready.php', 'The same technique used on this page with each of the grid items.', 'The same technique used on this page with each of the grid items.', '#', 'yes', '2016-08-02 10:27:48');
-/*!40000 ALTER TABLE `snippets` ENABLE KEYS */;
+-- Dumping data for table drumsinthedeep.upvotes: ~6 rows (approximately)
+/*!40000 ALTER TABLE `upvotes` DISABLE KEYS */;
+INSERT INTO `upvotes` (`id`, `file_id`, `user_id`, `active`) VALUES
+	(3, 4, 1, 'yes'),
+	(4, 6, 1, 'yes'),
+	(5, 8, 1, 'yes'),
+	(6, 4, 2, 'no'),
+	(7, 4, 2, 'yes'),
+	(8, 5, 2, 'yes');
+/*!40000 ALTER TABLE `upvotes` ENABLE KEYS */;
 
 
--- Dumping structure for table stonesu0_stonestreet.users
+-- Dumping structure for table drumsinthedeep.users
 CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `username` varchar(50) DEFAULT NULL,
-  `password` varchar(80) DEFAULT NULL,
-  `resume` varchar(50) DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `f_name` varchar(50) NOT NULL,
+  `l_name` varchar(50) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   KEY `Index 1` (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Dumping data for table stonesu0_stonestreet.users: 1 rows
+-- Dumping data for table drumsinthedeep.users: ~2 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` (`id`, `username`, `password`, `resume`) VALUES
-	(1, 'csteamengine', '$2y$10$wRLdGh5jUXNBgibHi/O7deipN4TvZhMwPXp1pvP8hdY6iWaVG207C', 'Gregory_Resume_2016_Summer.pdf');
+INSERT INTO `users` (`id`, `f_name`, `l_name`, `username`, `password`, `created`) VALUES
+	(1, 'Gregory', 'Steenhagen', 'csteamengine', '$2y$10$xZVQWE/zrC99JP67mgaF5OTy7A2Ws8ahFtHmtafvhnpaVvS.AQzVu', '2016-11-01 14:11:31'),
+	(2, 'Other', 'Guy', 'other_guy', '$2y$10$iuxRQfL.9fsfJv3mPUagluhB9ZRMXlWCJJ96zdKMXYOhI6QB2u8/S', '2016-11-01 14:31:04');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;

@@ -35,13 +35,13 @@ if($json == ""){
 }
 $json = json_decode($json);
 
-
 $dbhost = $json->{'host'};
 $dbname = $json->{'database'}; // the name of the database that you are going to use for this project
 
 $dbuser = $json->{'username'}; // the username that you created, or were given, to access your database
 $dbpass = $json->{'password'}; // the password that you created, or were given, to access your database
 $port = $json->{'port'};
+
 //#############################################
 
 

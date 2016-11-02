@@ -8,12 +8,32 @@
 #player{
     background: transparent;
     width: 800px;
-    z-index: 2;
+    z-index: 1;
     position: fixed;
     bottom: 0;
     left: 50%;
     margin-left: -400px;
     height: 300px;
+}
+#upvote{
+    z-index: 2;
+    cursor: pointer;
+    cursor: hand;
+    height: 35px;
+    position: absolute;
+    right: 50%;
+    margin-right: -200px;
+    bottom: 100px;
+}
+#downvote{
+    z-index: 2;
+    cursor: pointer;
+    cursor: hand;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    bottom: 100px;
 }
 div.player {
     height: 100%;
@@ -95,6 +115,7 @@ div.player div.time-controls {
     left: 0;
     top: 0;
     background-color: rgba(0,0,0,.5);
+    z-index: 5;
 }
 #loading h1{
     height: 100px;
