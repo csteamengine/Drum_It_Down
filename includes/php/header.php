@@ -11,6 +11,9 @@
 <header>
     <?php
     if($_SESSION['logged_in']){
+        $sql = "SELECT * FROM users WHERE username = '".$_SESSION['username']."'";
+        $query = mysqli_query($conn, $sql);
+        $result = mysqli_fetch_assoc($query);
         ?>
         <h1 id="header_title">Mines of MIDIa</h1>
         <a href="/browse/" class="header_link logged_in" id="browse">Browse</a>
@@ -18,7 +21,7 @@
         <p id="header_username"><?= $_SESSION['username'] ?></p>
         <a href="/" class="header_link" id="home_link">Home</a>
         <h2 id="drums_title">Drums, Drums in the deep.</h2>
-        <img src="/includes/images/user.png" id="user_icon">
+        <img src="/user_images/<?= $result['image'] ?>" id="user_icon">
         <div id="header_dropdown" hidden>
             <a href="/profile/" class="dropdown_link">Profile</a>
             <a href="/?action=logout" class="dropdown_link">Logout</a>

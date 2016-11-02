@@ -18,13 +18,53 @@ $action = $_GET['action'];
 if($action != ''){
     switch($action){
         case 'change_image':
-            //TODO set users image to pre-uploaded images
+            $sql = "UPDATE users SET image='".$_GET['image_file']."' WHERE username='".$_SESSION['username']."'";
+            $query = mysqli_query($conn, $sql);
+
+            if(!$query){
+                $json = array('code' => 404);
+                echo json_encode($json);
+                exit;
+            }
+
+            $json = array('code' => 200, 'image' => $_GET['image_file']);
+            echo json_encode($json);
+            exit;
 
             break;
         case 'upload_image':
-            //TODO upload image and set users image to it.
+            $target_dir = $_SERVER['DOCUMENT_ROOT']."/user_images/";
+            $target_file = $_SESSION['username'].".jpg";
+            $fileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
+            if ( 0 < $_FILES['image_file']['error']  || pathinfo($target_file,PATHINFO_EXTENSION) != 'jpg') {
+                echo 'ERROR UPLOADING FILE';
+            } else {
+                if(!file_exists($target_dir.$target_file)){
+                    if(move_uploaded_file($_FILES['image_file']['tmp_name'], $target_dir.$target_file)){
+                        echo $target_file;
+                    }else{
+                        echo "ERROR UPLOADING FILE";
+                    }
+                }else{
+                    $count = 0;
+                    $temp = basename($target_file, ".jpg");
 
+                    while(file_exists($_SERVER['DOCUMENT_ROOT']."/user_images/".$temp.".jpg")){
+                        $count++;
+                        $temp = basename($target_file, ".jpg")."_".$count;
+                    }
+                    $target_file = $temp.".jpg";
+
+                    move_uploaded_file($_FILES['image_file']['tmp_name'], "../user_images/".$target_file);
+                    $sql = "UPDATE users SET image='".$target_file."' WHERE username='".$_SESSION['username']."'";
+                    $query = mysqli_query($conn, $sql);
+
+                    echo $target_file;
+                }
+
+            }
+            exit;
             break;
         case 'update_info':
             $f_name = mysqli_real_escape_string($conn, $_GET['f_name']);
@@ -121,13 +161,17 @@ if(mysqli_num_rows($query) > 0){
                 <input type="submit" value="Update Info" id="submit_user">
             </form>
         </div>
-    <form id="change_image" hidden>
+    <form id="change_image" hidden enctype="multipart/form-data" action="index.php">
+        <input type="hidden" name="action" value="upload_image">
+        <input type="hidden" name="image_val" id="image_val" value="<?= $result['image'] ?>">
         <div class="image_grid">
-            <div class="image_choice" style="background: url('/user_images/default.png') center no-repeat; background-size: 100%;"></div>
-            <div class="image_choice" style="background: url('/user_images/default.png') center no-repeat; background-size: 100%;"></div>
-            <div class="image_choice" style="background: url('/user_images/default.png') center no-repeat; background-size: 100%;"></div>
+            <div class="image_choice" id="default.png" style="background: url('/user_images/default.png') center no-repeat; background-size: 100%;"></div>
+            <div class="image_choice" id="default_1.png" style="background: url('/user_images/default_1.png') center no-repeat; background-size: 100%;"></div>
+            <div class="image_choice" id="default_2.png" style="background: url('/user_images/default_2.png') center no-repeat; background-size: 100%;"></div>
 
         </div>
+        <h2 id="splitter">Or</h2>
+        <input type="file" name="image_file"  id="image_file">
         <button id="cancel_change">Cancel</button>
         <input type="submit" id="submit_change" value="Submit">
     </form>
@@ -146,7 +190,7 @@ if(mysqli_num_rows($query) > 0){
 <?php
 }
 ?>
-
+<script src="/includes/js/shared.js" type="application/javascript"></script>
 <script>
     $('#change_info').submit(function(event){
         event.preventDefault();
@@ -168,10 +212,7 @@ if(mysqli_num_rows($query) > 0){
         event.preventDefault();
         $('#change_image').hide();
     });
-    $('#change_image').submit(function(event){
-        event.preventDefault();
-        //TODO change image
-    });
+
     $(".image_choice").click(function() {
         var hasit = false;
         if($(this).hasClass('selected_image')){
@@ -180,6 +221,24 @@ if(mysqli_num_rows($query) > 0){
         $('.image_choice').removeClass('selected_image');
         if(!hasit){
             $(this).addClass('selected_image');
+            $('#image_val').val($(this).attr('id'));
+        }
+    });
+    $('#change_image').submit(function(event){
+        if($('#image_file').val() == ''){
+            event.preventDefault();
+            //TODO change image to default image
+            $.getJSON('index.php?action=change_image&image_file='+$('#image_val').val(),function(result){
+                if(result.code == 200){
+                    $('#user_image').css('background', "url('/user_images/"+result.image+"') center no-repeat" );
+                    $('#user_image').css('background-size', 'cover');
+                    $('#user_icon').attr('src', '/user_images/'+result.image);
+                    $('#change_image').hide();
+                }
+            });
+        }else{
+            event.preventDefault();
+            upload_image();
         }
     });
 </script>

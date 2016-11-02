@@ -79,7 +79,12 @@ body{
     font-size: 20px;
     cursor: pointer;
     cursor: hand;
+    text-decoration: none;
 }
+#login_start:focus, #signup_start:focus{
+    outline: none;
+}
+
 #login_start:hover, #signup_start:hover{
     background-color: #E05151;
 }

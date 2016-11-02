@@ -197,6 +197,9 @@ body{
     background-color: #75A3D1;
     color: white;
 }
+#submit_change:focus{
+    outline:none;
+}
 #cancel_change{
     position: absolute;
     bottom: 20px;
@@ -217,6 +220,9 @@ body{
     background: #E05151;
     color: white;
 
+}
+#cancel_change:focus{
+    outline: none;
 }
 
 .image_grid{
@@ -246,4 +252,7 @@ body{
 .selected_image{
     border: 1px solid #75A3D1;
 
+}
+#splitter{
+    margin: 50px;
 }

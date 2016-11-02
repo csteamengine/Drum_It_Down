@@ -147,6 +147,32 @@ function upload_file() {
     });
 }
 
+function upload_image() {
+
+    var file_data = $('#image_file').prop('files')[0];
+    var form_data = new FormData();
+    form_data.append('image_file', file_data);
+
+
+    $.ajax({
+        url: '/profile/index.php?action=upload_image', // point to server-side PHP script
+
+        dataType: 'text',  // what to expect back from the PHP script, if anything
+        cache: false,
+        contentType: false,
+        processData: false,
+        data: form_data,
+        type: 'post',
+        success: function (php_script_response) {
+            if (php_script_response != "ERROR UPLOADING FILE") {
+                $('#user_image').css('background', "url('/user_images/"+php_script_response+"') center no-repeat" );
+                $('#user_image').css('background-size', 'cover');
+                $('#user_icon').attr('src', '/user_images/'+result.image);
+                $('#change_image').hide();
+            }
+        }
+    });
+}
 
 
 function search_song() {

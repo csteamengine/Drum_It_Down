@@ -150,8 +150,8 @@ if(!$_SESSION['logged_in']){
     </div>
     <div id="get_started">
         <h1 id="get_started_title" class="title">Get Started Today!</h1>
-        <button id="signup_start">Sign Up</button>
-        <button id="login_start">Login</button>
+        <a href="/login.php"> <button id="signup_start">Sign Up</button></a>
+        <a href="/login.php"><button id="login_start">Login</button></a>
     </div>
 </body>
 </html>
