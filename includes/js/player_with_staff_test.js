@@ -41,7 +41,7 @@ eventjs.add(window, "load", function (event) {
 
             /// Handle note events
             player.addListener(function (data) {
-                console.log(data);
+                // console.log(data);
             });
 
             /// Show the player progress bar
@@ -51,7 +51,7 @@ eventjs.add(window, "load", function (event) {
 
     /// Load the MidiFile for parsing as staff music
     parse_midi(songs[songId], songs[songId], function(midiFile) {
-        console.log(midiFile);
+        // console.log(midiFile);
         initMusicStaff(midiFile);
     });
 });

@@ -2,6 +2,14 @@
  * Created by nkarasch on 10/27/16.
  */
 
+// TODO: Remove upon completion
+var debugging = false;
+function dbPrint(msg) {
+    if (debugging) {
+        console.log(msg);
+    }
+}
+
 var svg = {
     config: {
         scale: 3,
@@ -21,6 +29,7 @@ var svg = {
         return lines.join('');
     },
     getSvg: function(notes) {
+        //noinspection HtmlUnknownAttribute
         return '<svg width="' + this.config.width + '" height="' + this.config.height + '" ' +
             'viewBox="0 0 ' + this.vbWidth() + ' ' + this.vbHeight() + '">' + this.getStaff() +
             notes.join("") + '</svg>';
@@ -38,9 +47,9 @@ var initMusicStaff = function(midiFile) {
     var measureTree = new MeasureTree(4);
 
     var generateFlagsAndRests = function(tree) {
-        // console.log(tree);
-        console.log(tree.getNotes());
-        var parsedMeasure = measureTree.getNotes();
+        var parsedMeasure = tree.getNotes();
+        dbPrint(tree);
+        dbPrint(parsedMeasure);
         for (var beatIndex in parsedMeasure) {
             if (parsedMeasure.hasOwnProperty(beatIndex)) {
                 var beat = parsedMeasure[beatIndex];
@@ -50,17 +59,21 @@ var initMusicStaff = function(midiFile) {
 
                 if (beat == "rest") {
                     var noteData = noteInfo.getRest("1");
+
                     var xOffset = (2 + 9*parseInt(beatIndex))*svg.lineSpacing();
                     var yOffset = 0;
                     notes.push(getSvgElement(noteData.noteHead, xOffset, yOffset));
-                    console.log("Quarter Rest found");
+                    continue;
                 }
                 for (var subdivisionKey in beat) {
                     if (beat.hasOwnProperty(subdivisionKey)) {
                         var subdivision = beat[subdivisionKey];
-                        // if (subdivision.type == "rest") {
-                        //     notes.push(getSvgElement("8th rest", 50, 50)); // FIXME
-                        // }
+                        if (subdivision.type == "rest") {
+                            noteData = noteInfo.getRest(subdivision.size);
+                            xOffset = (2 + 9*parseFloat(subdivisionKey))*svg.lineSpacing();
+                            yOffset = 0;
+                            notes.push(getSvgElement(noteData.noteHead, xOffset, yOffset));
+                        }
                     }
                 }
             }
@@ -69,16 +82,15 @@ var initMusicStaff = function(midiFile) {
 
     var handleNoteOn = function() {
         var exactBeat = ticks / ticksPerBeat;
-        var roundedBeat = Math.round(exactBeat * 8) / 8.0;
+        var roundedBeat = Math.round(exactBeat * 4) / 4.0;
+        dbPrint("        Beat: " + roundedBeat);
         var measure = Math.floor(roundedBeat / beatsPerMeasure);
-        var measuresPassed = measure - lastMeasureDisplayed;
-        if (measuresPassed > 0) {
-            for (var i = 0; i < measuresPassed; i++) {
-                generateFlagsAndRests(measureTree);
-                musicStaff.append(svg.getSvg(notes));
-                notes = [];
-                measureTree = new MeasureTree(4);
-            }
+        if (lastMeasureDisplayed != measure) {
+            notes.push('<text x="15" y="30" transform="scale(3 3)">' + (measure) + '</text>');
+            generateFlagsAndRests(measureTree);
+            musicStaff.append(svg.getSvg(notes));
+            notes = [];
+            measureTree = new MeasureTree(4);
             lastMeasureDisplayed = measure;
         }
 
@@ -93,7 +105,6 @@ var initMusicStaff = function(midiFile) {
         notes.push(getSvgElement("stem", xOffset + xAdjustment, yOffset + yAdjustment));
     };
 
-    console.log(midiFile.tracks[0][42]);
     for (var i = 0; i < midiFile.tracks[0].length; i++) {
         var obj = midiFile.tracks[0][i];
         ticks += obj.deltaTime;
@@ -312,58 +323,66 @@ MeasureTree.prototype.getNotes = function() {
     return notes;
 };
 
-function Node(val) {
+function Node(val, rest) {
     // If left or right is null, it means it's a rest. Otherwise, it's a note
     // or has subdivision with a note.
+    dbPrint("new Node(" + val + ")");
+
     var decimalPart = val - Math.floor(val);
-    if (decimalPart == 0) {
-        this.left = null;
-        this.right = null;
-    } else if (decimalPart < 0.5) {
-        this.left = new Node(val * 2);
-        this.right = null;
-    } else {
-        this.left = new Node(0);
-        this.right = new Node(val * 2);
+
+    this.left = null;
+    this.right = null;
+    this.isRest = true;
+    if (rest != undefined) {
+        this.isRest = rest;
     }
+    this.add(val);
 }
+Node.prototype.hasChildren = function() {
+    return (this.left != null && this.right != null);
+};
 Node.prototype.add = function(val) {
+    dbPrint("node.add(" + val + ")");
     var decimalPart = val - Math.floor(val);
-    if (decimalPart == 0) {
-        // Do nothing
-    } else if (decimalPart < 0.5) {
-        if (this.left == null) {
-            this.left = new Node(val * 2);
-        } else {
-            this.left.add(val * 2);
+
+    if (this.hasChildren()) {
+        if (decimalPart == 0) {
+            this.left.add(0);
+        } else if (decimalPart < 0.5) {
+            this.left.add(decimalPart * 2);
+        } else if (decimalPart >= 0.5) {
+            this.right.add(decimalPart * 2);
         }
     } else {
-        if (this.left == null) {
+        // Leafs determine "note" or "rest"
+        if (decimalPart == 0) {
+            this.isRest = false;
+            dbPrint("this.isRest = false");
+        } else if (decimalPart < 0.5) {
+            this.left = new Node(decimalPart * 2, this.isRest);
+            this.right = new Node(0);
+            this.isRest = null;
+        } else if (decimalPart >= 0.5) {
             this.left = new Node(0);
-        }
-        if (this.right == null) {
-            this.right = new Node(val * 2);
-        } else {
-            this.right.add(val * 2);
+            dbPrint("left.isRest = this.isRest = " + this.isRest);
+            this.left.isRest = this.isRest;
+            this.right = new Node(decimalPart * 2);
+            this.isRest = null;
         }
     }
 };
+Node.prototype.noteType = function() {
+    return (this.isRest) ? "rest" : "note";
+};
 Node.prototype.getNotes = function(root, noteSize) {
     var notes = {};
-    if (this.left == null && this.right == null) {
-        notes[String(root)] = {type: "note", size: noteSize};
+    if (this.hasChildren()) {
+        return $.extend(this.left.getNotes(root, noteSize/2), this.right.getNotes(root + noteSize/2, noteSize/2));
+    } else {
+        // Leafs determine "note" or "rest"
+        notes[String(root)] = {type: this.noteType(), size: noteSize};
         return notes;
     }
-
-    if (this.left != null) {
-        notes = this.left.getNotes(root, noteSize/2);
-    } else {
-        notes[String(root)] = {type: "rest", size: noteSize};
-    }
-    if (this.right != null) {
-        notes = $.extend(notes, this.right.getNotes(root + noteSize/2, noteSize/2));
-    }
-    return notes;
 };
 
 
@@ -437,8 +456,8 @@ function getSvgElement(type, x, y, misc) {
                 '0.957 1.16-1.28 0.082-0.258 0.043-0.496-0.137-0.715-0.062-0.058-0.758-0.918-1.57-1.89-1.12-1.31-' +
                 '1.52-1.79-1.57-1.81-0.082-0.019-0.18-0.019-0.262 0.02z" /></g></g>';
         case "8th rest":
-            return '<g transform="translate(' + x + ' ' + y + ')" ' + misc + '>' +
-                '<g fill-rule="evenodd" transform="matrix(1.8 0 0 1.8 -593 341)" stroke-miterlimit="10">' +
+            return '<g transform="translate(' + (x-5140) + ' ' + (y-715) + ')" ' + misc + '>' +
+                '<g fill-rule="evenodd" transform="matrix(1.8 0 0 1.8 -593 341) scale(6 6)" stroke-miterlimit="10">' +
                 '<path stroke="#000" d="m531 74.8c-0.52 0.098-0.918 0.457-1.1 0.953-0.039 0.16-0.039 0.199-0.039 ' +
                 '0.418 0 0.301 0.019 0.461 0.16 0.699 0.199 0.399 0.617 0.719 1.09 0.836 0.5 0.141 1.34 0.02 ' +
                 '2.29-0.297l0.238-0.082-1.18 3.25-1.16 3.25s0.039 0.02 0.102 0.063c0.117 0.078 0.316 0.137 0.457 ' +
@@ -447,8 +466,8 @@ function getSvgElement(type, x, y, misc) {
                 '1.04-0.219 0.18-0.34 0.199-0.539 0.121-0.18-0.098-0.239-0.199-0.36-0.738-0.117-0.535-0.257-' +
                 '0.778-0.558-0.977-0.278-0.179-0.637-0.238-0.953-0.156z"/></g></g>';
         case "16th rest":
-            return '<g transform="translate(' + x + ' ' + y + ')" ' + misc + '>' +
-                '<g fill-rule="evenodd" transform="matrix(1.8 0 0 1.8 -649 265)" stroke-miterlimit="10">' +
+            return '<g transform="translate(' + (x-5220) + ' ' + (y-694) + ')" ' + misc + '>' +
+                '<g fill-rule="evenodd" transform="matrix(1.8 0 0 1.8 -649 265) scale(6 6)" stroke-miterlimit="10">' +
                 '<path d="m544 74.8c-0.519 0.098-0.918 0.457-1.09 0.953-0.043 0.16-0.043 0.199-0.043 0.418 0 ' +
                 '0.301 0.019 0.461 0.16 0.699 0.199 0.399 0.617 0.719 1.1 0.836 0.496 0.141 1.29 0.039 2.25-' +
                 '0.277 0.14-0.059 0.257-0.102 0.257-0.082 0 0.023-0.894 2.93-0.933 3.03-0.102 0.258-0.442 0.735-' +
