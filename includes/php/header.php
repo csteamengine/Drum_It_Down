@@ -23,7 +23,17 @@
         ?>
         <h1 id="header_title">Mines of MIDIa</h1>
         <a href="/browse/" class="header_link" id="browse_logged_out">Browse</a>
-        <a href="/" class="header_link" id="login_link_header">Login</a>
+        <?php
+        if(strpos(basename($_SERVER['PHP_SELF']), 'login.php') !== false){
+            ?>
+            <a href="/" class="header_link" id="login_link_header">Home</a>
+            <?php
+        }else{
+            ?>
+            <a href="/login.php" class="header_link" id="login_link_header">Login</a>
+            <?php
+        }
+        ?>
         <h2 id="drums_title">Drums, Drums in the deep.</h2>
 
     <?php

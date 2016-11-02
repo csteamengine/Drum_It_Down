@@ -7,23 +7,79 @@ body{
     padding-top: 50px;
     position: relative;
 }
+#welcome{
+    margin: 50px auto 50px auto;
+    font-size: 55px;
+}
 #content{
     margin-top: 50px;
 }
-#links{
-    margin-top: 20px;
-    width: 100%;
+.title{
+    color: #75A3D1;
 }
-#upload_link, #browse_link{
-    margin: 10px;
-    color: white;
-    font-size: 25px;
-    border-radius: 5px;
-    padding: 5px;
-    border: 1px solid #75A3D1;
-    text-decoration: none;
-}
-#upload_link:hover, #browse_link:hover{
-    background-color: #75A3D1;
 
+#icons{
+    width: 800px;
+    justify-content:space-between;
+    margin: 50px auto 10px;
+}
+.icon{
+    margin: 0 10px 0 10px;
+    opacity: .8;
+    height: 100px;
+}
+#upload_icon{
+    opacity:1;
+}
+#icon_text{
+    width: 650px;
+    margin: 0 auto 50px;
+    justify-content: space-between;
+    display: inline-flex;
+}
+.icon_text{
+    width: 150px;
+}
+.info{
+    width: 90%;
+    margin: 50px auto 50px;
+    position: relative;
+    height: 400px;
+}
+.info_item{
+    font-size: 30px;
+    position: absolute;
+    width: 60%;
+    margin-top: 100px;
+}
+.info_image{
+    position: absolute;
+    height: 400px;
+}
+.left{
+   left: 0;
+}
+.right{
+    right: 0;
+}
+#get_started{
+    width: 50%;
+    margin: 50px auto;
+    height: 300px;
+    font-size: 30px;
+}
+#login_start,#signup_start{
+    margin: 30px 15px;
+    height: 50px;
+    width: 125px;
+    border: 1px solid #E05151;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    cursor: hand;
+}
+#login_start:hover, #signup_start:hover{
+    background-color: #E05151;
 }

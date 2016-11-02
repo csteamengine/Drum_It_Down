@@ -8,6 +8,10 @@
 include "../includes/php/base.php";
 include "../includes/php/general.php";
 
+if(!$_SESSION['logged_in']){
+    header("Location: /login.php");
+}
+
 $action = $_GET['action'];
 if($action != ""){
     switch($action){
@@ -149,7 +153,7 @@ function update_pop($conn){
     <link rel="stylesheet" href="../includes/css/footer.css">
 <!--    <link rel="stylesheet" href="../includes/css/music_staff.css">-->
     <link rel="stylesheet" href="../includes/css/player.css">
-    <link rel="icon" type="image/x-icon" href="../favicon.png?v=3"/>
+    <link rel="icon" type="image/x-icon" href="../favicon.png?v=4"/>
     <!--<script src="includes/shim/Base64.js" type="text/javascript"></script>-->
     <script src="../includes/shim/Base64binary.js" type="text/javascript"></script>
     <script src="../includes/shim/WebAudioAPI.js" type="text/javascript"></script>
