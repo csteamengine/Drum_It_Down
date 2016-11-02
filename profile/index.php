@@ -116,11 +116,11 @@ include "../includes/php/header.php";
 $sql = "SELECT * FROM users WHERE username = '".$_SESSION['username']."'";
 $query = mysqli_query($conn, $sql);
 
-$sql_likes = "SELECT COUNT(*) as count FROM upvotes WHERE user_id=(SELECT id FROM users WHERE username='".$_SESSION['username']."')";
+$sql_likes = "SELECT COUNT(*) as count FROM upvotes WHERE user_id=(SELECT id FROM users WHERE username='".$_SESSION['username']."') AND active='yes'";
 $query_likes = mysqli_query($conn, $sql_likes);
 $likes_result = mysqli_fetch_assoc($query_likes);
 
-$sql_dislikes = "SELECT COUNT(*) as count FROM downvotes WHERE user_id=(SELECT id FROM users WHERE username='".$_SESSION['username']."')";
+$sql_dislikes = "SELECT COUNT(*) as count FROM downvotes WHERE user_id=(SELECT id FROM users WHERE username='".$_SESSION['username']."') AND active='yes'";
 $query_dislikes = mysqli_query($conn, $sql_dislikes);
 $dislikes_result = mysqli_fetch_assoc($query_dislikes);
 
