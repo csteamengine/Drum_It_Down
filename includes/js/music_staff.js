@@ -2,7 +2,7 @@
  * The music_staff.js script will parse a MIDI file into notes and rests, and display them visually on the html
  * page in a music staff. To use, call initMusicStaff(midiFile) with an open MIDI file, and be sure to have
  * an HTML element on the page with an id matching svg.config.containerId.
- * Created by nkarasch on 10/27/16.
+ * Created by Nathan Karasch (nkarasch@iastate.edu) on 10/27/16.
  */
 
 // The svg object provides high-level music staff data and functionality.
@@ -16,12 +16,18 @@ var svg = {
         containerId: 'music-staff'
     },
     // viewBox width and height
-    vbWidth: function() { return this.config.scale * this.config.width; },
-    vbHeight: function() { return this.config.scale * this.config.height; },
+    vbWidth: function () {
+        return this.config.scale * this.config.width;
+    },
+    vbHeight: function () {
+        return this.config.scale * this.config.height;
+    },
     // A standard unit of measurement for moving elements in the staff
-    lineSpacing: function() { return this.vbHeight() / 15; },
+    lineSpacing: function () {
+        return this.vbHeight() / 15;
+    },
     // Returns the svg elements comprising the 5 horizontal lines of the staff
-    getStaff: function() {
+    getStaff: function () {
         var lines = [];
         for (var i = 0; i < 5; i++) {
             var val = (i + 6) * this.lineSpacing();
@@ -31,7 +37,7 @@ var svg = {
         return lines.join('');
     },
     // Returns the entire svg area with all the notes, flags, rests, etc. inside the `notes` array.
-    getSvg: function(notes) {
+    getSvg: function (notes) {
         //noinspection HtmlUnknownAttribute
         return '<svg width="' + this.config.width + '" height="' + this.config.height + '" ' +
             'viewBox="0 0 ' + this.vbWidth() + ' ' + this.vbHeight() + '">' + this.getStaff() +
@@ -48,7 +54,7 @@ var svg = {
 
 
 // Creates an svg music staff for the given `midiFile`
-var initMusicStaff = function(midiFile) {
+var initMusicStaff = function (midiFile) {
     var ticksPerBeat = midiFile.header.ticksPerBeat;
     var notes = [];
     var ticks = 0;
@@ -62,7 +68,7 @@ var initMusicStaff = function(midiFile) {
     // The `parsedTree` parameter should be a MeasureTree.getNotes() object. The `measureNumber` is zero-indexed.
     // TODO: Possible future implementation should include connecting note stems instead of giving them all flags.
     // For the scope of this project, however, it just sticks to using flags.
-    var generateFlags = function(parsedTree, measureNumber) {
+    var generateFlags = function (parsedTree, measureNumber) {
         for (var beatIndex in parsedTree) {
             if (parsedTree.hasOwnProperty(beatIndex)) {
                 var beat = parsedTree[beatIndex];
@@ -76,9 +82,9 @@ var initMusicStaff = function(midiFile) {
                         var subdivision = beat[subdivisionKey];
                         if (subdivision.type == "note") {
                             var subdivFloat = parseFloat(subdivisionKey);
-                            var rawYHigh = svg.yBeatMaps.high[String(subdivFloat + (measureNumber-1)*4)];
-                            var rawYLow = svg.yBeatMaps.low[String(subdivFloat + (measureNumber-1)*4)];
-                            var xOffset = (2 + 9*subdivFloat)*svg.lineSpacing();
+                            var rawYHigh = svg.yBeatMaps.high[String(subdivFloat + (measureNumber - 1) * 4)];
+                            var rawYLow = svg.yBeatMaps.low[String(subdivFloat + (measureNumber - 1) * 4)];
+                            var xOffset = (2 + 9 * subdivFloat) * svg.lineSpacing();
                             if (subdivision.size == 0.5) {
                                 var identifier = "8th flag";
                             } else {
@@ -111,7 +117,7 @@ var initMusicStaff = function(midiFile) {
     };
 
     // Generates rests for a given MeasureTree.getNotes() object.
-    var generateRests = function(parsedTree) {
+    var generateRests = function (parsedTree) {
         for (var beatIndex in parsedTree) {
             if (parsedTree.hasOwnProperty(beatIndex)) {
                 var beat = parsedTree[beatIndex];
@@ -119,7 +125,7 @@ var initMusicStaff = function(midiFile) {
                 if (beat == "rest") {
                     var noteData = noteInfo.getRest("1");
 
-                    var xOffset = (2 + 9*parseInt(beatIndex))*svg.lineSpacing();
+                    var xOffset = (2 + 9 * parseInt(beatIndex)) * svg.lineSpacing();
                     var yOffset = 0;
                     notes.push(getSvgElement(noteData.noteHead, xOffset, yOffset));
                     continue;
@@ -130,7 +136,7 @@ var initMusicStaff = function(midiFile) {
                         var subdivision = beat[subdivisionKey];
                         if (subdivision.type == "rest") {
                             noteData = noteInfo.getRest(subdivision.size);
-                            xOffset = (2 + 9*parseFloat(subdivisionKey))*svg.lineSpacing();
+                            xOffset = (2 + 9 * parseFloat(subdivisionKey)) * svg.lineSpacing();
                             yOffset = 58;
                             notes.push(getSvgElement(noteData.noteHead, xOffset, yOffset));
                         }
@@ -141,7 +147,7 @@ var initMusicStaff = function(midiFile) {
     };
 
     // Handles SVG drawing behavior for notes in the `midiFile`
-    var handleNoteOn = function() {
+    var handleNoteOn = function () {
         var exactBeat = ticks / ticksPerBeat;
         var roundedBeat = Math.round(exactBeat * 4) / 4.0;
         var measure = Math.floor(roundedBeat / beatsPerMeasure);
@@ -176,13 +182,13 @@ var initMusicStaff = function(midiFile) {
         // Adding beats to the upper/lower measure trees and upper/lower beat maps allows for
         // the program to parse rests and stem flags out of it later
         if (noteData.rawY > 7) {
-            lowerMeasureTree.add(roundedBeat - measure*4);
+            lowerMeasureTree.add(roundedBeat - measure * 4);
             var currentBeatMapping = svg.yBeatMaps.low[String(roundedBeat)];
             if (currentBeatMapping == undefined || noteData.rawY > currentBeatMapping) {
                 svg.yBeatMaps.low[String(roundedBeat)] = noteData.rawY;
             }
         } else {
-            upperMeasureTree.add(roundedBeat - measure*4);
+            upperMeasureTree.add(roundedBeat - measure * 4);
             currentBeatMapping = svg.yBeatMaps.high[String(roundedBeat)];
             if (currentBeatMapping == undefined || noteData.rawY < currentBeatMapping) {
                 svg.yBeatMaps.high[String(roundedBeat)] = noteData.rawY;
@@ -190,7 +196,7 @@ var initMusicStaff = function(midiFile) {
         }
 
         // Add the actual note head to the `notes` array
-        var xOffset = (2 + 9*(roundedBeat-measure*4))*svg.lineSpacing();
+        var xOffset = (2 + 9 * (roundedBeat - measure * 4)) * svg.lineSpacing();
         var yOffset = noteData.y;
         notes.push(getSvgElement(noteData.noteHead, xOffset, yOffset,
             'id="' + i + '_beat' + roundedBeat + '"'));
@@ -215,7 +221,7 @@ var initMusicStaff = function(midiFile) {
 // This model stores data about where on the staff notes should be displayed and what kind of note head
 // they should have for any given note. (Ex: Hi-hat has an 'x', Splash cymbal is a 'diamond', etc.)
 var noteInfo = {
-    getNote: function(note) {
+    getNote: function (note) {
         var n = this.notes[String(note)];
         if (n == undefined) {
             return {
@@ -231,7 +237,7 @@ var noteInfo = {
             };
         }
     },
-    getRest: function(rest) {
+    getRest: function (rest) {
         var r = this.rests[String(rest)];
         if (r == undefined) {
             return {
@@ -402,7 +408,7 @@ function MeasureTree(beats) {
     }
 }
 // After rounding a beat to the nearest binary subdivision, use this method to add it to the tree
-MeasureTree.prototype.add = function(val) {
+MeasureTree.prototype.add = function (val) {
     if (val >= this.beatsPerMeasure || val < 0) {
         throw new RangeError("Invalid value (" + val + ") added to MeasureTree with beatsPerMeasure=" + this.beatsPerMeasure)
     }
@@ -414,7 +420,7 @@ MeasureTree.prototype.add = function(val) {
     }
 };
 // Parses the MeasureTree, returning an object containing note/rest and duration information for each beat subdivision.
-MeasureTree.prototype.getNotes = function() {
+MeasureTree.prototype.getNotes = function () {
     var notes = {};
     for (var i = 0; i < this.beats.length; i++) {
         if (this.beats[i] == null) {
@@ -438,10 +444,10 @@ function Node(val, rest) {
     }
     this.add(val);
 }
-Node.prototype.hasChildren = function() {
+Node.prototype.hasChildren = function () {
     return (this.left != null && this.right != null);
 };
-Node.prototype.add = function(val) {
+Node.prototype.add = function (val) {
     var decimalPart = val - Math.floor(val);
 
     if (this.hasChildren()) {
@@ -468,13 +474,13 @@ Node.prototype.add = function(val) {
         }
     }
 };
-Node.prototype.noteType = function() {
+Node.prototype.noteType = function () {
     return (this.isRest) ? "rest" : "note";
 };
-Node.prototype.getNotes = function(root, noteSize) {
+Node.prototype.getNotes = function (root, noteSize) {
     var notes = {};
     if (this.hasChildren()) {
-        return $.extend(this.left.getNotes(root, noteSize/2), this.right.getNotes(root + noteSize/2, noteSize/2));
+        return $.extend(this.left.getNotes(root, noteSize / 2), this.right.getNotes(root + noteSize / 2, noteSize / 2));
     } else {
         // Leafs determine "note" or "rest"
         notes[String(root)] = {type: this.noteType(), size: noteSize};
@@ -496,17 +502,17 @@ function getSvgElement(type, x, y, misc) {
             return '<circle cx="' + x + '" cy="' + y + '" r="28" class="open" ' + misc + '></circle>' +
                 '<circle cx="' + x + '" cy="' + y + '" r="5"></circle>';
         case "x":
-            return '<line x1="' + (x-22) + '" y1="' + (y-22) + '" x2="' + (x+22) +'" y2="' + (y+22) + '" ' +
+            return '<line x1="' + (x - 22) + '" y1="' + (y - 22) + '" x2="' + (x + 22) + '" y2="' + (y + 22) + '" ' +
                 misc + '></line>' +
-                '<line x1="' + (x+22) + '" y1="' + (y-22) + '" x2="' + (x-22) +'" y2="' + (y+22) + '"></line>';
+                '<line x1="' + (x + 22) + '" y1="' + (y - 22) + '" x2="' + (x - 22) + '" y2="' + (y + 22) + '"></line>';
         case "x open":
-            return '<line x1="' + (x-22) + '" y1="' + (y-22) + '" x2="' + (x+22) +'" y2="' + (y+22) + '" ' +
+            return '<line x1="' + (x - 22) + '" y1="' + (y - 22) + '" x2="' + (x + 22) + '" y2="' + (y + 22) + '" ' +
                 misc + '></line>' +
-                '<line x1="' + (x+22) + '" y1="' + (y-22) + '" x2="' + (x-22) +'" y2="' + (y+22) + '"></line>' +
-                '<circle cx="' + x + '" cy="' + (y-50) + '" r="10" class="open"></circle>';
+                '<line x1="' + (x + 22) + '" y1="' + (y - 22) + '" x2="' + (x - 22) + '" y2="' + (y + 22) + '"></line>' +
+                '<circle cx="' + x + '" cy="' + (y - 50) + '" r="10" class="open"></circle>';
         case "circled x":
-            return '<line x1="' + (x-22) + '" y1="' + (y-22) + '" x2="' + (x+22) +'" y2="' + (y+22) + '"></line>' +
-                '<line x1="' + (x+22) + '" y1="' + (y-22) + '" x2="' + (x-22) +'" y2="' + (y+22) + '"></line>' +
+            return '<line x1="' + (x - 22) + '" y1="' + (y - 22) + '" x2="' + (x + 22) + '" y2="' + (y + 22) + '"></line>' +
+                '<line x1="' + (x + 22) + '" y1="' + (y - 22) + '" x2="' + (x - 22) + '" y2="' + (y + 22) + '"></line>' +
                 '<circle cx="' + x + '" cy="' + y + '" r="28" ' + misc + '></circle>';
         case "filled diamond":
             return '<polygon points="0,-28 28,0 0,28 -28,0" transform="translate(' + x + ' ' + y + ')" ' +
@@ -517,7 +523,7 @@ function getSvgElement(type, x, y, misc) {
         case "stem":
             return '<rect width="4.6" height="165" transform="translate(' + x + ' ' + y + ')" ' + misc + '></rect>';
         case "8th flag":
-            return '<g transform="translate(' + (x-222) + ' ' + (y-500) + ') ' + misc + '">' +
+            return '<g transform="translate(' + (x - 222) + ' ' + (y - 500) + ') ' + misc + '">' +
                 '<path style="image-rendering:optimizeQuality;shape-rendering:geometricPrecision" ' +
                 'd="m246 301h4.33c1.08 6.91 2.44 12.7 4.24 17.4 1.71 4.63 3.79 8.63 6.05 12 2.35 3.36 5.87 7.63 ' +
                 '10.6 12.9 4.69 5.27 8.39 9.72 11.3 13.5 8.66 11.2 13 22.9 13 35.1 0 12.5-5.23 27.8-15.9 ' +
@@ -526,7 +532,7 @@ function getSvgElement(type, x, y, misc) {
                 '-14.5-3.79-4.45-8.03-8-12.8-10.8-4.78-2.73-9.75-4.27-14.9-4.54l-4.33-1.45z" ' +
                 'fill-rule="evenodd" /></g>';
         case "16th flag":
-            return '<g transform="translate(' + (x-362) + ' ' + (y-603) + ') ' + misc + '">' +
+            return '<g transform="translate(' + (x - 362) + ' ' + (y - 603) + ') ' + misc + '">' +
                 '<path style="image-rendering:optimizeQuality;shape-rendering:geometricPrecision" ' +
                 'd="m387 477v-72.3h4.69c0.632 7 2.17 12.5 4.69 16.2 2.44 3.73 6.5 8.18 12.3 13.2 5.69 5.09 10.1 ' +
                 '9.72 13.4 13.9 4.69 5.91 8.21 11.6 10.7 17.1 2.44 5.45 3.7 11.7 3.7 18.9 0 5.54-0.812 11.3-2.53 ' +
@@ -537,7 +543,7 @@ function getSvgElement(type, x, y, misc) {
                 '1.17-11.6-3.61-16.7-2.44-5.18-5.6-9.82-9.39-13.8-3.79-4-7.94-7.54-12.4-10.7-4.51-3.18-9.2-6.09-' +
                 '14.2-8.82z" fill-rule="evenodd" /></g>';
         case "4th rest":
-            return '<g transform="translate(' + (x-4900) + ' ' + (y-720) + ')" ' + misc + '>' +
+            return '<g transform="translate(' + (x - 4900) + ' ' + (y - 720) + ')" ' + misc + '>' +
                 '<g fill-rule="evenodd" transform="matrix(1.8 0 0 1.8 -644 352) scale(6 6)" stroke-miterlimit="10" ' +
                 'stroke-width="0">' +
                 '<path d="m512 71c-0.137 0.058-0.219 0.258-0.156 0.398 0.019 0.02 0.218 0.258 0.418 0.52 0.457 ' +
@@ -553,7 +559,7 @@ function getSvgElement(type, x, y, misc) {
                 '0.957 1.16-1.28 0.082-0.258 0.043-0.496-0.137-0.715-0.062-0.058-0.758-0.918-1.57-1.89-1.12-1.31-' +
                 '1.52-1.79-1.57-1.81-0.082-0.019-0.18-0.019-0.262 0.02z" /></g></g>';
         case "8th rest":
-            return '<g transform="translate(' + (x-5140) + ' ' + (y-715) + ')" ' + misc + '>' +
+            return '<g transform="translate(' + (x - 5140) + ' ' + (y - 715) + ')" ' + misc + '>' +
                 '<g fill-rule="evenodd" transform="matrix(1.8 0 0 1.8 -593 341) scale(6 6)" stroke-miterlimit="10">' +
                 '<path stroke="#000" d="m531 74.8c-0.52 0.098-0.918 0.457-1.1 0.953-0.039 0.16-0.039 0.199-0.039 ' +
                 '0.418 0 0.301 0.019 0.461 0.16 0.699 0.199 0.399 0.617 0.719 1.09 0.836 0.5 0.141 1.34 0.02 ' +
@@ -563,7 +569,7 @@ function getSvgElement(type, x, y, misc) {
                 '1.04-0.219 0.18-0.34 0.199-0.539 0.121-0.18-0.098-0.239-0.199-0.36-0.738-0.117-0.535-0.257-' +
                 '0.778-0.558-0.977-0.278-0.179-0.637-0.238-0.953-0.156z"/></g></g>';
         case "16th rest":
-            return '<g transform="translate(' + (x-5220) + ' ' + (y-694) + ')" ' + misc + '>' +
+            return '<g transform="translate(' + (x - 5220) + ' ' + (y - 694) + ')" ' + misc + '>' +
                 '<g fill-rule="evenodd" transform="matrix(1.8 0 0 1.8 -649 265) scale(6 6)" stroke-miterlimit="10">' +
                 '<path d="m544 74.8c-0.519 0.098-0.918 0.457-1.09 0.953-0.043 0.16-0.043 0.199-0.043 0.418 0 ' +
                 '0.301 0.019 0.461 0.16 0.699 0.199 0.399 0.617 0.719 1.1 0.836 0.496 0.141 1.29 0.039 2.25-' +
