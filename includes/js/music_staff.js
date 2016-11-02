@@ -33,7 +33,8 @@ var svg = {
         return '<svg width="' + this.config.width + '" height="' + this.config.height + '" ' +
             'viewBox="0 0 ' + this.vbWidth() + ' ' + this.vbHeight() + '">' + this.getStaff() +
             notes.join("") + '</svg>';
-    }
+    },
+    beatYMap: {}
 };
 
 
@@ -47,16 +48,53 @@ var initMusicStaff = function(midiFile) {
     var upperMeasureTree = new MeasureTree(4);
     var lowerMeasureTree = new MeasureTree(4);
 
-    var generateRests = function(tree) {
-        var parsedMeasure = tree.getNotes();
-        dbPrint(tree);
-        dbPrint(parsedMeasure);
-        for (var beatIndex in parsedMeasure) {
-            if (parsedMeasure.hasOwnProperty(beatIndex)) {
-                var beat = parsedMeasure[beatIndex];
+    var generateFlags = function(parsedTree, measureNumber) {
+        dbPrint(parsedTree);
+        for (var beatIndex in parsedTree) {
+            if (parsedTree.hasOwnProperty(beatIndex)) {
+                var beat = parsedTree[beatIndex];
 
-                // var xAdjustment = (noteData.rawY > 7) ? -28 : 24;
-                // var yAdjustment = (noteData.rawY > 7) ? 0 : -165;
+                if (beat == "rest") {
+                    continue;
+                }
+
+                for (var subdivisionKey in beat) {
+                    if (beat.hasOwnProperty(subdivisionKey)) {
+                        var subdivision = beat[subdivisionKey];
+                        if (subdivision.type == "note") {
+                            var subdivFloat = parseFloat(subdivisionKey);
+                            var rawY = svg.beatYMap[String(subdivFloat + (measureNumber-1)*4)];
+                            if (rawY == undefined) {
+                                console.log(subdivFloat + measureNumber*4);
+                                console.log(svg.beatYMap);
+                                rawY = 8;
+                            }
+                            var xOffset = (2 + 9*subdivFloat)*svg.lineSpacing();
+                            var yOffset = rawY * svg.lineSpacing();
+                            if (subdivision.size == 0.5) {
+                                console.log(subdivision);
+                                var xAdjustment = (rawY > 7) ? 445 : 0;
+                                var yAdjustment = (rawY > 7) ? 1000 : 0;
+                                var identifier = "8th flag";
+                            } else {
+                                xAdjustment = (rawY > 7) ? 726 : 0;
+                                yAdjustment = (rawY > 7) ? 1200 : 0;
+                                identifier = "16th flag";
+                            }
+                            var misc = (rawY > 7) ? "rotate(180)" : "";
+                            notes.push(getSvgElement(identifier, xOffset + xAdjustment, yOffset + yAdjustment, misc)); // FIXME
+                        }
+                    }
+                }
+            }
+        }
+    };
+
+    var generateRests = function(parsedTree) {
+        dbPrint(parsedTree);
+        for (var beatIndex in parsedTree) {
+            if (parsedTree.hasOwnProperty(beatIndex)) {
+                var beat = parsedTree[beatIndex];
 
                 if (beat == "rest") {
                     var noteData = noteInfo.getRest("1");
@@ -66,6 +104,7 @@ var initMusicStaff = function(midiFile) {
                     notes.push(getSvgElement(noteData.noteHead, xOffset, yOffset));
                     continue;
                 }
+
                 for (var subdivisionKey in beat) {
                     if (beat.hasOwnProperty(subdivisionKey)) {
                         var subdivision = beat[subdivisionKey];
@@ -84,12 +123,20 @@ var initMusicStaff = function(midiFile) {
     var handleNoteOn = function() {
         var exactBeat = ticks / ticksPerBeat;
         var roundedBeat = Math.round(exactBeat * 4) / 4.0;
-        dbPrint("        Beat: " + roundedBeat);
         var measure = Math.floor(roundedBeat / beatsPerMeasure);
         if (lastMeasureDisplayed != measure) {
             notes.push('<text x="15" y="30" transform="scale(3 3)">' + (measure) + '</text>');
-            // generateRests(upperMeasureTree);
-            generateRests(lowerMeasureTree);
+
+            var parsedUpperMeasure = upperMeasureTree.getNotes();
+            // TODO: Intelligent parsing of notes for upper and lower parts of the measure.
+            // They're outside the scope of this project, but could be implemented down the road.
+            // generateRests(parsedUpperMeasure);
+            generateFlags(parsedUpperMeasure, measure);
+
+            var parsedLowerMeasure = lowerMeasureTree.getNotes();
+            generateRests(parsedLowerMeasure);
+            generateFlags(parsedLowerMeasure, measure);
+
             musicStaff.append(svg.getSvg(notes));
             notes = [];
             upperMeasureTree = new MeasureTree(4);
@@ -101,14 +148,13 @@ var initMusicStaff = function(midiFile) {
         if (noteData.rawY > 7) {
             lowerMeasureTree.add(roundedBeat - measure*4);
         } else {
-            // TODO: Intelligent parsing of notes for upper and lower parts of the measure.
-            // They're outside the scope of this project, but could be implemented down the road.
-            // upperMeasureTree.add(roundedBeat - measure*4);
+            upperMeasureTree.add(roundedBeat - measure*4);
         }
         var xOffset = (2 + 9*(roundedBeat-measure*4))*svg.lineSpacing();
         var yOffset = noteData.y;
         notes.push(getSvgElement(noteData.noteHead, xOffset, yOffset,
             'id="' + i + '_beat' + roundedBeat + '"'));
+        svg.beatYMap[String(roundedBeat)] = noteData.rawY;
         var xAdjustment = (noteData.rawY > 7) ? -28 : 24;
         var yAdjustment = (noteData.rawY > 7) ? 0 : -165;
         notes.push(getSvgElement("stem", xOffset + xAdjustment, yOffset + yAdjustment));
@@ -335,8 +381,6 @@ MeasureTree.prototype.getNotes = function() {
 function Node(val, rest) {
     // If left or right is null, it means it's a rest. Otherwise, it's a note
     // or has subdivision with a note.
-    dbPrint("new Node(" + val + ")");
-
     var decimalPart = val - Math.floor(val);
 
     this.left = null;
@@ -351,7 +395,6 @@ Node.prototype.hasChildren = function() {
     return (this.left != null && this.right != null);
 };
 Node.prototype.add = function(val) {
-    dbPrint("node.add(" + val + ")");
     var decimalPart = val - Math.floor(val);
 
     if (this.hasChildren()) {
@@ -366,14 +409,12 @@ Node.prototype.add = function(val) {
         // Leafs determine "note" or "rest"
         if (decimalPart == 0) {
             this.isRest = false;
-            dbPrint("this.isRest = false");
         } else if (decimalPart < 0.5) {
             this.left = new Node(decimalPart * 2, this.isRest);
             this.right = new Node(0);
             this.isRest = null;
         } else if (decimalPart >= 0.5) {
             this.left = new Node(0);
-            dbPrint("left.isRest = this.isRest = " + this.isRest);
             this.left.isRest = this.isRest;
             this.right = new Node(decimalPart * 2);
             this.isRest = null;
@@ -429,7 +470,7 @@ function getSvgElement(type, x, y, misc) {
         case "stem":
             return '<rect width="4.6" height="165" transform="translate(' + x + ' ' + y + ')" ' + misc + '></rect>';
         case "8th flag":
-            return '<g transform="translate(' + x + ' ' + y + ')" ' + misc + '>' +
+            return '<g transform="translate(' + (x-222) + ' ' + (y-500) + ') ' + misc + '">' +
                 '<path style="image-rendering:optimizeQuality;shape-rendering:geometricPrecision" ' +
                 'd="m246 301h4.33c1.08 6.91 2.44 12.7 4.24 17.4 1.71 4.63 3.79 8.63 6.05 12 2.35 3.36 5.87 7.63 ' +
                 '10.6 12.9 4.69 5.27 8.39 9.72 11.3 13.5 8.66 11.2 13 22.9 13 35.1 0 12.5-5.23 27.8-15.9 ' +
@@ -438,7 +479,7 @@ function getSvgElement(type, x, y, misc) {
                 '-14.5-3.79-4.45-8.03-8-12.8-10.8-4.78-2.73-9.75-4.27-14.9-4.54l-4.33-1.45z" ' +
                 'fill-rule="evenodd" /></g>';
         case "16th flag":
-            return '<g transform="translate(' + x + ' ' + y + ')" ' + misc + '>' +
+            return '<g transform="translate(' + (x-362) + ' ' + (y-603) + ') ' + misc + '">' +
                 '<path style="image-rendering:optimizeQuality;shape-rendering:geometricPrecision" ' +
                 'd="m387 477v-72.3h4.69c0.632 7 2.17 12.5 4.69 16.2 2.44 3.73 6.5 8.18 12.3 13.2 5.69 5.09 10.1 ' +
                 '9.72 13.4 13.9 4.69 5.91 8.21 11.6 10.7 17.1 2.44 5.45 3.7 11.7 3.7 18.9 0 5.54-0.812 11.3-2.53 ' +
