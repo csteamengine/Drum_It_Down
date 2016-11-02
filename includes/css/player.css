@@ -13,8 +13,7 @@ body{
     background: rgba(0,0,0,.8);
     width: 800px;
     z-index: 1;
-    position: relative;
-    margin-top: 680px;
+    position: fixed;
     bottom: 0;
     left: 50%;
     margin-left: -450px;
