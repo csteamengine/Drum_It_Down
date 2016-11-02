@@ -1,23 +1,24 @@
-svg {
-    border: solid 1px grey;
+#music-staff svg {
+    border-left: solid 1px grey;
+    border-right: solid 1px grey;
 }
 
-svg * {
+#music-staff svg * {
     fill: black;
     stroke: black;
     stroke-width: 1;
 }
 
-svg ellipse {
+#music-staff svg ellipse {
     rx: 31;
     ry: 22;
 }
 
-svg line {
+#music-staff svg line {
     stroke-width: 8;
 }
 
-svg .open {
+#music-staff svg .open {
     stroke-width: 8;
     fill: none;
 }

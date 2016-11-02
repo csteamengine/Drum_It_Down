@@ -9,9 +9,9 @@
 var svg = {
     // Controls size and scaling of the svg music staff area
     config: {
-        scale: 3,
-        width: 800,
-        height: 300,
+        scale: 6,
+        width: 400,
+        height: 150,
         // This is the id of the HTML element that will hold all the music staff SVG.
         containerId: 'music-staff'
     },
