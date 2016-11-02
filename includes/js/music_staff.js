@@ -1,24 +1,26 @@
 /**
+ * The music_staff.js script will parse a MIDI file into notes and rests, and display them visually on the html
+ * page in a music staff. To use, call initMusicStaff(midiFile) with an open MIDI file, and be sure to have
+ * an HTML element on the page with an id matching svg.config.containerId.
  * Created by nkarasch on 10/27/16.
  */
 
-// TODO: Remove upon completion
-var debugging = false;
-function dbPrint(msg) {
-    if (debugging) {
-        console.log(msg);
-    }
-}
-
+// The svg object provides high-level music staff data and functionality.
 var svg = {
+    // Controls size and scaling of the svg music staff area
     config: {
         scale: 3,
         width: 800,
-        height: 300
+        height: 300,
+        // This is the id of the HTML element that will hold all the music staff SVG.
+        containerId: 'music-staff'
     },
+    // viewBox width and height
     vbWidth: function() { return this.config.scale * this.config.width; },
     vbHeight: function() { return this.config.scale * this.config.height; },
+    // A standard unit of measurement for moving elements in the staff
     lineSpacing: function() { return this.vbHeight() / 15; },
+    // Returns the svg elements comprising the 5 horizontal lines of the staff
     getStaff: function() {
         var lines = [];
         for (var i = 0; i < 5; i++) {
@@ -28,31 +30,39 @@ var svg = {
         }
         return lines.join('');
     },
+    // Returns the entire svg area with all the notes, flags, rests, etc. inside the `notes` array.
     getSvg: function(notes) {
         //noinspection HtmlUnknownAttribute
         return '<svg width="' + this.config.width + '" height="' + this.config.height + '" ' +
             'viewBox="0 0 ' + this.vbWidth() + ' ' + this.vbHeight() + '">' + this.getStaff() +
             notes.join("") + '</svg>';
     },
+    // Maps a beat location (Ex: 4.0, 4.5, 5.0, 5.25, 5.5, etc) to a rawY (Ex: 7.5, 9.5, 5, etc).
     yBeatMaps: {
+        // rawY values  < 7, which puts them in the upper portion of the staff
         high: {},
+        // rawY values >= 7, which puts them in the lower portion of the staff
         low: {}
     }
 };
 
 
+// Creates an svg music staff for the given `midiFile`
 var initMusicStaff = function(midiFile) {
     var ticksPerBeat = midiFile.header.ticksPerBeat;
     var notes = [];
     var ticks = 0;
     var beatsPerMeasure = 4;
-    var musicStaff = $("#music-staff");
+    var musicStaff = $("#" + svg.config.containerId);
     var lastMeasureDisplayed = 0;
     var upperMeasureTree = new MeasureTree(4);
     var lowerMeasureTree = new MeasureTree(4);
 
+    // Generates flags for notes, indicating if they are 8ths, 16ths, etc.
+    // The `parsedTree` parameter should be a MeasureTree.getNotes() object. The `measureNumber` is zero-indexed.
+    // TODO: Possible future implementation should include connecting note stems instead of giving them all flags.
+    // For the scope of this project, however, it just sticks to using flags.
     var generateFlags = function(parsedTree, measureNumber) {
-        dbPrint(parsedTree);
         for (var beatIndex in parsedTree) {
             if (parsedTree.hasOwnProperty(beatIndex)) {
                 var beat = parsedTree[beatIndex];
@@ -100,8 +110,8 @@ var initMusicStaff = function(midiFile) {
         }
     };
 
+    // Generates rests for a given MeasureTree.getNotes() object.
     var generateRests = function(parsedTree) {
-        dbPrint(parsedTree);
         for (var beatIndex in parsedTree) {
             if (parsedTree.hasOwnProperty(beatIndex)) {
                 var beat = parsedTree[beatIndex];
@@ -130,24 +140,31 @@ var initMusicStaff = function(midiFile) {
         }
     };
 
+    // Handles SVG drawing behavior for notes in the `midiFile`
     var handleNoteOn = function() {
         var exactBeat = ticks / ticksPerBeat;
         var roundedBeat = Math.round(exactBeat * 4) / 4.0;
         var measure = Math.floor(roundedBeat / beatsPerMeasure);
         if (lastMeasureDisplayed != measure) {
+            // Measure number
             notes.push('<text x="15" y="30" transform="scale(3 3)">' + (measure) + '</text>');
 
+            // Parses the upper half of the measure for rests and note durations
             var parsedUpperMeasure = upperMeasureTree.getNotes();
             // TODO: Intelligent parsing of notes for upper and lower parts of the measure.
             // They're outside the scope of this project, but could be implemented down the road.
             // generateRests(parsedUpperMeasure);
             generateFlags(parsedUpperMeasure, measure);
 
+            // Parses the lower half of the measure for rests and note durations
             var parsedLowerMeasure = lowerMeasureTree.getNotes();
             generateRests(parsedLowerMeasure);
             generateFlags(parsedLowerMeasure, measure);
 
+            // Add the svg element and all its children to the DOM
             musicStaff.append(svg.getSvg(notes));
+
+            // Cleanup variables for the next measure
             notes = [];
             upperMeasureTree = new MeasureTree(4);
             lowerMeasureTree = new MeasureTree(4);
@@ -155,6 +172,9 @@ var initMusicStaff = function(midiFile) {
         }
 
         var noteData = noteInfo.getNote(obj.noteNumber);
+
+        // Adding beats to the upper/lower measure trees and upper/lower beat maps allows for
+        // the program to parse rests and stem flags out of it later
         if (noteData.rawY > 7) {
             lowerMeasureTree.add(roundedBeat - measure*4);
             var currentBeatMapping = svg.yBeatMaps.low[String(roundedBeat)];
@@ -168,15 +188,20 @@ var initMusicStaff = function(midiFile) {
                 svg.yBeatMaps.high[String(roundedBeat)] = noteData.rawY;
             }
         }
+
+        // Add the actual note head to the `notes` array
         var xOffset = (2 + 9*(roundedBeat-measure*4))*svg.lineSpacing();
         var yOffset = noteData.y;
         notes.push(getSvgElement(noteData.noteHead, xOffset, yOffset,
             'id="' + i + '_beat' + roundedBeat + '"'));
+
+        // Add the note's stem (based on upper or lower staff) to the `notes` array
         var xAdjustment = (noteData.rawY > 7) ? -28 : 24;
         var yAdjustment = (noteData.rawY > 7) ? 0 : -165;
         notes.push(getSvgElement("stem", xOffset + xAdjustment, yOffset + yAdjustment));
     };
 
+    // MAIN LOOP: This iterates through all the MIDI "noteOn" events in the `midiFile` drum track (channel 9)
     for (var i = 0; i < midiFile.tracks[0].length; i++) {
         var obj = midiFile.tracks[0][i];
         ticks += obj.deltaTime;
@@ -187,6 +212,8 @@ var initMusicStaff = function(midiFile) {
 };
 
 
+// This model stores data about where on the staff notes should be displayed and what kind of note head
+// they should have for any given note. (Ex: Hi-hat has an 'x', Splash cymbal is a 'diamond', etc.)
 var noteInfo = {
     getNote: function(note) {
         var n = this.notes[String(note)];
@@ -362,6 +389,8 @@ var noteInfo = {
 
 // A MeasureTree provides a means to parse measures containing binary divisions of notes (4ths, 8ths, 16ths, etc)
 // into more usable data.
+// TODO: If this project is extended in the future, this data structure should be re-written to take into account
+// any odd time divisions, such as triplets.
 function MeasureTree(beats) {
     if ((typeof beats !== "number") || Math.floor(beats) !== beats) {
         throw new TypeError("The MeasureTree constructor must be given an integer!");
@@ -372,6 +401,7 @@ function MeasureTree(beats) {
         this.beats.push(null);
     }
 }
+// After rounding a beat to the nearest binary subdivision, use this method to add it to the tree
 MeasureTree.prototype.add = function(val) {
     if (val >= this.beatsPerMeasure || val < 0) {
         throw new RangeError("Invalid value (" + val + ") added to MeasureTree with beatsPerMeasure=" + this.beatsPerMeasure)
@@ -383,6 +413,7 @@ MeasureTree.prototype.add = function(val) {
         this.beats[beat].add(val, val);
     }
 };
+// Parses the MeasureTree, returning an object containing note/rest and duration information for each beat subdivision.
 MeasureTree.prototype.getNotes = function() {
     var notes = {};
     for (var i = 0; i < this.beats.length; i++) {
@@ -394,7 +425,10 @@ MeasureTree.prototype.getNotes = function() {
     }
     return notes;
 };
-
+// A MeasureTree Node. Since we're only addressing binary divisions (instead of triplets or other odd divisions), it
+// only needs a left and right node. Nodes either have both children or zero children -- there is no state in which a
+// Node would have only 1 child. If it has zero children (leaf node), then the `isRest` property is applicable and
+// tells you if the leaf is a note or a rest.
 function Node(val, rest) {
     this.left = null;
     this.right = null;
