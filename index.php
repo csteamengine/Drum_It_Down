@@ -41,6 +41,7 @@ if(!$_SESSION['logged_in']){
                 $username = mysqli_real_escape_string($conn, $_GET['username']);
                 $password = mysqli_real_escape_string($conn, $_GET['password']);
                 $password_verify = mysqli_real_escape_string($conn, $_GET['password_verify']);
+                $email = mysqli_real_escape_string($conn, $_GET['email']);
                 $f_name = mysqli_real_escape_string($conn,  $_GET['f_name']);
                 $l_name = mysqli_real_escape_string($conn, $_GET['l_name']);
 
@@ -59,7 +60,7 @@ if(!$_SESSION['logged_in']){
                 }
 
 
-                $sql = "INSERT INTO users (f_name, l_name, username, password) VALUES ('".$f_name."','".$l_name."','".$username."','".password_hash($password, PASSWORD_BCRYPT)."')";
+                $sql = "INSERT INTO users (f_name, l_name, username, email, password) VALUES ('".$f_name."','".$l_name."','".$username."','".$email."','".password_hash($password, PASSWORD_BCRYPT)."')";
                 $query = mysqli_query($conn, $sql);
                 if(!$query){
                     $json = array('code' => 404, 'error' => mysqli_error($conn));
