@@ -32,6 +32,8 @@ header{
     border-radius: 5px;
     padding: 10px;
     top: 25px;
+    cursor: pointer;
+    cursor: hand;
 }
 .header_link:hover{
     -webkit-box-shadow:  2px 2px 10px black;
@@ -44,15 +46,58 @@ header{
 #browse{
     right: 150px;
 }
+#browse.logged_in{
+    right: 200px;
+}
+
 #upload{
     left: 150px;
 }
-#logout{
-    right: 50px;
+
+#header_username{
+    position: absolute;
+    height: 15px;
+    font-size: 20px;
+    padding: 5px 10px;
+    top: 25px;
+    right: 45px;
+    color: #75A3D1;
+    border-radius: 5px;
+    cursor: pointer;
+    cursor: hand;
+}
+#user_icon{
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    height: 35px;
+    cursor: pointer;
+    cursor: hand;
+
 }
 #browse_logged_out{
     right: 50px;
 }
 #login_link_header{
     left: 50px;
+}
+#header_dropdown{
+    width: 200px;
+    position: absolute;
+    right: 0px;
+    top: 65px;
+    border-radius: 5px;
+    border: 1px solid #75A3D1;
+}
+.dropdown_link{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+.dropdown_link:hover{
+    background-color: #75A3D1;
 }

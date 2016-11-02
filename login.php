@@ -49,6 +49,7 @@ if($_SESSION['logged_in']){
         <input id="username_signup" type="text" placeholder="Username" >
         <input id="f_name" type="text" placeholder="First Name">
         <input id="l_name" type="text" placeholder="Last Name">
+        <input id="email" type="text" placeholder="Email">
         <input type="password" id="password_signup" placeholder="Password">
         <input type="password" id="password_verify" placeholder="Confirm Password">
         <input type="submit" value="Sign Up" id="submit_signup">
@@ -87,10 +88,11 @@ include "includes/php/footer.php";
         var username = $('#username_signup').val();
         var password = $('#password_signup').val();
         var password_confirm = $('#password_verify').val();
+        var email = $('#email').val();
         var f_name = $('#f_name').val();
         var l_name = $('#l_name').val();
-        if(username != "" && password != "" && password_confirm != "" && password == password_confirm){
-            $.getJSON('index.php?action=sign_up&username='+username+'&password='+password+'&password_verify='+password_confirm+'&f_name='+f_name+'&l_name='+l_name,function(json){
+        if(username != "" && email != "" && password != "" && password_confirm != "" && password == password_confirm){
+            $.getJSON('index.php?action=sign_up&username='+username+'&email='+email+'&password='+password+'&password_verify='+password_confirm+'&f_name='+f_name+'&l_name='+l_name,function(json){
                 if(json.code != 200){
                     alert.html(json.error);
                 }else{
@@ -100,6 +102,8 @@ include "includes/php/footer.php";
         }else{
             if(username == ""){
                 alert.html('Username and Password cannot be blank.');
+            }else if(email == ""){
+                alert.html('Email cannot be blank.');
             }else if(password == ""){
                 alert.html('Username and Password cannot be blank.');
             }else if(password != password_confirm){

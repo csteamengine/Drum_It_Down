@@ -102,14 +102,15 @@ include "../includes/php/header.php";
     </div>
 </div>
 <div id="view_all">
-    <h1 class="click_title selected_title" id="all_songs_title">All Songs</h1>
-    <h1 class="click_title" id="all_files_title">All Files</h1>
+    <h1 class="click_title selected_title" id="all_files_title">All Files</h1>
+    <h1 class="click_title " id="all_songs_title">All Songs</h1>
+
 </div>
 <?php
 
 ?>
 <div id="songs" >
-    <div id="all_songs">
+    <div id="all_songs" hidden>
 
         <div class="song_wide_names" id="column_names">
             <div class="title column">Title</div>
@@ -131,7 +132,7 @@ include "../includes/php/header.php";
         }
         ?>
     </div>
-    <div id="all_files" hidden>
+    <div id="all_files">
 
         <div class="song_wide_names">
             <div class="title column">Title</div>
