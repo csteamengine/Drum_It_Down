@@ -70,7 +70,7 @@ if($action != ''){
             $f_name = mysqli_real_escape_string($conn, $_GET['f_name']);
             $l_name = mysqli_real_escape_string($conn, $_GET['l_name']);
             $email = mysqli_real_escape_string($conn, $_GET['email']);
-            $sql = "UPDATE users SET f_name='".$f_name."', l_name='".$l_name."', email='".$email."'";
+            $sql = "UPDATE users SET f_name='".$f_name."', l_name='".$l_name."', email='".$email."' WHERE username='".$_SESSION['username']."'";
             $query = mysqli_query($conn, $sql);
             if(!$query){
                 $json = array('code' => 404, 'error' => mysqli_error($conn));
