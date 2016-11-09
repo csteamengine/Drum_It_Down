@@ -8,9 +8,7 @@
 include "../includes/php/base.php";
 include "../includes/php/general.php";
 
-if(!$_SESSION['logged_in']){
-    header("Location: /login.php");
-}
+
 
 $action = $_GET['action'];
 if($action != ""){
