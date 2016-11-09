@@ -17,9 +17,14 @@ without it given the time frame.
 
 ## Other Thoughts
 
-We have also implemented a user login/signup system to allow users to upvote or downvote a midi file. This ensures that users
+We have also implgit add -A
+emented a user login/signup system to allow users to upvote or downvote a midi file. This ensures that users
 are learning accurate drum parts by hoisting the most popular versions up. This product also allows users to create their own midi files
 and upload them for others to learn. 
+
+## Screen Shots
+
+![Drumset](https://photos.google.com/photo/AF1QipMw2QN2tJ8sc-K6EfzaErKJHN38VON1UZkKpwmt)
 
 ## Creators
 
