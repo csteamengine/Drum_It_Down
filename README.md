@@ -24,7 +24,7 @@ and upload them for others to learn.
 
 ## Live Site
 
-The site is live at [www.drumitdown.com](www.drumitdown.com)
+The site is live at [www.drumitdown.com](http://www.drumitdown.com)
 
 ## Creators
 
