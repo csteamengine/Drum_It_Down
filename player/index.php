@@ -144,7 +144,7 @@ function update_pop($conn){
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <title>Mines of MIDIa</title>
+    <title>Drum It Down</title>
 
     <link rel="stylesheet" href="../includes/css/shared.css">
     <link rel="stylesheet" href="../includes/css/header.css">

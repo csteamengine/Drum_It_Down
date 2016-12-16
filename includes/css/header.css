@@ -102,3 +102,7 @@ header{
 .dropdown_link:hover{
     background-color: #75A3D1;
 }
+.stress{
+    color: #75A3D1;
+    text-decoration: none;
+}

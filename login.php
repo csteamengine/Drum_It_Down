@@ -20,7 +20,7 @@ if($_SESSION['logged_in']){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Mines of Midia</title>
+    <title>Drum It Down</title>
     <link rel="stylesheet" href="includes/css/header.css">
     <link rel="stylesheet" href="includes/css/footer.css">
     <link rel="icon" type="image/x-icon" href="/favicon.png?v=1"/>
@@ -40,7 +40,7 @@ if($_SESSION['logged_in']){
         <input id="username" type="text" placeholder="Username" >
         <input type="password" id="password" placeholder="Password">
         <input type="submit" id="submit_login" value="Login">
-        <h4 class="login_links" id="signup_link">New to Mines of MIDIa? Sign Up Now!</h4>
+        <h4 class="login_links" id="signup_link">New to Drum It Down? Sign Up Now!</h4>
     </form>
 
     <form id="signup" class="">

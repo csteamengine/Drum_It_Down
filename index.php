@@ -9,9 +9,14 @@
 include "includes/php/base.php";
 include "includes/php/general.php";
 
+if(!isset($_SESSION['logged_in'])){
+    $_SESSION['logged_in'] = false;
+}
+
 if(!$_SESSION['logged_in']){
-    $action = $_GET['action'];
-    if($action != ""){
+
+    if(isset($_GET['action'])){
+        $action = $_GET['action'];
         switch($action){
             case 'login':
                 $sql = "SELECT * FROM users WHERE username='".mysqli_real_escape_string($conn, $_GET['username'])."'";
@@ -81,7 +86,7 @@ if(!$_SESSION['logged_in']){
         }
     }
 }else{
-    if($_GET['action'] == 'logout'){
+    if(isset($_GET['action']) && $_GET['action'] == 'logout'){
         session_destroy();
         header("Location: /");
     }
@@ -96,8 +101,8 @@ if(!$_SESSION['logged_in']){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Mines of Midia</title>
-    <link rel="icon" type="image/png" href="/favicon.png?v=1"/>
+    <title>Drum It Down</title>
+    <link rel="icon" type="image/png" href="/favicon.png?v=2"/>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="includes/css/shared.css">
     <link rel="stylesheet" href="includes/css/header.css">
@@ -111,7 +116,7 @@ if(!$_SESSION['logged_in']){
 
 </head>
 <body>
-<h1 id="welcome" class="title">Welcome to Mines of MIDIa.</h1>
+<h1 id="welcome" class="title">Welcome to Drum It Down.</h1>
     <div id="content">
 
         <div id="icons">
@@ -130,7 +135,7 @@ if(!$_SESSION['logged_in']){
     <div class="info">
         <div class="info_item left">
             <h1 class="title">Visual Drumming</h1>
-            <p>Mines of MIDIa is a revolutionary tool for drummers of all skill sets to learn to play new songs the way the pros do. With a virtual drum kit that plays back any song exactly as written, you can learn any song quickly and accurately.</p>
+            <p>Drum It Down is a revolutionary tool for drummers of all skill sets to learn to play new songs the way the pros do. With a virtual drum kit that plays back any song exactly as written, you can learn any song quickly and accurately.</p>
         </div>
         <img src="/includes/images/drum.png" class="info_image right">
     </div>
@@ -144,7 +149,7 @@ if(!$_SESSION['logged_in']){
     <div class="info">
         <div class="info_item left">
             <h1 class="title">Ensuring Accuracy</h1>
-            <p>Mines of MIDIa has a voting system to ensure the uploaded files are accurate. If you come across a high quality file, give it an upvote so more drummers can learn it. If it is inaccurate, give it a downvote.</p>
+            <p>Drum It Down has a voting system to ensure the uploaded files are accurate. If you come across a high quality file, give it an upvote so more drummers can learn it. If it is inaccurate, give it a downvote.</p>
         </div>
         <img src="/includes/images/target.png" class="info_image right">
     </div>

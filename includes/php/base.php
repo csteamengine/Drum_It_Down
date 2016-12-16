@@ -15,7 +15,7 @@ session_start();
 //This connection is for a live mysql database that you have to have IP access to,
 //So it won't work for you.
 //########################################
-$this_file = str_replace('se329_project_3', '', $_SERVER['DOCUMENT_ROOT']);
+$this_file = str_replace('drum_it_down', '', $_SERVER['DOCUMENT_ROOT']);
 $sql_file = $this_file.'/drums_config.txt';
 
 $json = "";

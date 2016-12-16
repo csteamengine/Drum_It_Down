@@ -15,12 +15,12 @@
         $query = mysqli_query($conn, $sql);
         $result = mysqli_fetch_assoc($query);
         ?>
-        <h1 id="header_title">Mines of MIDIa</h1>
+        <h1 id="header_title">Drum It Down</h1>
         <a href="/browse/" class="header_link logged_in" id="browse">Browse</a>
         <a href="/upload/" class="header_link" id="upload">Upload</a>
         <p id="header_username"><?= $_SESSION['username'] ?></p>
         <a href="/" class="header_link" id="home_link">Home</a>
-        <h2 id="drums_title">Drums, Drums in the deep.</h2>
+        <h2 id="drums_title">Let us <span class="stress">Drum It Down</span> for you.</h2>
         <img src="/user_images/<?= $result['image'] ?>" id="user_icon">
         <div id="header_dropdown" hidden>
             <a href="/profile/" class="dropdown_link">Profile</a>
@@ -29,7 +29,7 @@
     <?php
     }else{
         ?>
-        <h1 id="header_title">Mines of MIDIa</h1>
+        <h1 id="header_title">Drum It Down</h1>
         <a href="/browse/" class="header_link" id="browse_logged_out">Browse</a>
         <?php
         if(strpos(basename($_SERVER['PHP_SELF']), 'login.php') !== false){
@@ -42,7 +42,7 @@
             <?php
         }
         ?>
-        <h2 id="drums_title">Drums, Drums in the deep.</h2>
+        <h2 id="drums_title">Let us <span class="stress">Drum It Down</span> for you.</h2>
 
     <?php
     }

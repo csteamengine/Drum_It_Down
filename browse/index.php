@@ -10,7 +10,7 @@ include "../includes/php/base.php";
 include "../includes/php/general.php";
 
 
-if($_GET['action'] != ""){
+if(isset($_GET['action']) && $_GET['action'] != ""){
     $action = $_GET['action'];
     switch($action){
         case 'search':
@@ -51,7 +51,7 @@ if($_GET['action'] != ""){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Browse | Mines of Midia</title>
+    <title>Browse | Drum It Down</title>
     <link rel="icon" type="image/x-icon" href="/favicon.png?v=3"/>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/includes/css/shared.css">
